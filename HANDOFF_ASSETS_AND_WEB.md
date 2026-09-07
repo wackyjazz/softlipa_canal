@@ -152,3 +152,9 @@ python3 asset_tools/package.py
 tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/桌面、舊網址導回正確攻略。既有test_live.cjs/test_site.cjs的No275斷言已配合更新。未增加不存在的學生服截图。
 
 使用者最新順序：支線手帖為GorDoN、三種籤、夜店、一平；時空旅人一平固定最後SIDE NOTE / 04。publish.py輸出順序已更新，不能只改生成後資料。
+
+## 圖片 Worker Referer 防盜連
+
+使用者授權僅允許wackyjazz.github.io來源以减少盜連讀取。cloudflare/worker.mjs在URL/快取/R2處理前，以URL解析Referer並精確比對origin=https://wackyjazz.github.io。缺少/無效/非HTTPS/其他host或非標準port一律403且Cache-Control:no-store，包括HEAD與If-None-Match。正常請求維持既有canonical快取、HEAD/304零R2讀取、GET最多1次R2讀取。新增測試覆蓋12種拒絕來源×GET/HEAD及允許origin-only/完整路徑，8項測試通過。
+
+這是一般防盜連，不是認證：Referer可偽造，被拒請求仍計入Workers請求額度，但沒有R2讀取。嚴格模式會拒絕直接貼圖片網址、移除Referer的隱私工具、file://或其他host預覽使用線上R2圖；正式Pages網站瀏覽器會提供允許的origin。真正完整離線包自帶本機圖，不受影響。維護HTTP驗證需提供允許的Referer，guide_tools/verify_live_images.py已更新。使用者沒有授權升級付費方案，不需要新增服務。

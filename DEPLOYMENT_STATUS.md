@@ -9,8 +9,8 @@
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
 - 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34101037780
-- 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
-- Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
+- 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（僅允許合法 Referer 及 /images/清單內檔名；缺少 Referer 回403，合法來源的不存在路徑回404）
+- Worker Version：94774cc6-d437-4f7e-8a4f-5da5c4e085a5
 - 部署頁面 commit：82588f26340bf79a025feef171177ecf2bd5f986；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
@@ -40,7 +40,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T08:32:35.126Z
+最後驗證時間：2026-09-07T08:35:51.914746+00:00
 
 ## 038／039 與首頁更新
 
@@ -93,3 +93,13 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 一平快捷按鈕改成MJ與媽媽；目前順序Gina、MJ、媽媽、非工作人員，輸入框範例同步。僅改推薦查詢，不刪除一平事件或搜尋能力。內容commit82588f2，Pages run34101037780。
 
 線上已驗證4個快捷按鈕順序與MJ/媽媽皆有搜尋結果：verification/dialogue-shortcuts-live-checks.json。
+
+## Worker Referer 防盜連（已上線）
+
+Worker先解析Referer，僅接受origin=https://wackyjazz.github.io；缺少、無效、非HTTPS、其他網域/子域/非標準port都先回403，Cache-Control:no-store，不查快取、不讀R2。URL精確比對避免wackyjazz.github.io.evil.example等相似前綴。正常GET/HEAD/304及既有canonical快取規則不變。
+
+Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線上允許origin-only及完整站內Referer，無Referer/外站/相似網域回403。正式站首頁、對話、原圖、手機與圖庫瀏覽器驗證通過，報告verification/referer-live-checks.json與verification/referer-site-live-checks.json。
+
+減少的是非授權來源的R2讀取；被拒請求仍計入Workers每日請求額度，Referer亦可被非瀏覽器工具偽造，不能當成認證。直接貼圖片網址、移除Referer的工具、file://或其他host使用線上R2圖將被拒。維護驗證HTTP請求需加Referer（guide_tools/verify_live_images.py已調整）。未啟用付費服務、沒有新增R2物件；這次無需重新部署Pages。
+
+官方額度依據：https://developers.cloudflare.com/workers/platform/pricing/ （Inbound requests to your Worker）。

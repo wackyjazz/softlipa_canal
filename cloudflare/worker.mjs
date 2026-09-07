@@ -3,6 +3,10 @@ import manifest from './images-manifest.json' with {type:'json'};
 // Only this read-only Worker may expose the private R2 bucket.
 // Workers Free caps requests at 100,000/day; never loop or retry R2 reads here.
 export async function handle(request, env, ctx, cache=globalThis.caches?.default) {
+  // Reject hotlinks before checking cached responses or reading R2.
+  let referrer;
+  try{referrer=new URL(request.headers.get('Referer')||'');}catch{}
+  if(referrer?.origin!=='https://wackyjazz.github.io')return new Response('Forbidden',{status:403,headers:{'Cache-Control':'no-store'}});
   const url=new URL(request.url);
   if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});
   const match=/^\/images\/([0-9]{3}-[a-zA-Z0-9-]+\.(?:jpg|avif))$/.exec(url.pathname);

@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-07T08:22:03.397Z",
-  "workerTests": 6,
+  "date": "2026-09-07T08:35:51.914746+00:00",
+  "workerTests": 8,
   "uploadGuardTests": 10,
   "wranglerDryRun": {
     "version": "4.129.0",
@@ -172,5 +172,16 @@
     "pagesRun": "34100142025",
     "contentCommit": "a37841b8b62c3488fad2396ee8e27f1f42e70abe",
     "report": "verification/player-guide-live-checks.json"
+  },
+  "refererProtection": {
+    "passed": true,
+    "allowedOrigin": "https://wackyjazz.github.io",
+    "missingRefererStatus": 403,
+    "rejectedCacheReads": 0,
+    "rejectedR2Reads": 0,
+    "deniedStillCountsAsWorkerRequest": true,
+    "workerVersion": "94774cc6-d437-4f7e-8a4f-5da5c4e085a5",
+    "report": "verification/referer-live-checks.json",
+    "browserReport": "verification/referer-site-live-checks.json"
   }
 }

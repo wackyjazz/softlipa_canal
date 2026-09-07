@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-07T08:35:51.914746+00:00",
+  "workerVersion": "94774cc6-d437-4f7e-8a4f-5da5c4e085a5",
+  "checks": [
+    {
+      "referer": "https://wackyjazz.github.io/",
+      "status": 200
+    },
+    {
+      "referer": "https://wackyjazz.github.io/softlipa_canal/index.html",
+      "status": 200
+    },
+    {
+      "referer": null,
+      "status": 403
+    },
+    {
+      "referer": "https://example.com/",
+      "status": 403
+    },
+    {
+      "referer": "https://wackyjazz.github.io.evil.example/",
+      "status": 403
+    },
+    {
+      "referer": "http://wackyjazz.github.io/",
+      "status": 403
+    }
+  ],
+  "passed": true
+}
