@@ -1,0 +1,13 @@
+r2-images/
+_site/
+_preview/
+cloudflare/node_modules/
+cloudflare/.wrangler/
+cloudflare/.dry-run/
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+.upload-ledger.*
+__pycache__/

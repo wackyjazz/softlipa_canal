@@ -1,0 +1,44 @@
+{
+  "originalFiles": 309,
+  "originalVisualFiles": 309,
+  "catalogEntries": 538,
+  "exportedAnimationFrames": 3202,
+  "animationSheets": 88,
+  "originalBytes": 34061986,
+  "categories": {
+    "應用程式圖示": 14,
+    "道具與彩蛋相關物件": 33,
+    "場景與地圖圖層": 69,
+    "塗鴉圖集與遮罩": 2,
+    "照片": 11,
+    "結尾圖片": 20,
+    "人物與動畫": 95,
+    "介面與圖示": 65,
+    "獨立塗鴉與隱藏圖案": 101,
+    "塗鴉遮罩": 101,
+    "場景合成圖": 27
+  },
+  "allOriginalsByteIdentical": true,
+  "allStandaloneOriginalImagesCovered": true,
+  "missingOriginalImages": [],
+  "missingLocalReferences": [],
+  "inlineEngineMedia": "4 references in Phaser library (default/debug textures and generated SVG template); engine implementation resources, not separate game designs. Recorded in manifest.",
+  "pixelValidation": {
+    "atlasCropsPixelIdentical": 202,
+    "animationFramesPixelIdentical": 3202
+  },
+  "scope": "Visual-only web subset; full-pack audio/font/map metadata omitted",
+  "browserValidation": {
+    "catalog604": true,
+    "photos11": true,
+    "gordonSheets3": true,
+    "graffiti101": true,
+    "fullImageLoads": true,
+    "literalSearch": true,
+    "mobile390NoOverflow": true,
+    "guideCollection538": true,
+    "categoryURLs": true,
+    "assetDeepLinkReload": true,
+    "guideNavigation": true
+  }
+}

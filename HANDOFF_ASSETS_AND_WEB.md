@@ -1,0 +1,113 @@
+# 交接：完整素材擷取與攻略網頁整合
+
+## 接手先讀
+
+使用者使用繁體中文。這次要求把原本主要是人物的素材包擴充為所有原始設計，包含照片、彩蛋相關物件、塗鴉與場景；接著要求繼續優化網頁，並留下 agent 交接文件。已採取「完整離線素材包 + 攻略內視覺素材圖庫」兩種交付形式。不要將此工作當成重新擷取劇情對話畫面的要求。
+
+**不要改動或關閉使用者的 `gordon_demo`、`gordon_demo_v2` 或其他遊戲實例。不要部署、上傳、發文或啟用付費方案。** 目前只有本機成品與部署包，沒有 GitHub / Cloudflare 實際站台。不要廣泛 kill 同名遊戲程序。
+
+目前沒有使用子 agent。請遵守當前對話的代理與權限規則；不需要為本機可回復工作額外要求確認。
+
+## 成品與來源
+
+| 路徑 | 用途 |
+| --- | --- |
+| `full_asset_pack/index.html` | 完整素材包離線入口，604 項目錄 |
+| `full_asset_pack/manifest.json` | 原始 SHA、來源路徑、atlas 座標、動畫序號與程式引用 |
+| `full_asset_pack/verification.json` | 原始檔及拆圖驗證 |
+| `full_asset_pack/originals/dist/` | 375 個原始資源，逐位元保留 |
+| `full_asset_pack/designs/` | 101 個獨立塗鴉 + 101 個遮罩 |
+| `full_asset_pack/frames/` | 88 張動畫圖集的 3,202 個非空白 PNG 圖格 |
+| `full_asset_pack/scenes/` | 9 張室內 + 18 張戶外日夜底圖合成 |
+| `guide/index.html` | 原攻略，新增「原始設計圖庫」段落與導覽 |
+| `guide/collection/index.html` | 攻略內圖庫，538 項視覺素材 + 全部圖格 |
+| `運河_完整設計素材包.zip` | 完整素材包，解壓後開 index.html |
+| `運河散策_完整圖文攻略.zip` | 含內建圖庫的完整攻略 |
+| `運河攻略_GitHub_R2部署包.zip` | 更新後本機部署包，尚未發布 |
+
+權威來源為保留的 `accelerated_portable_v2/resources/app.asar.original`，不是魔改版 ASAR。使用 `build_gordon_demo.read_asar()` 讀取；來源檔 SHA 已記錄於 manifest。沒有使用 AI 重畫素材。
+
+收錄原始圖像共 309 個：255 PNG、21 JPG、32 SVG、1 ICO。照片 11 張（`dist/photo`），結尾圖 20 張（`dist/screenshots`）。原始塗鴉的 `dist/gameData/painting.json` 有 101 個 frames，供 `painting.png` 與 `painting-mask.png` 共用。不要只複製 atlas 大圖而漏掉獨立設計。
+
+完整包另含 42 MP3（約 104 MiB）、3 字型、20 JSON 與 1 shader。網頁圖庫只帶視覺資源，避免把音訊與地圖資料整批加入攻略下載。
+
+## 已完成的網頁功能
+
+- 圖庫支援分類、多個空白分隔關鍵字（AND）、中英文關鍵字對照與快速分類。
+- 先載入 60 張卡片，按鈕每次增加 60；縮圖使用小尺寸無損 WebP、lazy loading。
+- 點圖後才載入完整原尺寸，保留透明背景，支援原尺寸／適合視窗切換。
+- 動畫以 range 逐格選取，120 ms 圖格預覽，左右方向鍵切換。
+- 收藏 checkbox 寫入 localStorage；可匯出／匯入 Markdown 清單。
+- 分類／搜尋寫入 URL query，素材以 `#asset=<encoded file path>` 深連結；可直接複製瀏覽器網址。
+- `/` 聚焦素材搜尋、原生 dialog 支援 Escape，手機雙欄無水平溢出。
+- 原攻略新增素材導覽與照片／結尾圖／塗鴉／場景 4 個入口；圖庫能返回攻略。
+- 完整素材圖庫可離線開啟，不需要 fetch API 讀取本機 JSON；使用 `catalog-data.js`。
+
+## 重建流程
+
+工作目錄 `/mnt/d/wsl_home/rsdr_game`。Python3 標準庫可用，**不要假設 Pillow 已安裝**。目前可用 Windows Node：
+
+```bash
+python3 asset_tools/extract_all.py
+'/mnt/c/Program Files/nodejs/node.exe' asset_tools/derive.cjs
+python3 asset_tools/publish.py
+'/mnt/c/Program Files/nodejs/node.exe' asset_tools/verify_pixels.cjs
+python3 asset_tools/integrate_guide.py
+python3 guide_tools/build_deploy_package.py
+python3 guide_tools/package_guides.py
+python3 asset_tools/package.py
+```
+
+依賴：`derive.cjs` / `verify_pixels.cjs` 使用 `deploy/github-r2/cloudflare/node_modules/sharp`（目前固定 Wrangler 相依套件中的 Sharp）。不需要額外安裝圖像 AI 工具。若依賴未在另一環境安裝，先依該部署資料夾的 package-lock 執行 npm ci。
+
+`extract_all.py` 會重新產生原始 manifest；`derive.cjs` 會重建所有拆圖與預覽；`publish.py` 會重新產生 catalog-data / README / 基礎 verification。**像素驗證應在 publish 後執行，再 integrate，否則後一次 publish 會覆蓋驗證附加欄位。** `integrate_guide.py` 與攻略 section/CSS 插入具重跑防重複判斷。若修改分類、來源檔案或移除資源，現行 copytree 不會清理舊輸出，應先依舊 manifest 精確清掉生成檔，避免把使用者檔案一起刪除。
+
+模板是 `asset_tools/catalog.html`。不要只改生成的 `full_asset_pack/index.html` 或 `guide/collection/index.html`，否則重建會覆蓋。主攻略 section/CSS 插入模板在 `integrate_guide.py`；已插入後若改設計，需同步改攻略及生成腳本。
+
+## 驗證方式
+
+- `publish.py`：375 原始檔與 ASAR 逐位元相同、309 張原始圖像沒有遺漏、所有圖格與預覽連結存在。
+- `verify_pixels.cjs`：202 個 atlas 拆圖與 3,202 個動畫 PNG，解碼像素逐一比對原圖對應矩形。
+- `asset_tools/test_catalog.cjs`：Edge CDP 瀏覽器檢查 604 項目錄、照片 11 張、原圖載入、Gordon 3 張圖集及第 2 格、HTML 字串搜尋安全、塗鴉 101 張、390px 手機無溢出。
+- `asset_tools/test_integration.cjs`：攻略入口、538 項嵌入圖庫、分類網址、深連結與返回攻略。
+- 原攻略回歸：`python3 guide_tools/verify.py`、Windows Node `guide_tools/test_site.cjs`。
+- ZIP：`asset_tools/package.py` 及 `guide_tools/package_guides.py` 會做 CRC 與所有檔案 SHA 比對。
+
+測試瀏覽器為獨立 Edge headless，CDP **9337**。`guide_tools/cdp.cjs` 的 `connect(9337)` 能直接使用；Windows Node 不一定繼承 WSL 前綴 env vars，請明確傳 port。**不要平行導航同一個 CDP 頁面**。若瀏覽器已關閉，需要另起自己的隔離測試 profile。遊戲擷取則是不同的 9336，目前沒有需要啟動。
+
+## 真實性與限制（務必保留）
+
+- 圖庫是原始設計擷取，不是新增實玩劇情截圖。
+- 「彩蛋」關鍵字包括塗鴉、幽靈船、壁虎、專輯、一平等探索線索。**不表示已證實每張圖都有獨立秘密事件**；程式引用 excerpt 可供後續研究。
+- 場景只合成可見美術圖層：室內略過碰撞、觸發區及不可見層；戶外將 under/front 同座標相疊。沒有加執行時 NPC、道具、塗鴉、後處理特效或章節條件。章節變體在 originals 中另存。
+- 地圖 renderer 支援當前檔案使用的翻轉；現有室內圖只有奶奶家 15 個水平翻轉。若日後延伸到任意 Tiled 地圖，須再驗證 diagonal + flip 的轉換與圖層透明度／group，不要假設通用。
+- 動畫按圖格索引順序，不是遊戲的動作狀態機。空白格留在完整原圖集中，不輸出冗餘 PNG。
+- Phaser 引擎有 4 處 inline 圖片引用（預設／debug texture 與動態 SVG 模板），記在 manifest；沒有視為遊戲設計輸出。
+- 只涵蓋原 ASAR 內本機可用資源；沒有推測伺服器或外部帳號才提供的未知素材。
+
+## 保護先前攻略工作
+
+原攻略仍為 294 組事件、740 個 frame references、734 個獨立截圖。No.275 學生 GorDoN 的 6 句原始台詞與教授版同文，引用 No.274 的教授畫面並明確標註；**不要偽造可實際觸發的學生版**，也不要改寫原始 speaker。程式在相同 `GorDoN` flag 下生 NPC 且選教授台詞。
+
+全部已發布截圖是 `guide/assets/images/*.avif`，1200×900。JPEG 原始母檔在 `capture_masters/images/`，不得放回部署包，勿當成多餘檔刪除。AVIF 全部 734 張共 112.6 MiB，較 JPEG 減少 41.8%，壓縮紀錄與 before/after 比較在 `guide/verification/`。ZIP 大小不等於網頁圖片下載量；PNG/JPEG 可能在 ZIP 內較容易壓縮。
+
+之前花很多時間修正的 NPC 位置、對齊、櫃檯入口與動畫截圖，這次沒有重新擷取或覆蓋。若修改擷取流程，先讀 `guide/verification` 與 `guide_tools` 內既有說明。
+
+## GitHub Pages + R2 邊界
+
+`guide_tools/build_deploy_package.py` 現在把 `guide/collection` 複製到 `deploy/github-r2/web/collection`。新增圖庫為 **GitHub Pages 靜態檔**；R2 Worker 仍只允許原本 734 張攻略截圖的檔名／SHA，不新增 R2 上傳或存取路由。使用者不必為素材圖庫啟用額外付費服務。
+
+`deploy/github-r2/tools/build_site.py` 有 github-only 與 R2 模式。`_site`、`_preview`、node_modules、母檔與本機憑證不進部署 ZIP。新增圖庫之後請重新量測部署總大小，不要沿用先前約 4 MB 靜態頁面的舊數字。
+
+未取得 GitHub repo / Cloudflare 認證，也未部署。R2 使用量計費，不能保證任意流量或共用帳號都永遠零費用；原先 `FREE-TIER.md` 的條件和 upload guard 不要移除。
+
+## 後續可做的具體工作
+
+1. 若使用者要求「彩蛋出現在哪裡」，依每張圖的 references、地圖物件與原遊戲 create 邏輯建立實際座標／章節關係，再連回攻略事件；不要只按檔名猜位置。
+2. 若要精確動畫名稱，分析 Phaser anims 定義，將同一圖集拆成 walk/up/down/idle 等原生播放序列。目前只有忠實逐格瀏覽。
+3. 若要完整遊戲外觀的城市拼圖，需加入場景 create 中動態裝飾、塗鴉位置與 chapter/night 分支；現有 scenes 已清楚標「底圖合成」，不能直接宣稱實玩全景。
+4. 若網頁要更輕，可將視覺原檔另外做無損 WebP 版本，但完整包中的原檔與來源 SHA 必須保留；再量測首屏與點圖下載，避免壓糊文字或像素邊緣。
+
+## 本輪完成檢查紀錄
+
+原檔位元比對、202 張 atlas 像素比對、3,202 格動畫像素比對、素材圖庫瀏覽器測試、攻略整合與深連結測試，以及原攻略 verify.py / test_site.cjs 回歸皆已通過。原攻略仍有 734 張畫面、733 種 SHA，沒有撤回事件或截圖失敗。verify.py 已改以 URL path 驗證本機連結，正確排除新增分類 query。

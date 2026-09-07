@@ -1,0 +1,39 @@
+name: Publish guide to GitHub Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Require a public repository for the free Pages plan
+        env:
+          VISIBILITY: ${{ github.event.repository.visibility }}
+        run: test "$VISIBILITY" = public
+      - uses: actions/configure-pages@v5
+      - name: Build with the private R2 image gateway
+        env:
+          R2_IMAGE_BASE: ${{ vars.R2_IMAGE_BASE }}
+        run: python3 tools/build_site.py --mode r2
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+          retention-days: 1
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

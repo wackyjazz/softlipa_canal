@@ -1,0 +1,9 @@
+{
+  "name": "canal-guide-images",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "r2_buckets": [{"binding": "IMAGES", "bucket_name": "canal-guide-images"}]
+}

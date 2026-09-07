@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-07T03:53:41.424597+00:00",
+  "workerTests": 6,
+  "uploadGuardTests": 5,
+  "wranglerDryRun": {
+    "version": "4.129.0",
+    "success": true,
+    "uploadKiB": 161.41,
+    "binding": "IMAGES: canal-guide-images"
+  },
+  "siteBuilds": [
+    "r2",
+    "github-only"
+  ],
+  "frameLinksVerified": 740,
+  "actualImages": 734,
+  "uniqueR2Objects": 733,
+  "R2Bytes": 117911920,
+  "networkUploads": 0,
+  "deployed": false,
+  "accountPlanVerified": false,
+  "reason": "No GitHub repository or authenticated Cloudflare account was supplied; account-wide zero billing cannot be certified.",
+  "generatedSiteBrowserCheck": {
+    "passed": true,
+    "keyword": "Gina",
+    "target": "e275/frame/5",
+    "image": "274-05.avif",
+    "width": 1200
+  },
+  "compression": {
+    "format": "AVIF 4:4:4",
+    "dimensions": "1200x900",
+    "images": 734,
+    "sourceMastersIntact": true,
+    "beforeBytes": 202795852,
+    "afterBytes": 118035355,
+    "savedPercent": 41.79597174403745
+  },
+  "artCollection": {
+    "catalogEntries": 538,
+    "animationFrames": 3202,
+    "bytes": 57434484,
+    "hosting": "GitHub Pages static files",
+    "r2ManifestUnchanged": true,
+    "deployed": false
+  }
+}
