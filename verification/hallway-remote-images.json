@@ -1,0 +1,14 @@
+[
+  {
+    "file": "038-01.avif",
+    "status": 200,
+    "sha256": "36e3b9fcafc0892f74164db9391d299179f23a17231cb75b98af885807da393b",
+    "bytes": 127112
+  },
+  {
+    "file": "039-01.avif",
+    "status": 200,
+    "sha256": "eac43f756003fe0d3f7e92a4ce6e79c3765c092de022f086e987bda17a161e4b",
+    "bytes": 106587
+  }
+]

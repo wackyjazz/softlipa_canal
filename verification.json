@@ -47,8 +47,8 @@
   "accountPlanVerificationMethod": "Explicit user confirmation: Workers Free; billing API unavailable",
   "pagesURL": "https://wackyjazz.github.io/softlipa_canal/",
   "workerURL": "https://canal-guide-images.wackyjazz1.workers.dev",
-  "pagesRun": "https://github.com/wackyjazz/softlipa_canal/actions/runs/34091230011",
-  "workerVersion": "dd55f4f0-c960-44b6-9fa9-3373afab012f",
+  "pagesRun": "https://github.com/wackyjazz/softlipa_canal/actions/runs/34094342552",
+  "workerVersion": "49d977af-71a0-48ce-9668-4ff0540502f5",
   "liveBrowser": {
     "date": "2026-09-07T06:34:22.897Z",
     "base": "https://wackyjazz.github.io/softlipa_canal/",
@@ -111,6 +111,8 @@
     "officialLink": "https://rsdr.online/",
     "localChecksPassed": true,
     "newR2ObjectsUploaded": 2,
-    "publicDeploymentPending": true
+    "publicDeploymentPending": false,
+    "liveChecksPassed": true,
+    "pagesRun": "https://github.com/wackyjazz/softlipa_canal/actions/runs/34094342552"
   }
 }
