@@ -142,3 +142,11 @@ python3 asset_tools/package.py
 ## 原遊戲 favicon
 
 全站5個HTML入口改用favicon.ico，原檔來自accelerated_portable_v2/resources/icon/canal-legend.ico，SHA256 4c7848a33217a7b75f7bd9869c1b63f4e5a355db05e24ad06564a904abbe4fdb，與素材包ICO一致，未重畫或轉檔。guide_tools/site_icons.py同步原ICO並設定各頁相對路徑及雜湊版號；build_deploy_package.py在複製前自動執行，避免重新生成圖庫或驗證頁時遺漏圖示。由Pages提供，無R2變更。
+
+## 最新編輯方針：攻略只呈現玩家能遇到的內容
+
+使用者明確要求移除「夜店學生GorDoN：原檔保留」等不存在流程與程式解釋。publish.py從public_events排除e275；公開293組、730段對話+4選項回覆=734個frame引用，734張檔案/733個R2物件不變。其餘事件編號不重排。原始294組events.json/dialogues.json/captures.json留作內部來源，不得又拿來源筆數當公開攻略收錄數。public related、支線推薦、搜尋、coverage、進度分母同步293。No274只保留輸入「嘶」完成變身、第10章夜店相遇的玩家條件。
+
+移除No274/275的查證入口、學生版說明、教授同文對照推薦。程式查證材料移到本機research/gordon-nightclub；公開舊查證HTML僅轉到#e274，移除公開audit/source JSON及兩張比較圖。舊#e275[/frame/N]轉到#e274[/frame/N]，既有其他筆記與編號維持。README與首頁關於段落改成玩家用法。
+
+tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/桌面、舊網址導回正確攻略。既有test_live.cjs/test_site.cjs的No275斷言已配合更新。未增加不存在的學生服截图。

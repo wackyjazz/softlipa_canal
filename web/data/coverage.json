@@ -5856,49 +5856,6 @@
       ]
     },
     {
-      "id": "e275",
-      "event": "GorDoN_student_nightclub_up",
-      "dialogueLines": 6,
-      "images": [
-        {
-          "status": "reference",
-          "file": "assets/images/274-01.avif",
-          "exists": true,
-          "sha256": "6f54418928e4f394c413dc8eeeb93a790c59c0dc9e77777642235ff9b5e0df14"
-        },
-        {
-          "status": "reference",
-          "file": "assets/images/274-02.avif",
-          "exists": true,
-          "sha256": "b707699cbb1a6bccc7654ccde60416a9e5f8fcdcfc3c2584e051a1cd550ae7ae"
-        },
-        {
-          "status": "reference",
-          "file": "assets/images/274-03.avif",
-          "exists": true,
-          "sha256": "b78185deadfc25aceb0769b1d327cc28c303c9dab2cd854ef5d38aa1622a8a31"
-        },
-        {
-          "status": "reference",
-          "file": "assets/images/274-04.avif",
-          "exists": true,
-          "sha256": "c56d26ab8326941ca96cb4516ed76e16fdf59448ae41099c68f2afaa66f5a628"
-        },
-        {
-          "status": "reference",
-          "file": "assets/images/274-05.avif",
-          "exists": true,
-          "sha256": "9cf64587b156b16394d688f1a7c5dad262d5a662d93efd298284d506a0f45087"
-        },
-        {
-          "status": "reference",
-          "file": "assets/images/274-06.avif",
-          "exists": true,
-          "sha256": "48f4034a3ab8b5b45e3b7c5a3890afe9a79b58463037e2b188686340fc5ef1fa"
-        }
-      ]
-    },
-    {
       "id": "e276",
       "event": "store_owner_nightclub",
       "dialogueLines": 2,

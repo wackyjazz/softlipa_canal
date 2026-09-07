@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-07T08:17:34.051Z",
+  "base": "file:///D:/wsl_home/rsdr_game/guide/",
+  "checks": [
+    {
+      "width": 390,
+      "events": 293,
+      "ginaOnlyProfessor": true,
+      "frame5Loads": true,
+      "noStudentOrAuditExplanation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1920,
+      "events": 293,
+      "ginaOnlyProfessor": true,
+      "frame5Loads": true,
+      "noStudentOrAuditExplanation": true,
+      "noOverflow": true
+    },
+    "Old No275 link redirects to actual professor encounter, preserving frame",
+    "Old investigation page redirects to player guide"
+  ],
+  "passed": true
+}
