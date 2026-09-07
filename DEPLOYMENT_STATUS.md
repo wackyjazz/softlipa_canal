@@ -3,12 +3,13 @@
 **網站已發布並完成線上驗證。**
 
 - 攻略：https://wackyjazz.github.io/softlipa_canal/
+- 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34094342552
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34095691131
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：7b9de67cc0e5b400f520ab3db9bb0943c3374efc；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：d9fa5e4ec6d3631ee1175b7001d1dea1c90f67bb；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -37,7 +38,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T06:34:59.148429+00:00
+最後驗證時間：2026-09-07T07:30:26.383Z
 
 ## 038／039 與首頁更新
 
@@ -46,3 +47,15 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 首頁標題以 CSS display:block 固定「運河」第一行、「散策」橘色第二行；新增蛋堡杜振熙2026《運河》附贈遊戲介紹、非官方攻略說明及 https://rsdr.online/ 官網支持按鈕。CSS和guide-data.js連結加上版本參數以更新快取。
 
 線上1440/390/320px與038、039修正畫面均驗證通過。報告：verification/hallway-home-live-checks.json、verification/hallway-remote-images.json。工作區 test_hallway_home.cjs 可重新驗證。compress_images.cjs 現在支援指定 038-01 039-01 等圖格，只重壓選定檔案並保留其餘紀錄。
+
+## 歌詞頁與首頁圖片自適應
+
+新增 lyrics/index.html，收錄既有遊戲抽取資料的6首457段歌詞，提供12曲目錄（其餘6曲明確標示沒有內嵌歌詞）、搜尋、字級、時間標記、段落深連結。文字與時間逐段比對原始lyrics/lyrics.json相同，沒有新增音樂檔。
+
+首頁圖片改為等比例img，桌面左右排列、900px以下上下排列；不裁切、不遮住人物或對話框，維持運河／橘色散策兩行。新歌詞頁全部檔案合計50,221 bytes，由Pages提供；圖片沿用原R2物件，Worker與bucket設定未改。
+
+本次Pages成功部署34095691131，內容commitd9fa5e4。完整來源、生成方式與驗收指令見HANDOFF_ASSETS_AND_WEB.md最後一節。
+
+官網支持按鈕依最新要求放在介紹下方置中，改亮橘色#ff963f、桌面最大560px寬、最小68px高，文字18px（手機16px），支援換行。
+
+線上已驗證320/390/768/1024/1440/1920px完整圖片等比例顯示與置中橘色大按鈕；歌詞12曲原文、搜尋及段落重整、字級與時間標記均通過。報告：verification/lyrics-scale-live-checks.json。

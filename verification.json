@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07T06:34:59.148429+00:00",
+  "date": "2026-09-07T07:30:26.383Z",
   "workerTests": 6,
   "uploadGuardTests": 10,
   "wranglerDryRun": {
@@ -114,5 +114,27 @@
     "publicDeploymentPending": false,
     "liveChecksPassed": true,
     "pagesRun": "https://github.com/wackyjazz/softlipa_canal/actions/runs/34094342552"
+  },
+  "lyricsAndResponsiveHome": {
+    "passed": true,
+    "lyricsTracks": 6,
+    "catalogTracks": 12,
+    "lines": 457,
+    "sourceTextAndTimingPreserved": true,
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "entireHeroImageVisible": true,
+    "largeCenteredOrangeSupportButton": true,
+    "report": "verification/lyrics-scale-live-checks.json",
+    "pagesRun": "34095691131",
+    "contentCommit": "d9fa5e4ec6d3631ee1175b7001d1dea1c90f67bb",
+    "r2Changes": false,
+    "audioAdded": false
   }
 }

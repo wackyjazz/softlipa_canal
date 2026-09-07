@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07T07:26:59.909Z",
+  "date": "2026-09-07T07:30:26.383Z",
   "base": "https://wackyjazz.github.io/softlipa_canal/",
   "checks": [
     {
@@ -7,42 +7,48 @@
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     {
       "width": 390,
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     {
       "width": 768,
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     {
       "width": 1024,
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     {
       "width": 1440,
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     {
       "width": 1920,
       "entireImageVisible": true,
       "proportional": true,
       "noOverlap": true,
-      "noOverflow": true
+      "noOverflow": true,
+      "largeCenteredOrangeSupportButton": true
     },
     "All 12 tracks / 457 entries match the original local text and timing exactly",
     "Every track renders exact source lines; six missing tracks show explicit empty state",
