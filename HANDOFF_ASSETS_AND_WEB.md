@@ -150,3 +150,5 @@ python3 asset_tools/package.py
 移除No274/275的查證入口、學生版說明、教授同文對照推薦。程式查證材料移到本機research/gordon-nightclub；公開舊查證HTML僅轉到#e274，移除公開audit/source JSON及兩張比較圖。舊#e275[/frame/N]轉到#e274[/frame/N]，既有其他筆記與編號維持。README與首頁關於段落改成玩家用法。
 
 tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/桌面、舊網址導回正確攻略。既有test_live.cjs/test_site.cjs的No275斷言已配合更新。未增加不存在的學生服截图。
+
+使用者最新順序：支線手帖為GorDoN、三種籤、夜店、一平；時空旅人一平固定最後SIDE NOTE / 04。publish.py輸出順序已更新，不能只改生成後資料。
