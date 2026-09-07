@@ -124,3 +124,5 @@ python3 asset_tools/package.py
 - 歌詞頁支援曲名/歌詞AND搜尋、命中高亮、`#track-09/line-1`段落深連結、上下曲、18/22/28px字級、時間標記及複製連結。設定保存於 canal-lyrics-* localStorage；讀取失敗不影響閱讀。
 - `guide_tools/build_deploy_package.py` 已加入 lyrics 目錄複製。僅更新文字/CSS/JS時只需同步到web、commit/push、手動Pages部署，不需R2上傳或Worker部署。
 - 驗收工具：`guide_tools/test_lyrics_scale.cjs [baseURL]`，檢查320/390/768/1024/1440/1920px首頁圖片比例、完整可見、無遮擋、無橫向溢出；12曲原文逐段一致、搜尋深連結、重新整理與閱讀設定。`test_hallway_home.cjs` 保留兩行標題與038/039回歸檢查。
+
+- 最新官網支持CTA：專輯介紹下方置中，亮橘色#ff963f、桌面最大560px、最小高度68px、桌面18px/手機16px字體。保持手機自動換行，不要再縮回小型右側按鈕。
