@@ -8,10 +8,10 @@
 - 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34100142025
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34101037780
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：a37841b8b62c3488fad2396ee8e27f1f42e70abe；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：82588f26340bf79a025feef171177ecf2bd5f986；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -40,7 +40,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T08:22:03.397Z
+最後驗證時間：2026-09-07T08:32:35.126Z
 
 ## 038／039 與首頁更新
 
@@ -87,3 +87,9 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 時空旅人一平移至支線手帖最後SIDE NOTE / 04，前面依序是GorDoN、三種籤、夜店。內容commit a37841b，Pages run34100142025。
 
 線上390/1920px驗收通過：一平為最後SIDE NOTE / 04、公開293組、Gina只命中楊教授、舊連結導向正確、無學生版與查證入口。verification/player-guide-live-checks.json。
+
+## 對話查圖快捷詞
+
+一平快捷按鈕改成MJ與媽媽；目前順序Gina、MJ、媽媽、非工作人員，輸入框範例同步。僅改推薦查詢，不刪除一平事件或搜尋能力。內容commit82588f2，Pages run34101037780。
+
+線上已驗證4個快捷按鈕順序與MJ/媽媽皆有搜尋結果：verification/dialogue-shortcuts-live-checks.json。

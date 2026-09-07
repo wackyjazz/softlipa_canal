@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-07T08:32:35.126Z",
+  "checks": [
+    {
+      "query": "MJ",
+      "count": 12
+    },
+    {
+      "query": "媽媽",
+      "count": 12
+    }
+  ],
+  "passed": true
+}
