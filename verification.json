@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07T07:30:26.383Z",
+  "date": "2026-09-07T07:35:43.978Z",
   "workerTests": 6,
   "uploadGuardTests": 10,
   "wranglerDryRun": {
@@ -136,5 +136,20 @@
     "contentCommit": "d9fa5e4ec6d3631ee1175b7001d1dea1c90f67bb",
     "r2Changes": false,
     "audioAdded": false
+  },
+  "desktopRouteTypography": {
+    "passed": true,
+    "report": "verification/route-type-live-checks.json",
+    "pagesRun": "34096161132",
+    "contentCommit": "eab586e2d9ae9331e5abdc72d51ed986f7570122",
+    "bodyPx": [
+      18,
+      22
+    ],
+    "chapterLabelPx": [
+      16,
+      18
+    ],
+    "originalTwoColumnDesignPreserved": true
   }
 }

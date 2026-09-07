@@ -6,10 +6,10 @@
 - 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34095691131
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34096161132
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：d9fa5e4ec6d3631ee1175b7001d1dea1c90f67bb；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：eab586e2d9ae9331e5abdc72d51ed986f7570122；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -38,7 +38,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T07:30:26.383Z
+最後驗證時間：2026-09-07T07:35:43.978Z
 
 ## 038／039 與首頁更新
 
@@ -54,8 +54,14 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 首頁圖片改為等比例img，桌面左右排列、900px以下上下排列；不裁切、不遮住人物或對話框，維持運河／橘色散策兩行。新歌詞頁全部檔案合計50,221 bytes，由Pages提供；圖片沿用原R2物件，Worker與bucket設定未改。
 
-本次Pages成功部署34095691131，內容commitd9fa5e4。完整來源、生成方式與驗收指令見HANDOFF_ASSETS_AND_WEB.md最後一節。
+歌詞與按鈕版本Pages成功部署34095691131，內容commitd9fa5e4。完整來源、生成方式與驗收指令見HANDOFF_ASSETS_AND_WEB.md最後一節。
 
 官網支持按鈕依最新要求放在介紹下方置中，改亮橘色#ff963f、桌面最大560px寬、最小68px高，文字18px（手機16px），支援換行。
 
 線上已驗證320/390/768/1024/1440/1920px完整圖片等比例顯示與置中橘色大按鈕；歌詞12曲原文、搜尋及段落重整、字級與時間標記均通過。報告：verification/lyrics-scale-live-checks.json。
+
+## 主線路書字級更新
+
+桌面主線路書內文從13px提升為18–22px，章節選單/事件連結從10px提升為16–18px，說明14–16px。保留原雙欄版型，左欄配合字級加寬，901px以上生效。內容commit eab586e，Pages run 34096161132。本次只更新HTML/CSS，沒有變更R2。
+
+線上390/901/1440/1920/2560/3840px的全部12章切換與無溢出驗收通過：verification/route-type-live-checks.json。

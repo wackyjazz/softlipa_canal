@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-07T07:35:43.978Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "passed": true,
+  "checks": [
+    {
+      "width": 390,
+      "tab": 10,
+      "body": 13,
+      "note": 10,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    },
+    {
+      "width": 901,
+      "tab": 16,
+      "body": 18,
+      "note": 14,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    },
+    {
+      "width": 1440,
+      "tab": 16,
+      "body": 18,
+      "note": 14,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    },
+    {
+      "width": 1920,
+      "tab": 17.28,
+      "body": 20.16,
+      "note": 15.36,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    },
+    {
+      "width": 2560,
+      "tab": 18,
+      "body": 22,
+      "note": 16,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    },
+    {
+      "width": 3840,
+      "tab": 18,
+      "body": 22,
+      "note": 16,
+      "fits": true,
+      "noOverflow": true,
+      "tabs": 12
+    }
+  ]
+}
