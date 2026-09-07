@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-07T07:57:57.082888+00:00",
+  "pages": [
+    {
+      "page": "index.html",
+      "icon": "https://wackyjazz.github.io/softlipa_canal/favicon.ico?v=4c7848a33217"
+    },
+    {
+      "page": "collection/index.html",
+      "icon": "https://wackyjazz.github.io/softlipa_canal/favicon.ico?v=4c7848a33217"
+    },
+    {
+      "page": "lyrics/index.html",
+      "icon": "https://wackyjazz.github.io/softlipa_canal/favicon.ico?v=4c7848a33217"
+    },
+    {
+      "page": "verification/compression-comparison.html",
+      "icon": "https://wackyjazz.github.io/softlipa_canal/favicon.ico?v=4c7848a33217"
+    },
+    {
+      "page": "verification/gordon-nightclub/index.html",
+      "icon": "https://wackyjazz.github.io/softlipa_canal/favicon.ico?v=4c7848a33217"
+    }
+  ],
+  "sha256": "4c7848a33217a7b75f7bd9869c1b63f4e5a355db05e24ad06564a904abbe4fdb",
+  "contentType": "image/vnd.microsoft.icon",
+  "bytes": 104744,
+  "passed": true
+}

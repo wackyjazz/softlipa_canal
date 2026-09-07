@@ -6,10 +6,10 @@
 - 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34097704590
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34098025647
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：f4253797d78025d24e5f6aaba1d804d1aae204a1；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：47f95821342d565cb3faafde03b7ceeeadf2266c；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -38,7 +38,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T07:54:15.585Z
+最後驗證時間：2026-09-07T07:57:57.082888+00:00
 
 ## 038／039 與首頁更新
 
@@ -73,3 +73,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 本次Pages run 34097704590，內容commit f425379。734張原事件截圖及740個引用皆未變；新增2張查證圖由Pages提供，不修改R2/Worker設定。
 
 線上390/1440px的No275標示、查證入口、兩張1200px圖片與六句原文均驗收通過，報告verification/gordon-audit-web-live-checks.json。
+
+## 原遊戲 favicon
+
+全站5頁使用原始canal-legend.ico作為favicon，原樣保留104,744bytes。線上檔案SHA256與原檔相同，Content-Type為image/vnd.microsoft.icon，各頁相對連結均正確。報告verification/favicon-live-checks.json。內容commit47f9582，Pages run34098025647。後續重新生成頁面可執行guide_tools/site_icons.py；部署包生成時亦會自動同步。
