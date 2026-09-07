@@ -6,10 +6,10 @@
 - 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34096161132
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34097704590
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：eab586e2d9ae9331e5abdc72d51ed986f7570122；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：f4253797d78025d24e5f6aaba1d804d1aae204a1；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -38,7 +38,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T07:35:43.978Z
+最後驗證時間：2026-09-07T07:54:15.585Z
 
 ## 038／039 與首頁更新
 
@@ -65,3 +65,11 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 桌面主線路書內文從13px提升為18–22px，章節選單/事件連結從10px提升為16–18px，說明14–16px。保留原雙欄版型，左欄配合字級加寬，901px以上生效。內容commit eab586e，Pages run 34096161132。本次只更新HTML/CSS，沒有變更R2。
 
 線上390/901/1440/1920/2560/3840px的全部12章切換與無溢出驗收通過：verification/route-type-live-checks.json。
+
+## GorDoN 夜店實測說明
+
+新增 https://wackyjazz.github.io/softlipa_canal/verification/gordon-nightclub/index.html 。原始碼及10組隔離原版引擎狀態確認：未完成「嘶」變身，夜店不生成GorDoN；學生版僅在原文資料中，正常流程不可達。附未變身空位／已變身楊教授的兩張無損WebP對照，No274/275新增查證入口，No275明確標記原檔保留、不會正常出現。
+
+本次Pages run 34097704590，內容commit f425379。734張原事件截圖及740個引用皆未變；新增2張查證圖由Pages提供，不修改R2/Worker設定。
+
+線上390/1440px的No275標示、查證入口、兩張1200px圖片與六句原文均驗收通過，報告verification/gordon-audit-web-live-checks.json。

@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-07T07:54:15.585Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "checks": [
+    {
+      "width": 390,
+      "event275Label": true,
+      "professorReferenceLabel": true,
+      "auditLink": true,
+      "twoImagesLoaded": true,
+      "archivedDialogueLines": 6,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "event275Label": true,
+      "professorReferenceLabel": true,
+      "auditLink": true,
+      "twoImagesLoaded": true,
+      "archivedDialogueLines": 6,
+      "noOverflow": true
+    }
+  ],
+  "passed": true
+}

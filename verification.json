@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07T07:35:43.978Z",
+  "date": "2026-09-07T07:54:15.585Z",
   "workerTests": 6,
   "uploadGuardTests": 10,
   "wranglerDryRun": {
@@ -151,5 +151,15 @@
       18
     ],
     "originalTwoColumnDesignPreserved": true
+  },
+  "gordonNightclubPresenceAudit": {
+    "passed": true,
+    "nativeStateCases": 10,
+    "studentBranchNormallyReachable": false,
+    "newEvidenceImages": 2,
+    "originalFrameReferencesUnchanged": 740,
+    "pagesRun": "34097704590",
+    "contentCommit": "f4253797d78025d24e5f6aaba1d804d1aae204a1",
+    "report": "verification/gordon-audit-web-live-checks.json"
   }
 }
