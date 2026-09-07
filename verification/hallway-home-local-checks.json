@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-07T07:09:18.694Z",
+  "base": "file:///D:/wsl_home/rsdr_game/guide/index.html",
+  "results": [
+    {
+      "width": 1440,
+      "titleTwoLines": true,
+      "orangeSecondLine": true,
+      "noOverflow": true,
+      "albumSupport": true
+    },
+    {
+      "width": 390,
+      "titleTwoLines": true,
+      "orangeSecondLine": true,
+      "noOverflow": true,
+      "albumSupport": true
+    },
+    {
+      "width": 320,
+      "titleTwoLines": true,
+      "orangeSecondLine": true,
+      "noOverflow": true,
+      "albumSupport": true
+    },
+    {
+      "event": "e038",
+      "facesUpperWall": true,
+      "aligned": true,
+      "currentImageLoads": true
+    },
+    {
+      "event": "e039",
+      "facesUpperWall": true,
+      "aligned": true,
+      "currentImageLoads": true
+    }
+  ],
+  "passed": true
+}

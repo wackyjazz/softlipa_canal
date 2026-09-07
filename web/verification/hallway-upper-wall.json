@@ -1,0 +1,56 @@
+{
+  "changedFrames": [
+    "038-01",
+    "039-01"
+  ],
+  "unchangedOtherFrames": 738,
+  "checks": {
+    "038-01": {
+      "label": "上方牆壁的班級標示",
+      "target": {
+        "x": 680,
+        "y": 90
+      },
+      "original": {
+        "x": 680,
+        "y": 140
+      },
+      "direction": "walk_up",
+      "source": "reviewed original map artwork",
+      "player": {
+        "x": 680,
+        "y": 144,
+        "direction": "walk_up"
+      },
+      "head": {
+        "x": 680,
+        "y": 120.13999999999999
+      },
+      "aligned": true
+    },
+    "039-01": {
+      "label": "上方牆壁",
+      "target": {
+        "x": 1120,
+        "y": 90
+      },
+      "original": {
+        "x": 1120,
+        "y": 140
+      },
+      "direction": "walk_up",
+      "source": "reviewed original map artwork",
+      "player": {
+        "x": 1120,
+        "y": 144,
+        "direction": "walk_up"
+      },
+      "head": {
+        "x": 1120,
+        "y": 120.13999999999999
+      },
+      "aligned": true
+    }
+  },
+  "reason": "Original hallway triggers specify walk_up; corrected mistaken side-door gaze targets to upper wall."
+}

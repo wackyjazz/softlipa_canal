@@ -15,7 +15,7 @@
   "frameLinksVerified": 740,
   "actualImages": 734,
   "uniqueR2Objects": 733,
-  "R2Bytes": 117911920,
+  "R2Bytes": 117912963,
   "networkUploads": 733,
   "deployed": true,
   "accountPlanVerified": true,
@@ -32,9 +32,9 @@
     "dimensions": "1200x900",
     "images": 734,
     "sourceMastersIntact": true,
-    "beforeBytes": 202795852,
-    "afterBytes": 118035355,
-    "savedPercent": 41.79597174403745
+    "beforeBytes": 202793628,
+    "afterBytes": 118036398,
+    "savedPercent": 41.794819115322504
   },
   "artCollection": {
     "catalogEntries": 538,
@@ -96,5 +96,21 @@
       }
     ],
     "passed": true
+  },
+  "latestChanges": {
+    "events": [
+      "e038",
+      "e039"
+    ],
+    "direction": "walk_up",
+    "homeTitle": [
+      "運河",
+      "散策"
+    ],
+    "albumSupport": "蛋堡 杜振熙 2026《運河》",
+    "officialLink": "https://rsdr.online/",
+    "localChecksPassed": true,
+    "newR2ObjectsUploaded": 2,
+    "publicDeploymentPending": true
   }
 }

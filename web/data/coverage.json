@@ -905,7 +905,7 @@
           "status": "available",
           "file": "assets/images/038-01.avif",
           "exists": true,
-          "sha256": "8fe34ed81bd00974ceda82a974fe26b537f985a4c72bb49d497ed772fe4241a1"
+          "sha256": "36e3b9fcafc0892f74164db9391d299179f23a17231cb75b98af885807da393b"
         }
       ]
     },
@@ -918,7 +918,7 @@
           "status": "available",
           "file": "assets/images/039-01.avif",
           "exists": true,
-          "sha256": "937bc39837998a6d0bdca9e59f8096c851ede53ca7ec992cb482021ba5ca6168"
+          "sha256": "eac43f756003fe0d3f7e92a4ce6e79c3765c092de022f086e987bda17a161e4b"
         }
       ]
     },
