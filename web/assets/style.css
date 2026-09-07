@@ -54,3 +54,5 @@ main{margin-left:var(--rail)}.topbar{height:70px;padding:0 5%;display:flex;align
   #routes .section-heading h2{font-size:clamp(30px,1.8vw,38px)}
   #routes .section-heading h2 span{font-size:var(--route-label)}
 }
+
+.gordon-audit-entry{margin:0;padding:0 32px 24px}.gordon-audit-entry .button{white-space:normal;text-align:center;font-size:15px;line-height:1.8}@media(max-width:600px){.gordon-audit-entry{padding:0 18px 20px}}

@@ -130,3 +130,11 @@ python3 asset_tools/package.py
 ## 主線路書大螢幕字級
 
 依使用者要求保留原本雙欄章節版型，只放大901px以上的主線路書文字。選單與事件連結16–18px、內文18–22px、說明14–16px；clamp隨視窗增加。左欄280–360px以容納加大文字，手機沿用原版型。CSS限定#routes避免影響其他區塊。驗證390/901/1440/1920/2560/3840px全部12章切換、無裁切或橫向溢出，報告在verification/route-type-*-checks.json。
+
+## GorDoN 夜店生成重新查證
+
+2026-09-07 再查原始ASAR（SHA256 44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef），全bundle只找到4處new oe：結尾、夜店生成、夜店聽歌補齊、戶外。夜店兩處都要求GorDoN旗標；旗標唯一add位於triggerGorDoNHenshin完成後，setFinalAnswer精確比對「嘶」進入此流程。triggerGorDoNTalk無NPC先return，有旗標選教授，故學生代號在此版本正常流程不可達。一般夜店兩種旗標皆不生成他；談話/聽歌只有已變身才生成教授。夜店student_1/2/3是其他NPC。
+
+隔離原版引擎9336驗證10組：第10章normal/talking/listening ×有無旗標；11/12章normal ×有無旗標。聽歌是直接呼叫原始交談函式的診斷，不表示聽歌中可正常按鍵交談。沒有插入NPC。音效與過場等待有停用，非全流程通關。guide_tools/audit_gordon_presence.cjs可重跑（須先啟動隔離capture app）；結果guide/verification/gordon-presence-audit.json。已停止本次啟動的精確tmp/guide_capture執行檔，未操作其他遊戲。
+
+公開查證頁guide/verification/gordon-nightclub/index.html，兩張1200x900無損WebP：未變身空位／變身教授原文第一句。新增543,372bytes證據圖片由Pages提供，不列入734張對話截圖或R2清單。No274/275詳情有查證入口，No275標題及提示改成已查證正常流程不出現；原本六張教授同文對照仍明確標記，未造學生圖。原始碼片段與10組驗證JSON放在查證頁同目錄；build_deploy_package.py已加入其複製。

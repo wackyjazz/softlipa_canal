@@ -1,0 +1,244 @@
+{
+  "date": "2026-09-07T07:48:17.821Z",
+  "source": "accelerated_portable_v2/resources/app.asar.original",
+  "sourceSha256": "44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef",
+  "method": "Isolated original scene construction and original triggerGorDoNTalk; audio/cutscene waits suppressed, no inserted NPC, no modified spawn flags beyond test inputs. State matrix reconstruction, not a full new-game playthrough.",
+  "checks": [
+    {
+      "id": "ch10-normal-untransformed",
+      "chapter": 10,
+      "transformed": false,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement"
+      ],
+      "otherStudents": [],
+      "errors": []
+    },
+    {
+      "id": "ch10-normal-transformed",
+      "chapter": 10,
+      "transformed": true,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "GorDoN"
+      ],
+      "otherStudents": [],
+      "errors": []
+    },
+    {
+      "id": "ch10-talking-untransformed",
+      "chapter": 10,
+      "transformed": false,
+      "state": "talking",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "old_man_skateboarding"
+      ],
+      "otherStudents": [
+        "student_1",
+        "student_2",
+        "student_3"
+      ],
+      "errors": [],
+      "screenshot": "ch10-talking-untransformed.webp"
+    },
+    {
+      "id": "ch10-talking-transformed",
+      "chapter": 10,
+      "transformed": true,
+      "state": "talking",
+      "npcPresent": true,
+      "studentAlpha": 0,
+      "professorAlpha": 1,
+      "position": {
+        "x": 460,
+        "y": 420
+      },
+      "dialogs": [
+        "GorDoN_nightclub_up"
+      ],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "old_man_skateboarding",
+        "GorDoN"
+      ],
+      "otherStudents": [
+        "student_1",
+        "student_2",
+        "student_3"
+      ],
+      "errors": [],
+      "screenshot": "ch10-talking-transformed.webp"
+    },
+    {
+      "id": "ch10-listening-untransformed",
+      "chapter": 10,
+      "transformed": false,
+      "state": "listening",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "old_man_skateboarding"
+      ],
+      "otherStudents": [
+        "student_1",
+        "student_2",
+        "student_3"
+      ],
+      "errors": []
+    },
+    {
+      "id": "ch10-listening-transformed",
+      "chapter": 10,
+      "transformed": true,
+      "state": "listening",
+      "npcPresent": true,
+      "studentAlpha": 0,
+      "professorAlpha": 1,
+      "position": {
+        "x": 360,
+        "y": 120
+      },
+      "dialogs": [
+        "GorDoN_nightclub_up"
+      ],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "old_man_skateboarding",
+        "GorDoN"
+      ],
+      "otherStudents": [
+        "student_1",
+        "student_2",
+        "student_3"
+      ],
+      "errors": []
+    },
+    {
+      "id": "ch11-normal-untransformed",
+      "chapter": 11,
+      "transformed": false,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement"
+      ],
+      "otherStudents": [],
+      "errors": []
+    },
+    {
+      "id": "ch11-normal-transformed",
+      "chapter": 11,
+      "transformed": true,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "GorDoN"
+      ],
+      "otherStudents": [],
+      "errors": []
+    },
+    {
+      "id": "ch12-normal-untransformed",
+      "chapter": 12,
+      "transformed": false,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement"
+      ],
+      "otherStudents": [],
+      "errors": []
+    },
+    {
+      "id": "ch12-normal-transformed",
+      "chapter": 12,
+      "transformed": true,
+      "state": "normal",
+      "npcPresent": false,
+      "studentAlpha": null,
+      "professorAlpha": null,
+      "position": null,
+      "dialogs": [],
+      "flags": [
+        "first_time",
+        "tutorial_movement",
+        "GorDoN"
+      ],
+      "otherStudents": [],
+      "errors": []
+    }
+  ],
+  "dialogueTextIdentical": true,
+  "studentDialogue": [
+    {
+      "lines": "嘶嘶！",
+      "speaker": "yang_student"
+    },
+    {
+      "lines": "嘶！",
+      "speaker": "SL"
+    },
+    {
+      "lines": "啊你自己來喔？",
+      "speaker": "yang_student"
+    },
+    {
+      "lines": "對啊...不然？",
+      "speaker": "SL"
+    },
+    {
+      "lines": "哈...我有問Gina要不要來！",
+      "speaker": "yang_student"
+    },
+    {
+      "lines": "那......這個晚上只好各自social...",
+      "speaker": "SL"
+    }
+  ],
+  "conclusion": "Without the GorDoN transformation flag he is absent from normal, talking and listening nightclub layouts. The student dialogue definition is unreachable through native NPC creation in this supplied build.",
+  "passed": true
+}

@@ -1,0 +1,36 @@
+{
+  "bundle": "dist/assets/index-BbZAngKC.js",
+  "offsetUnit": "Unicode code points in UTF-8 decoded original bundle",
+  "excerpts": [
+    {
+      "topic": "character appearance",
+      "offset": 96483,
+      "text": ",\"GorDoN_mask\");n(this,\"endingLoopEnabled\",!1);n(this,\"endingRunId\",0);const s=this.scene.registry.get(\"triggeredEvents\")||new Set;this.GorDoN_student=this.scene.add.sprite(0,0,\"GorDoN-student\").setAlpha(s.has(\"GorDoN\")?0:1),this.GorDoN_student_mask=this.scene.add.sprite(0,0,\"GorDoN-student\").setAlpha(0).setTintFill(16777215),this.GorDoN=this.scene.add.sprite(0,0,\"GorDoN\").setAlpha(s.has(\"GorDoN\")?1:0),this.GorDoN_mask=this.scene.add.sprite(0,0,\"GorDoN\").setAlpha(0).setTintFill(16777215),this.createAnimations(),this.add([this.GorDo"
+    },
+    {
+      "topic": "listening NPC spawn",
+      "offset": 277295,
+      "text": "g_man=new fe(this,480,220),this.drowning_man.enter({x:480,y:220})),!this.GorDoN&&t.has(\"GorDoN\")&&(this.GorDoN=new oe(this,360,120)),this.nun||(this.nun=new Bt("
+    },
+    {
+      "topic": "initial NPC spawn",
+      "offset": 281185,
+      "text": "480,220),this.drowning_man.enter({x:480,y:220}),t.has(\"GorDoN\")&&(this.GorDoN=new oe(this,360,120)),this.nun=new Bt(this,46"
+    },
+    {
+      "topic": "talk guard and branch",
+      "offset": 293344,
+      "text": "async triggerGorDoNTalk(t){var i,s;if(!this.GorDoN){this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1);return}const e=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),this.audio.toggleFilter(!0),t===\"left\"&&((i=this.GorDoN)==null||i.turnAround(\"left\")),await this.ui.showDialog(`GorDoN${e.has(\"GorDoN\")?\"\":\"_student\"}_nightclub_up`,\"dialog\"),t===\"left\"&&((s=this.GorDoN)==null||s.turnAround(\"down\")),this.audio.toggleFilter(!1),this.unlockControlsIfOwnerFlowInactive(),this.triggerRecordTalked(\"GorDoN\")}async triggerRandomTalked(t){var e,i;this."
+    },
+    {
+      "topic": "transformation flag",
+      "offset": 493295,
+      "text": "urnAround(t)}async triggerGorDoNHenshin(){const t=this.registry.get(\"triggeredEvents\")||new Set;t.has(\"GorDoN\")||!this.GorDoN||(this.audio.playSE(\"sound-effect-henshin\",void 0,void 0,!1,1.5),await this.GorDoN.henShin(),await m(this,500),await this.ui.showDialog(\"GorDoN-after-henshin\",\"dialog\"),this.audio.toggleFilter(!1),await this.GorDoN.leave(),this.player.playAnimation(\"walk_down\"),this.registry.set(\"triggeredEvents\",t.add(\"GorDoN\").add(\"GorDoN_left\").add(\"GorDoN_right\")),this.registry.set(\"menuStopControl\",!1),this.registry.set(\"playerStopControl\",!1))}asyn"
+    },
+    {
+      "topic": "answer match",
+      "offset": 517224,
+      "text": "rol\",!1)}}async setFinalAnswer(t){t===\"嘶\"?(this.ui.afterInputText(),await this.ui.showDialog(\"GorDoN-after-check\",\"dialog\"),this.triggerGorDoNHenshin()):(this.ui.afterInputText(),await this.ui.showDialog(\"GorDoN-after\",\"dialog\"),this.audio.toggleFilter(!1),this.triggerGorDoNTurnAround(\"down\"),this.registry.set(\"menuStopControl\",!1),this.registry.set(\"playerStopControl\",!1))}update(t,e){if(!this.loaded)return;this.rt&&this."
+    }
+  ]
+}
