@@ -176,7 +176,7 @@
   for(const kind of new Set(events.map(event=>event.kind)))$('#kind-filter').insertAdjacentHTML('beforeend',`<option>${esc(kind)}</option>`);
   for(const [key,value] of Object.entries(data.stats)){const node=$('#stat-'+({mapped:'points'}[key]||key));if(node)node.textContent=value;}
   const hero=events.find(event=>event.name==='old_man_bridge') || events.find(event=>event.name==='first_time');
-  $('#hero-image').style.backgroundImage=`url("${hero.frames[0].image}")`;
+  $('#hero-art').src=hero.frames[0].image;
   $('#branch-grid').innerHTML=data.branches.map((branch,i)=>`<article class="branch-card"><span class="branch-no">SIDE NOTE / 0${i+1}</span><h3>${esc(branch.title)}</h3><p>${esc(branch.description)}</p><div class="event-links">${links(branch.events)}</div></article>`).join('');
   updateProgress();renderChapter(0);renderCards();
   function readHash(){const match=/^#(e[0-9]+)(?:\/frame\/([0-9]+))?$/.exec(location.hash);if(match&&byId.has(match[1]))openEvent(match[1],{noHash:true,frame:match[2]?Number(match[2])-1:0});}

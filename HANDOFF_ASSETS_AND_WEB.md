@@ -2,6 +2,8 @@
 
 > 正式網站已上線：https://wackyjazz.github.io/softlipa_canal/ 。部署與更新流程請讀 [DEPLOYMENT_STATUS.md](DEPLOYMENT_STATUS.md)；下文未發布相關敘述是素材包製作階段的歷史記錄。
 
+> 後續部署授權已更新：使用者已要求發布到 wackyjazz/softlipa_canal 與自己的 R2。請先讀 [DEPLOYMENT_STATUS.md](DEPLOYMENT_STATUS.md)；下文「未授權／未部署」為上一階段歷史狀態。
+
 ## 接手先讀
 
 使用者使用繁體中文。這次要求把原本主要是人物的素材包擴充為所有原始設計，包含照片、彩蛋相關物件、塗鴉與場景；接著要求繼續優化網頁，並留下 agent 交接文件。已採取「完整離線素材包 + 攻略內視覺素材圖庫」兩種交付形式。不要將此工作當成重新擷取劇情對話畫面的要求。
@@ -113,3 +115,12 @@ python3 asset_tools/package.py
 ## 本輪完成檢查紀錄
 
 原檔位元比對、202 張 atlas 像素比對、3,202 格動畫像素比對、素材圖庫瀏覽器測試、攻略整合與深連結測試，以及原攻略 verify.py / test_site.cjs 回歸皆已通過。原攻略仍有 734 張畫面、733 種 SHA，沒有撤回事件或截圖失敗。verify.py 已改以 URL path 驗證本機連結，正確排除新增分類 query。
+
+## 歌詞閱讀與首頁圖片自適應（2026-09-07）
+
+- 首頁 `#hero-art` 使用真正的 img，width:100%、height:auto、object-fit:contain。桌面雙欄，900px以下上下排列，禁止恢復 background-size:cover，以免裁掉場景。固定「運河」第一行、橘色「散策」第二行。
+- 新頁 `guide/lyrics/index.html`（部署對應 `web/lyrics/`）。首頁側欄、歌詞段落與6首捷徑均可進入。
+- 唯一文字來源為既存 `lyrics/lyrics.json`；`python3 guide_tools/build_lyrics.py` 生成 lyrics-data.js / source.json，完整保留文字、排序、時間及 duration。共12曲，6曲含歌詞，共457段。沒有內嵌歌詞的曲目顯示未收錄，不推定為純音樂，不補寫或抓取外部歌詞，網站沒有新增音訊。
+- 歌詞頁支援曲名/歌詞AND搜尋、命中高亮、`#track-09/line-1`段落深連結、上下曲、18/22/28px字級、時間標記及複製連結。設定保存於 canal-lyrics-* localStorage；讀取失敗不影響閱讀。
+- `guide_tools/build_deploy_package.py` 已加入 lyrics 目錄複製。僅更新文字/CSS/JS時只需同步到web、commit/push、手動Pages部署，不需R2上傳或Worker部署。
+- 驗收工具：`guide_tools/test_lyrics_scale.cjs [baseURL]`，檢查320/390/768/1024/1440/1920px首頁圖片比例、完整可見、無遮擋、無橫向溢出；12曲原文逐段一致、搜尋深連結、重新整理與閱讀設定。`test_hallway_home.cjs` 保留兩行標題與038/039回歸檢查。

@@ -5,21 +5,21 @@
   <meta name="theme-color" content="#193f3b">
   <meta name="description" content="《運河 幻の南都》完整圖文攻略：294 組事件、逐段對話截圖、主線流程與隱藏支線。">
   <title>運河散策｜《幻の南都》全事件圖文攻略</title>
-  <link rel="stylesheet" href="assets/style.css?v=20260907-hallway-home">
-  <script src="data/guide-data.js?v=20260907-hallway-home" defer></script><script src="assets/app.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260907-lyrics-scale">
+  <script src="data/guide-data.js?v=20260907-hallway-home" defer></script><script src="assets/app.js?v=20260907-lyrics-scale" defer></script>
 </head>
 <body>
   <a class="skip" href="#library">跳到事件圖鑑</a>
   <aside class="rail" aria-label="主要導覽">
     <a class="brand" href="#top" aria-label="運河散策首頁"><span class="brand-seal">運<br>河</span><span>散策<br><small>CANAL FIELD GUIDE</small></span></a>
     <div class="rail-caption">一本寫給南都的遊戲筆記</div>
-    <nav><a href="#overview"><span>01</span> 閱讀起點</a><a href="#routes"><span>02</span> 主線路書</a><a href="#branches"><span>03</span> 支線手帖</a><a href="#dialogue-search"><span>04</span> 對話查圖</a><a href="#library"><span>05</span> 全事件圖鑑</a><a href="#art-collection"><span>06</span> 原始設計圖庫</a><a href="#method"><span>07</span> 關於本攻略</a></nav>
+    <nav><a href="#overview"><span>01</span> 閱讀起點</a><a href="#routes"><span>02</span> 主線路書</a><a href="#branches"><span>03</span> 支線手帖</a><a href="#dialogue-search"><span>04</span> 對話查圖</a><a href="#library"><span>05</span> 全事件圖鑑</a><a href="#art-collection"><span>06</span> 原始設計圖庫</a><a href="#lyrics"><span>07</span> 歌詞閱讀</a><a href="#method"><span>08</span> 關於本攻略</a></nav>
     <div class="rail-bottom"><div class="progress-label"><span>我的閱讀進度</span><b id="progress-label">0 / 294</b></div><progress id="read-progress" max="294" value="0" aria-label="已讀事件"></progress><div class="progress-actions"><button id="export-progress">匯出筆記</button><button id="import-progress">匯入筆記</button><input type="file" id="progress-file" accept="application/json,.json" hidden></div><p>進度保存在這個瀏覽器。<br>換裝置前可先匯出備份。</p></div>
   </aside>
   <main id="top">
     <header class="topbar"><span>《運河 幻の南都》 <i>／</i> 全事件圖文攻略</span><a href="#dialogue-search" class="top-search">對話查圖 <kbd>/</kbd></a></header>
     <section class="hero" id="overview">
-      <div class="hero-image" id="hero-image" aria-hidden="true"></div>
+      <div class="hero-image" id="hero-image"><img id="hero-art" width="1200" height="900" alt="運河街景與橋邊人物的原版遊戲畫面" fetchpriority="high"></div>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-copy"><div class="eyebrow light">TAINAN, ONE STORY AT A TIME.</div><p class="hero-kicker">沿著記憶，走進城市。</p><h1>運河<span>散策</span></h1><p class="hero-description">從高中房間到運河街角，<br>把每一次相遇，留成可以翻閱的攻略。</p><div class="hero-actions"><a class="button coral" href="#routes">開始主線旅程 <span>↗</span></a><a class="hero-link" href="#library">翻閱全部事件 →</a></div></div>
       <div class="hero-caption"><span class="live-dot"></span> 原版場景・事件重現 <span>SL EDITION</span></div>
@@ -47,6 +47,7 @@
         <div id="active-filters" class="active-filters"></div><div id="event-grid" class="event-grid"></div><div id="empty-state" class="empty-state" hidden><span>⌕</span><h3>這一頁還找不到相遇。</h3><p>試試較短的關鍵字，或放寬場景與章節篩選。</p><button class="button" id="empty-reset">顯示全部事件</button></div><div class="load-more-wrap"><button class="button outline" id="load-more">再展開 24 組事件 <span>↓</span></button></div>
       </section>
       <section id="art-collection" class="section-block"><div class="section-heading"><div><div class="eyebrow">THE ORIGINAL ART COLLECTION</div><h2>原始設計圖庫<span>把路過的細節，留成收藏</span></h2></div></div><p>除了事件對話，也能逐張欣賞原檔裡的照片、塗鴉、道具與日夜場景。圖庫可搜尋、放大原圖、逐格查看動畫，並匯出你勾選的素材清單。</p><div class="art-links"><a href="collection/index.html?category=照片"><strong>11</strong><span>照片與回憶 ↗</span></a><a href="collection/index.html?category=結尾圖片"><strong>20</strong><span>結尾圖片 ↗</span></a><a href="collection/index.html?category=獨立塗鴉與隱藏圖案"><strong>101</strong><span>塗鴉與圖案 ↗</span></a><a href="collection/index.html?category=場景合成圖"><strong>27</strong><span>原始場景合成圖 ↗</span></a></div><p><a class="button outline" href="collection/index.html">瀏覽全部 538 項視覺素材 ↗</a></p><p class="dialogue-search-help">保留原始解析度與透明背景；合成場景不含執行時加入的人物與特效。彩蛋相關關鍵字提供探索線索，不等於每件圖案都有獨立隱藏事件。</p></section>
+      <section id="lyrics" class="section-block lyrics-preview" aria-labelledby="lyrics-title"><div class="section-heading"><div><div class="eyebrow">WORDS ALONG THE RIVER</div><h2 id="lyrics-title">歌詞閱讀<span>沿著文字，再走一次《運河》</span></h2></div></div><p>收錄遊戲內嵌的 6 首歌詞。可以依曲目閱讀、搜尋一句歌詞、調整字級，也能分享對應段落。</p><div class="lyrics-links"><a href="lyrics/index.html#track-02"><span>02</span><strong>韻河</strong><span aria-hidden="true">↗</span></a><a href="lyrics/index.html#track-03"><span>03</span><strong>給我一點時間</strong><span aria-hidden="true">↗</span></a><a href="lyrics/index.html#track-05"><span>05</span><strong>我們振熙</strong><span aria-hidden="true">↗</span></a><a href="lyrics/index.html#track-07"><span>07</span><strong>饒我流</strong><span aria-hidden="true">↗</span></a><a href="lyrics/index.html#track-09"><span>09</span><strong>日本房間</strong><span aria-hidden="true">↗</span></a><a href="lyrics/index.html#track-11"><span>11</span><strong>大人的HIPHOP</strong><span aria-hidden="true">↗</span></a></div><a class="button outline" href="lyrics/index.html">開啟歌詞閱讀 ↗</a><p class="dialogue-search-help">保留遊戲資料原文與時間標記；其餘曲目目前沒有內嵌歌詞資料。聆聽音樂與正式歌詞本，請支持原專輯。</p></section>
       <section id="method" class="method section-block"><div><div class="eyebrow">ABOUT THIS FIELD GUIDE</div><h2>把來源說清楚，<br>讓每一步都有依據。</h2><span class="edition">SCREENSHOT REVISION · 2026.09.07</span></div><div class="method-body"><h3>這些畫面怎麼來的？</h3><p>以原版遊戲引擎載入場景、角色與原生對話框，整理 <a href="data/story_index.md">story_index.md</a> 的 294 組事件原文，共 734 張原版場景截圖。No.275 的六句台詞與教授版完全相同，提供 No.274 的教授版同文對照圖，並保留原始學生版說話者標記；不把對照圖算成新增截圖。畫面是「事件重現截圖」，並非 294 條分支都從新遊戲實玩通關的錄影紀錄。</p><h3>如何判讀條件與位置？</h3><p>地圖標記來自遊戲內的互動區域；章節與前置條件來自互動規則。沒有獨立觸發點的後續對話會註明，重現畫面的角色位置只供辨識場景。通用候選對話可能被較早的事件或 NPC 狀態取代。</p><h3>這份攻略收錄到哪裡？</h3><p>涵蓋索引全部事件與原文，包含教學、主線、選項、NPC 閒聊與貓咪對話。音樂過場、純動作與不在索引內的事件不屬於本次逐段收錄範圍。圖片及原文素材屬原作品，本頁為本機整理的非官方攻略。</p><div class="method-links"><a href="data/coverage.json" download>下載收錄清單 ↗</a><a href="README.md">離線使用說明 ↗</a></div></div></section>
       <footer><span class="footer-brand">運河散策</span><p>一張地圖，一段回憶。<br>《運河 幻の南都》非官方圖文攻略</p><a href="#top">回到頁首 ↑</a></footer>
     </div>

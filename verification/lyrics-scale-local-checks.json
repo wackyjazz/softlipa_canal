@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-07T07:24:50.416Z",
+  "base": "file:///D:/wsl_home/rsdr_game/guide/",
+  "checks": [
+    {
+      "width": 320,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    {
+      "width": 768,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1024,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1440,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1920,
+      "entireImageVisible": true,
+      "proportional": true,
+      "noOverlap": true,
+      "noOverflow": true
+    },
+    "All 12 tracks / 457 entries match the original local text and timing exactly",
+    "Every track renders exact source lines; six missing tracks show explicit empty state",
+    "Search highlights matching text and opens an exact line; deep link survives reload",
+    "Font size and timestamps persist after reload",
+    "Lyrics fit 320/390/768/1440px at large text size; no JavaScript errors"
+  ],
+  "passed": true
+}

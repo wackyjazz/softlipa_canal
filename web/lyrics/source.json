@@ -1,0 +1,10 @@
+{
+  "source": "lyrics/lyrics.json (previously extracted from the user-provided game)",
+  "sourceSha256": "55b3de32a9ed66b7de8b484acd0078741a13d9d338acabee3b6c58b1e7ffbd1c",
+  "tracks": 12,
+  "tracksWithLyrics": 6,
+  "lines": 457,
+  "textAndTimingPreserved": true,
+  "audioIncluded": false,
+  "missingLyricsAreNotInferred": true
+}
