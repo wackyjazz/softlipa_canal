@@ -1,0 +1,15 @@
+{
+  "source": "accelerated_portable_v2/resources/icon/canal-legend.ico",
+  "sha256": "4c7848a33217a7b75f7bd9869c1b63f4e5a355db05e24ad06564a904abbe4fdb",
+  "bytes": 104744,
+  "icoImageCount": 6,
+  "pages": [
+    "index.html",
+    "collection/index.html",
+    "lyrics/index.html",
+    "verification/compression-comparison.html",
+    "verification/gordon-nightclub/index.html"
+  ],
+  "identicalToOriginal": true,
+  "passed": true
+}

@@ -138,3 +138,7 @@ python3 asset_tools/package.py
 隔離原版引擎9336驗證10組：第10章normal/talking/listening ×有無旗標；11/12章normal ×有無旗標。聽歌是直接呼叫原始交談函式的診斷，不表示聽歌中可正常按鍵交談。沒有插入NPC。音效與過場等待有停用，非全流程通關。guide_tools/audit_gordon_presence.cjs可重跑（須先啟動隔離capture app）；結果guide/verification/gordon-presence-audit.json。已停止本次啟動的精確tmp/guide_capture執行檔，未操作其他遊戲。
 
 公開查證頁guide/verification/gordon-nightclub/index.html，兩張1200x900無損WebP：未變身空位／變身教授原文第一句。新增543,372bytes證據圖片由Pages提供，不列入734張對話截圖或R2清單。No274/275詳情有查證入口，No275標題及提示改成已查證正常流程不出現；原本六張教授同文對照仍明確標記，未造學生圖。原始碼片段與10組驗證JSON放在查證頁同目錄；build_deploy_package.py已加入其複製。
+
+## 原遊戲 favicon
+
+全站5個HTML入口改用favicon.ico，原檔來自accelerated_portable_v2/resources/icon/canal-legend.ico，SHA256 4c7848a33217a7b75f7bd9869c1b63f4e5a355db05e24ad06564a904abbe4fdb，與素材包ICO一致，未重畫或轉檔。guide_tools/site_icons.py同步原ICO並設定各頁相對路徑及雜湊版號；build_deploy_package.py在複製前自動執行，避免重新生成圖庫或驗證頁時遺漏圖示。由Pages提供，無R2變更。
