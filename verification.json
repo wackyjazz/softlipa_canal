@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-07T03:53:41.424597+00:00",
+  "date": "2026-09-07T06:34:59.148429+00:00",
   "workerTests": 6,
-  "uploadGuardTests": 5,
+  "uploadGuardTests": 10,
   "wranglerDryRun": {
     "version": "4.129.0",
     "success": true,
@@ -16,10 +16,10 @@
   "actualImages": 734,
   "uniqueR2Objects": 733,
   "R2Bytes": 117911920,
-  "networkUploads": 0,
-  "deployed": false,
-  "accountPlanVerified": false,
-  "reason": "No GitHub repository or authenticated Cloudflare account was supplied; account-wide zero billing cannot be certified.",
+  "networkUploads": 733,
+  "deployed": true,
+  "accountPlanVerified": true,
+  "reason": "User-authorized deployment completed; all object integrity checks and live browser checks passed",
   "generatedSiteBrowserCheck": {
     "passed": true,
     "keyword": "Gina",
@@ -42,6 +42,59 @@
     "bytes": 57434484,
     "hosting": "GitHub Pages static files",
     "r2ManifestUnchanged": true,
-    "deployed": false
+    "deployed": true
+  },
+  "accountPlanVerificationMethod": "Explicit user confirmation: Workers Free; billing API unavailable",
+  "pagesURL": "https://wackyjazz.github.io/softlipa_canal/",
+  "workerURL": "https://canal-guide-images.wackyjazz1.workers.dev",
+  "pagesRun": "https://github.com/wackyjazz/softlipa_canal/actions/runs/34091230011",
+  "workerVersion": "dd55f4f0-c960-44b6-9fa9-3373afab012f",
+  "liveBrowser": {
+    "date": "2026-09-07T06:34:22.897Z",
+    "base": "https://wackyjazz.github.io/softlipa_canal/",
+    "checks": [
+      "Public Pages homepage: 24 initial event cards",
+      "Gina opens professor frame 5; 1200px image loads from real R2 gateway",
+      "Exact dialogue deep-link survives reload",
+      "No.275 professor counterpart label and image preserved",
+      "Counter entrance keyword finds No.083 and loads image",
+      "Mobile guide and event dialog fit 390px; no JS errors",
+      "538-asset gallery, 11 photos, full-resolution photo and deep-link work online",
+      "Mobile gallery has no overflow or JS errors",
+      "Gallery returns to project-subpath guide correctly"
+    ],
+    "passed": true
+  },
+  "liveImages": {
+    "base": "https://canal-guide-images.wackyjazz1.workers.dev",
+    "checks": [
+      {
+        "name": "001-01.avif",
+        "status": 200,
+        "bytes": 51880,
+        "sha256Verified": true
+      },
+      {
+        "name": "274-05.avif",
+        "status": 200,
+        "bytes": 146577,
+        "sha256Verified": true
+      },
+      {
+        "name": "083-01.avif",
+        "status": 200,
+        "bytes": 119989,
+        "sha256Verified": true
+      },
+      {
+        "path": "/images/unknown.avif",
+        "status": 404
+      },
+      {
+        "path": "/images/001-01.avif?sha=bad",
+        "status": 410
+      }
+    ],
+    "passed": true
   }
 }

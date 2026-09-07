@@ -1,6 +1,6 @@
 # 運河攻略：GitHub Pages ＋私人 R2 圖庫
 
-已包含最新對話查圖功能、精確畫面連結、No.274 楊教授原版截圖，以及 No.275 的教授版同文對照。這是可部署的完整資料包，目前沒有替你建立公開網站或開通任何付費服務。
+已包含最新對話查圖功能、精確畫面連結、No.274 楊教授原版截圖，以及 No.275 的教授版同文對照。正式網站已發布：[https://wackyjazz.github.io/softlipa_canal/](https://wackyjazz.github.io/softlipa_canal/)。部署交接與更新方式請讀 [DEPLOYMENT_STATUS.md](DEPLOYMENT_STATUS.md)。使用者確認 Workers Free，部署沒有升級方案。
 
 **先讀 [免費條件與限制](FREE-TIER.md)。R2 是有免費額度的用量計費服務，不是無条件零帳單服務。若你不接受啟用任何計費服務，請直接使用文末的純 GitHub Pages 方案。**
 
@@ -126,3 +126,7 @@ python3 -m http.server 8080 --directory _site
 ## 新增原始設計圖庫
 
 `web/collection/` 收錄 538 項視覺素材與 3,202 格動畫，約 54.8 MiB。此部分隨 GitHub Pages 靜態檔發布；原尺寸圖只在使用者點選時載入，列表採小型無損縮圖。R2 仍只處理原本 734 張攻略截圖；不需新增 bucket、Worker 路由或付費服務。完整素材包的約 104 MiB 音訊沒有加入網頁。詳見 `HANDOFF_ASSETS_AND_WEB.md`。
+
+## 使用已登入的 Wrangler 更新 R2
+
+除了既有 S3 上傳方式，也可使用 `tools/upload_r2_oauth.py`，預設只檢查本機。明確指定 --apply --free-account-confirmed --account 與本機 --auth-file 後，才會上傳。沿用容量／操作預算、私人 Standard bucket 檢查、雜湊驗證及跳過相同物件；不需要將任何登入憑證放到 GitHub。

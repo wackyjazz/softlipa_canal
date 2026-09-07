@@ -1,0 +1,32 @@
+{
+  "base": "https://canal-guide-images.wackyjazz1.workers.dev",
+  "checks": [
+    {
+      "name": "001-01.avif",
+      "status": 200,
+      "bytes": 51880,
+      "sha256Verified": true
+    },
+    {
+      "name": "274-05.avif",
+      "status": 200,
+      "bytes": 146577,
+      "sha256Verified": true
+    },
+    {
+      "name": "083-01.avif",
+      "status": 200,
+      "bytes": 119989,
+      "sha256Verified": true
+    },
+    {
+      "path": "/images/unknown.avif",
+      "status": 404
+    },
+    {
+      "path": "/images/001-01.avif?sha=bad",
+      "status": 410
+    }
+  ],
+  "passed": true
+}
