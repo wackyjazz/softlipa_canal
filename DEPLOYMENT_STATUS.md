@@ -2,14 +2,16 @@
 
 **網站已發布並完成線上驗證。**
 
+最新公開攻略為293組、734個畫面引用。下文294組／740引用與學生同文對照是歷史來源查證紀錄；使用者已要求攻略移除不存在的學生版流程。
+
 - 攻略：https://wackyjazz.github.io/softlipa_canal/
 - 歌詞閱讀：https://wackyjazz.github.io/softlipa_canal/lyrics/index.html
 - 素材圖庫：https://wackyjazz.github.io/softlipa_canal/collection/index.html
 - GitHub：https://github.com/wackyjazz/softlipa_canal
-- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34098025647
+- 本次 Pages 成功流程：https://github.com/wackyjazz/softlipa_canal/actions/runs/34100142025
 - 圖片 Worker：https://canal-guide-images.wackyjazz1.workers.dev（只接受 /images/清單內檔名；根路徑 404 是預期行為）
 - Worker Version：49d977af-71a0-48ce-9668-4ff0540502f5
-- 部署頁面 commit：47f95821342d565cb3faafde03b7ceeeadf2266c；之後的文件與驗證報告 commit 不改動網站內容。
+- 部署頁面 commit：a37841b8b62c3488fad2396ee8e27f1f42e70abe；之後的文件與驗證報告 commit 不改動網站內容。
 
 ## 已驗證
 
@@ -38,7 +40,7 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 
 驗證紀錄：部署repo的 `verification/live-site-checks.json`、`verification/live-image-checks.json` 和 `verification.json`。現有ZIP是上架前快照；後續以GitHub main與工作區檔案為準。重打部署ZIP時必須排除 .git、node_modules、憑證、母檔、_site、_preview。
 
-最後驗證時間：2026-09-07T07:57:57.082888+00:00
+最後驗證時間：2026-09-07T08:22:03.397Z
 
 ## 038／039 與首頁更新
 
@@ -77,3 +79,11 @@ R2 Account ID：10e29bccc61ef294e6cd624a26101d15。Worker 沒有付費圖片轉�
 ## 原遊戲 favicon
 
 全站5頁使用原始canal-legend.ico作為favicon，原樣保留104,744bytes。線上檔案SHA256與原檔相同，Content-Type為image/vnd.microsoft.icon，各頁相對連結均正確。報告verification/favicon-live-checks.json。內容commit47f9582，Pages run34098025647。後續重新生成頁面可執行guide_tools/site_icons.py；部署包生成時亦會自動同步。
+
+## 攻略內容整理與支線排序
+
+公開攻略排除No275，搜尋/支線/相關事件/進度/統計同步為293組，734張圖與R2設定不變。楊教授只說明輸入「嘶」完成變身與第10章夜店相遇條件。移除程式查證入口及學生版對照說明；舊No275與查證頁連結導向No274。內部原始資料維持294組，避免破壞來源與原始編號。
+
+時空旅人一平移至支線手帖最後SIDE NOTE / 04，前面依序是GorDoN、三種籤、夜店。內容commit a37841b，Pages run34100142025。
+
+線上390/1920px驗收通過：一平為最後SIDE NOTE / 04、公開293組、Gina只命中楊教授、舊連結導向正確、無學生版與查證入口。verification/player-guide-live-checks.json。

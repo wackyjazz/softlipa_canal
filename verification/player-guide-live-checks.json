@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-07T08:22:03.397Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "checks": [
+    {
+      "width": 390,
+      "events": 293,
+      "yipingLastSideNote04": true,
+      "ginaOnlyProfessor": true,
+      "frame5Loads": true,
+      "noStudentOrAuditExplanation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1920,
+      "events": 293,
+      "yipingLastSideNote04": true,
+      "ginaOnlyProfessor": true,
+      "frame5Loads": true,
+      "noStudentOrAuditExplanation": true,
+      "noOverflow": true
+    },
+    "Old No275 link redirects to actual professor encounter, preserving frame",
+    "Old investigation page redirects to player guide"
+  ],
+  "passed": true
+}

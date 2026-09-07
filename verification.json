@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-07T07:54:15.585Z",
+  "date": "2026-09-07T08:22:03.397Z",
   "workerTests": 6,
   "uploadGuardTests": 10,
   "wranglerDryRun": {
@@ -12,7 +12,7 @@
     "r2",
     "github-only"
   ],
-  "frameLinksVerified": 740,
+  "frameLinksVerified": 734,
   "actualImages": 734,
   "uniqueR2Objects": 733,
   "R2Bytes": 117912963,
@@ -161,5 +161,16 @@
     "pagesRun": "34097704590",
     "contentCommit": "f4253797d78025d24e5f6aaba1d804d1aae204a1",
     "report": "verification/gordon-audit-web-live-checks.json"
+  },
+  "publicEvents": 293,
+  "archivedSourceEvents": 294,
+  "playerGuideRevision": {
+    "passed": true,
+    "studentNightclubEntryRemoved": true,
+    "technicalAuditRemovedFromPlayerFlow": true,
+    "yipingFinalSideNote": 4,
+    "pagesRun": "34100142025",
+    "contentCommit": "a37841b8b62c3488fad2396ee8e27f1f42e70abe",
+    "report": "verification/player-guide-live-checks.json"
   }
 }
