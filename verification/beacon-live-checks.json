@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-08T07:09:03.746Z",
+  "results": [
+    {
+      "url": "https://wackyjazz.github.io/softlipa_canal/index.html",
+      "beacons": [
+        {
+          "token": "b4e8786a597d449e92164091608d15eb"
+        }
+      ],
+      "loaded": [
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://wackyjazz.github.io/softlipa_canal/collection/index.html",
+      "beacons": [
+        {
+          "token": "b4e8786a597d449e92164091608d15eb"
+        }
+      ],
+      "loaded": [
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://wackyjazz.github.io/softlipa_canal/lyrics/index.html",
+      "beacons": [
+        {
+          "token": "b4e8786a597d449e92164091608d15eb"
+        }
+      ],
+      "loaded": [
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "network": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 200
+    },
+    {
+      "url": "https://cloudflareinsights.com/cdn-cgi/rum",
+      "status": 204
+    }
+  ]
+}
