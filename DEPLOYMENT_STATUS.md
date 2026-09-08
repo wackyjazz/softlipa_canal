@@ -108,3 +108,5 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 ## 2026-09-08 每日訪客計數
 
 新增首頁今日訪客，三頁共用每日匿名去重計數。D1 canal-guide-visitors；Worker 版本 f871a034-1eae-4374-b1ec-a74b4e047a18。維持 Workers Free，未升級付費。Web Analytics 尚未啟用（RUM API 403）。設定、額度、停用及後續維護見 cloudflare/VISITORS.md（部署資料夾內）。
+
+已正式上線：Pages commit `6b98325a88d5b6f2cda42b3bb67771ee63bec555`；成功部署 https://github.com/wackyjazz/softlipa_canal/actions/runs/34175692834。手機 390px／桌面 1920px、跨頁共用與 API 去重驗證通過。計數從 2026-09-08 開始，無歷史回填。
