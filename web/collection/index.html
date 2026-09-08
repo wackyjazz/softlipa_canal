@@ -26,4 +26,5 @@ $('import').onclick=()=>$('importFile').click();$('importFile').onchange=async()
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!$('detail').open){e.preventDefault();$('query').focus()}if($('detail').open&&active.frames?.length&&['ArrowLeft','ArrowRight'].includes(e.key)&&document.activeElement.tagName!=='INPUT'){e.preventDefault();stop();$('frame').value=(+$('frame').value+(e.key==='ArrowRight'?1:-1)+active.frames.length)%active.frames.length;showFrame()}});
 const params=new URLSearchParams(location.search);$('query').value=params.get('q')||'';if(counts[params.get('category')])$('category').value=params.get('category');render();if(location.hash.startsWith('#asset=')){const target=entries.find(e=>e.file===decodeURIComponent(location.hash.slice(7)));if(target)open(target)}
 
-</script></html>
+</script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b4e8786a597d449e92164091608d15eb"}'></script><!-- End Cloudflare Web Analytics -->
+</html>

@@ -10,13 +10,13 @@
 - 每日台灣 00:15 Cron 刪除早於兩日前的匿名識別紀錄，每次上限 5000 列；大量訪客時清理可能落後，日彙總保留供趨勢檢視。不儲存 IP。
 - Workers 維持 Free；圖片和計數 API 共用全帳號每日 100,000 請求額度（台灣 08:00 重置）。D1 Free 每日 500 萬列讀／10 萬列寫／總共 5GB；索引、trigger、清理也耗寫入。超額可能暫停功能，沒有升級付費方案。
 - R2 計費設定未變。計數不讀寫 R2。Worker 的 R2 圖片保護測試保留。
-- Web Analytics **未啟用**：現有 Wrangler OAuth 存取 RUM site-info API 回覆 403。使用者可到 Cloudflare Dashboard > Web Analytics > Add a site，填 wackyjazz.github.io，取得公開 beacon token 後加入三頁（不要把 API token 放前端）。本次沒有將未啟用的功能宣稱完成。
+- Web Analytics：2026-09-08 使用者提供 Cloudflare 後台公開 beacon，已加入攻略、圖庫、歌詞三頁。後台分析與首頁 D1 今日訪客是獨立統計，數字可能不同。
 
 ## 驗證與部署
 
 Node 25+ `npm test`：8 項既有圖片測試 + 5 項使用真實 SQLite 的統計測試。
 初次部署先 `wrangler d1 execute canal-guide-visitors --remote --file visitors.sql`，再 `wrangler deploy`。Schema 冪等；勿清空正式資料。
-網站來源在根目錄 guide/，需同步 deploy/github-r2/web/ 後推送並手動執行 pages.yml。重建圖庫／歌詞 HTML 時保留 visitors.js script。
+網站來源在根目錄 guide/，需同步 deploy/github-r2/web/ 後推送並手動執行 pages.yml。重建圖庫／歌詞 HTML 時保留 visitors.js 與 Cloudflare beacon script。
 
 查看歷日：Cloudflare D1 Console 執行 `SELECT day, visitors FROM daily_totals ORDER BY day DESC LIMIT 30;`。
 實際額度使用看 Workers Metrics、R2 Metrics 和 D1 Metrics，訪客不能換算成固定請求數。
