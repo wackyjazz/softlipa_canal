@@ -54,3 +54,5 @@ main{margin-left:var(--rail)}.topbar{height:70px;padding:0 5%;display:flex;align
   #routes .section-heading h2{font-size:clamp(30px,1.8vw,38px)}
   #routes .section-heading h2 span{font-size:var(--route-label)}
 }
+
+.visitor-count{margin:36px 0 0;padding:24px;border-top:1px solid #c9c1b2;text-align:center;line-height:1.8}.visitor-count>span{display:block;font-size:18px}.visitor-count strong{color:#a34418;font-size:30px;margin-left:10px;font-variant-numeric:tabular-nums}.visitor-count small{display:block;font-size:13px;color:#58625c;margin-top:5px}

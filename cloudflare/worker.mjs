@@ -1,3 +1,4 @@
+import {visitors,cleanup} from './visitors.mjs';
 import manifest from './images-manifest.json' with {type:'json'};
 
 // Only this read-only Worker may expose the private R2 bucket.
@@ -8,6 +9,7 @@ export async function handle(request, env, ctx, cache=globalThis.caches?.default
   try{referrer=new URL(request.headers.get('Referer')||'');}catch{}
   if(referrer?.origin!=='https://wackyjazz.github.io')return new Response('Forbidden',{status:403,headers:{'Cache-Control':'no-store'}});
   const url=new URL(request.url);
+  if(url.pathname==='/api/visitors')return visitors(request,env);
   if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});
   const match=/^\/images\/([0-9]{3}-[a-zA-Z0-9-]+\.(?:jpg|avif))$/.exec(url.pathname);
   const entry=match&&Object.hasOwn(manifest,match[1])?manifest[match[1]]:null;
@@ -27,4 +29,4 @@ export async function handle(request, env, ctx, cache=globalThis.caches?.default
   if(cache)ctx.waitUntil(cache.put(cacheKey,response.clone()).catch(()=>{}));
   return response;
 }
-export default {fetch:handle};
+export default {fetch:handle,scheduled(event,env,ctx){ctx.waitUntil(cleanup(env));}};

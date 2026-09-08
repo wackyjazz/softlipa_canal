@@ -158,3 +158,8 @@ tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/
 使用者授權僅允許wackyjazz.github.io來源以减少盜連讀取。cloudflare/worker.mjs在URL/快取/R2處理前，以URL解析Referer並精確比對origin=https://wackyjazz.github.io。缺少/無效/非HTTPS/其他host或非標準port一律403且Cache-Control:no-store，包括HEAD與If-None-Match。正常請求維持既有canonical快取、HEAD/304零R2讀取、GET最多1次R2讀取。新增測試覆蓋12種拒絕來源×GET/HEAD及允許origin-only/完整路徑，8項測試通過。
 
 這是一般防盜連，不是認證：Referer可偽造，被拒請求仍計入Workers請求額度，但沒有R2讀取。嚴格模式會拒絕直接貼圖片網址、移除Referer的隱私工具、file://或其他host預覽使用線上R2圖；正式Pages網站瀏覽器會提供允許的origin。真正完整離線包自帶本機圖，不受影響。維護HTTP驗證需提供允許的Referer，guide_tools/verify_live_images.py已更新。使用者沒有授權升級付費方案，不需要新增服務。
+
+
+## 2026-09-08 每日訪客計數
+
+新增首頁今日訪客，三頁共用每日匿名去重計數。D1 canal-guide-visitors；Worker 版本 f871a034-1eae-4374-b1ec-a74b4e047a18。維持 Workers Free，未升級付費。Web Analytics 尚未啟用（RUM API 403）。設定、額度、停用及後續維護見 cloudflare/VISITORS.md（部署資料夾內）。

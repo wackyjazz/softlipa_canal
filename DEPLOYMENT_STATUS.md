@@ -103,3 +103,8 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 減少的是非授權來源的R2讀取；被拒請求仍計入Workers每日請求額度，Referer亦可被非瀏覽器工具偽造，不能當成認證。直接貼圖片網址、移除Referer的工具、file://或其他host使用線上R2圖將被拒。維護驗證HTTP請求需加Referer（guide_tools/verify_live_images.py已調整）。未啟用付費服務、沒有新增R2物件；這次無需重新部署Pages。
 
 官方額度依據：https://developers.cloudflare.com/workers/platform/pricing/ （Inbound requests to your Worker）。
+
+
+## 2026-09-08 每日訪客計數
+
+新增首頁今日訪客，三頁共用每日匿名去重計數。D1 canal-guide-visitors；Worker 版本 f871a034-1eae-4374-b1ec-a74b4e047a18。維持 Workers Free，未升級付費。Web Analytics 尚未啟用（RUM API 403）。設定、額度、停用及後續維護見 cloudflare/VISITORS.md（部署資料夾內）。

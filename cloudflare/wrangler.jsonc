@@ -4,6 +4,25 @@
   "compatibility_date": "2026-09-01",
   "workers_dev": true,
   "preview_urls": false,
-  "observability": {"enabled": false},
-  "r2_buckets": [{"binding": "IMAGES", "bucket_name": "canal-guide-images"}]
+  "observability": {
+    "enabled": false
+  },
+  "r2_buckets": [
+    {
+      "binding": "IMAGES",
+      "bucket_name": "canal-guide-images"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "VISITORS",
+      "database_name": "canal-guide-visitors",
+      "database_id": "452ce47d-cd19-48ca-b148-ba770b3a96b0"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "15 16 * * *"
+    ]
+  }
 }
