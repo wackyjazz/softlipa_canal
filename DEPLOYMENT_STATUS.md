@@ -159,3 +159,5 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 ## 2026-09-09 歌詞頁遊戲字體與視覺更新
 
 全頁統一Cubic_11遊戲字體，包括曲目、歌詞、表單、時間標記與頁尾；字型預載。米白曲目區搭配深綠歌詞閱讀區、暖金標題、CSS唱片裝飾與清楚的選中狀態；手機雙欄曲目、歌詞換行及桌面曲目捲動。資料與JS行為不變。320/390/768/1024/1440/1920px大字＋時間標記無溢出；12曲原文、搜尋深連結及閱讀設定持久化通過。測試guide_tools/test_lyrics_design.cjs，報告verification/lyrics-design-local-checks.json。只部署Pages，沿用字型及分析程式。
+
+新版已上線：最終內容commit `d98fea3`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34323834061 成功。正式站全頁遊戲字型載入、六種寬度大字及時間標記、原文與搜尋/設定回歸通過，報告verification/lyrics-design-live-checks.json。
