@@ -1,0 +1,40 @@
+{
+  "sourceArchive": "accelerated_portable_v2/resources/app.asar.original",
+  "sourceArchiveSha256": "44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef",
+  "bundle": "dist/assets/index-BbZAngKC.js",
+  "bundleSha256": "014bde754ab4fa16535a136ef0e07a0481c9b5ade2f222411109c2e73b84cc75",
+  "entries": [
+    {
+      "id": "stele_east",
+      "title": "〈談選擇 之ㄧ〉  佚名",
+      "location": "東區",
+      "lines": 20,
+      "sha256": "1d87e012f645fef4c1a544ee2885b84e2d0efdc67f65495032bb6c0f7b8d26f1",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_anping",
+      "title": "〈談選擇 之二〉  佚名",
+      "location": "安平",
+      "lines": 26,
+      "sha256": "fd60996b3b5e083915eee77f3eee890379a0b7f5e597d7eef38daa742bf7cb16",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_north",
+      "title": "〈談選擇 之三〉  佚名",
+      "location": "北區",
+      "lines": 64,
+      "sha256": "adf66c63bc112063dde94fa3a6517ce5bee30268d46387c2d939f14a1d8f124b",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_south",
+      "title": "〈談選擇 之四〉  佚名",
+      "location": "南區",
+      "lines": 63,
+      "sha256": "0ca2b299f5134156bec205959cd16cfa2ee2443ecf1482f0be863470bb961fbd",
+      "originalTextMatched": true
+    }
+  ]
+}

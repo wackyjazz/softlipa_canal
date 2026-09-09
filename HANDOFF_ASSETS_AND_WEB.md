@@ -165,3 +165,14 @@ tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/
 新增首頁今日訪客，三頁共用每日匿名去重計數。D1 canal-guide-visitors；Worker 版本 f871a034-1eae-4374-b1ec-a74b4e047a18。維持 Workers Free，未升級付費。Web Analytics 尚未啟用（RUM API 403）。設定、額度、停用及後續維護見 cloudflare/VISITORS.md（部署資料夾內）。
 
 已正式上線：Pages commit `6b98325a88d5b6f2cda42b3bb67771ee63bec555`；成功部署 https://github.com/wackyjazz/softlipa_canal/actions/runs/34175692834。手機 390px／桌面 1920px、跨頁共用與 API 去重驗證通過。計數從 2026-09-08 開始，無歷史回填。
+
+
+## 2026-09-09 石牌〈談選擇〉典藏
+
+從保留的原始 ASAR `dist/assets/index-BbZAngKC.js` 擷取四個石牌文字陣列，並以原始地圖互動物件確認位置：東區之一（原題「之ㄧ」）、安平之二、北區之三、南區之四，署名均為佚名。舊圖庫只有 stele.png 底圖，現補原文閱讀與四筆典藏，網頁從538項增加至542項，完整素材包从604項增加至608項。
+
+首頁新增四篇石牌專用入口，圖庫新增「石牌・談選擇」分類、原文全文搜尋、UTF-8原文下載與既有收藏／深連結支援。縮圖沿用原始石牌底圖；文字閱讀採橫排，保留原文、分行、空行、標點，不宣稱是原遊戲畫面截圖。原圖及3202動畫圖格不變。
+
+重新擷取：`python3 asset_tools/add_steles.py`。`asset_tools/publish.py` 與 `integrate_guide.py` 已納入文字典藏；生成圖庫時保留現有 visitors.js 與 beacon。來源、地圖物件與SHA256記錄在 `web/collection/steles/source.json` 及 `manifest.json`。工作區同步 guide/collection 與 full_asset_pack，部署同步 web/collection。
+
+原始封存檔SHA256核對，全部542筆素材路徑／動畫圖格可解析，四篇原文逐行核對；390px與1440px閱讀到底、搜尋、收藏重整、深連結、照片功能與首頁入口驗證通過。瀏覽器檢查：`asset_tools/test_steles.cjs`，傳入正式首頁URL可驗收線上版。報告 `verification/stele-local-checks.json`。本次只需部署Pages，沒有R2或Worker變更。

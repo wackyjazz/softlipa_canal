@@ -1,11 +1,12 @@
 {
   "originalFiles": 309,
   "originalVisualFiles": 309,
-  "catalogEntries": 538,
+  "catalogEntries": 542,
   "exportedAnimationFrames": 3202,
   "animationSheets": 88,
   "originalBytes": 34061986,
   "categories": {
+    "石牌・談選擇": 4,
     "應用程式圖示": 14,
     "道具與彩蛋相關物件": 33,
     "場景與地圖圖層": 69,
@@ -27,7 +28,7 @@
     "atlasCropsPixelIdentical": 202,
     "animationFramesPixelIdentical": 3202
   },
-  "scope": "Visual-only web subset; full-pack audio/font/map metadata omitted",
+  "scope": "Visual assets plus four original stele texts; full-pack audio/font/map metadata omitted",
   "browserValidation": {
     "catalog604": true,
     "photos11": true,
@@ -40,5 +41,39 @@
     "categoryURLs": true,
     "assetDeepLinkReload": true,
     "guideNavigation": true
-  }
+  },
+  "steleTexts": [
+    {
+      "id": "stele_east",
+      "title": "〈談選擇 之ㄧ〉  佚名",
+      "location": "東區",
+      "lines": 20,
+      "sha256": "1d87e012f645fef4c1a544ee2885b84e2d0efdc67f65495032bb6c0f7b8d26f1",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_anping",
+      "title": "〈談選擇 之二〉  佚名",
+      "location": "安平",
+      "lines": 26,
+      "sha256": "fd60996b3b5e083915eee77f3eee890379a0b7f5e597d7eef38daa742bf7cb16",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_north",
+      "title": "〈談選擇 之三〉  佚名",
+      "location": "北區",
+      "lines": 64,
+      "sha256": "adf66c63bc112063dde94fa3a6517ce5bee30268d46387c2d939f14a1d8f124b",
+      "originalTextMatched": true
+    },
+    {
+      "id": "stele_south",
+      "title": "〈談選擇 之四〉  佚名",
+      "location": "南區",
+      "lines": 63,
+      "sha256": "0ca2b299f5134156bec205959cd16cfa2ee2443ecf1482f0be863470bb961fbd",
+      "originalTextMatched": true
+    }
+  ]
 }
