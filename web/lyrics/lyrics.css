@@ -106,6 +106,7 @@ footer { max-width: 1280px; margin: auto; padding: 26px 36px; border-top: 1px so
   .top { padding: 18px 22px; font-size: 14px; gap: 20px; }
   .intro .eyebrow { font-size: 13px; letter-spacing: 1px; }
   h1 { margin-block: 16px; }
+  h1 span { display: block; }
   .sidebar #tracks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
   .track { padding: 10px 8px; grid-template-columns: 26px minmax(0, 1fr); gap: 8px; background: #eaece0; }
   .track .name { font-size: 16px; }
