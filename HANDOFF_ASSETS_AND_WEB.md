@@ -176,3 +176,12 @@ tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/
 重新擷取：`python3 asset_tools/add_steles.py`。`asset_tools/publish.py` 與 `integrate_guide.py` 已納入文字典藏；生成圖庫時保留現有 visitors.js 與 beacon。來源、地圖物件與SHA256記錄在 `web/collection/steles/source.json` 及 `manifest.json`。工作區同步 guide/collection 與 full_asset_pack，部署同步 web/collection。
 
 原始封存檔SHA256核對，全部542筆素材路徑／動畫圖格可解析，四篇原文逐行核對；390px與1440px閱讀到底、搜尋、收藏重整、深連結、照片功能與首頁入口驗證通過。瀏覽器檢查：`asset_tools/test_steles.cjs`，傳入正式首頁URL可驗收線上版。報告 `verification/stele-local-checks.json`。本次只需部署Pages，沒有R2或Worker變更。
+
+
+## 2026-09-09 石牌翻頁模式
+
+依使用者要求，典藏石牌預設使用原始stele.png與Cubic_11.woff2呈現金色直排翻頁，保留橫排原文切換。網頁Canvas重現原版文字排版，不是遊戲截圖。分頁直接對照原始Fr類別paginate結果：之一2頁、之二2頁、之三5頁、之四5頁。左鍵下一頁、右鍵上一頁；觸控按鈕、放大捲動、模式切換保留頁次。網址新增page及view參數，舊asset網址仍有效。
+
+共用實作在工作區asset_tools/stele-reader/，add_steles.py重新擷取時同步至full_asset_pack及guide/collection；integrate_guide.py同步該資料夾。字型來自原始素材包，沒有外部字型請求。部署資料夾為web/collection/stele-reader/。
+
+測試asset_tools/test_stele_pages.cjs將每一篇每一頁與原始Fr分頁程式比較，並在390/1440px驗證邊界、方向鍵、模式與頁次保留、深連結重整、放大及照片回歸；test_steles.cjs保留原文搜尋／收藏測試。原版比對類別來自保留ASAR的dist/assets/index-BbZAngKC.js，自class Fr extends至class Rr extends前，暫存tmp/original-stele-class.js。報告verification/stele-pages-local-checks.json。

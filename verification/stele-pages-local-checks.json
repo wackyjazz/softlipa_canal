@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-09T01:43:44.878Z",
+  "base": "http://127.0.0.1:9340/",
+  "pageCounts": [
+    {
+      "id": "stele_east",
+      "pages": 2
+    },
+    {
+      "id": "stele_anping",
+      "pages": 2
+    },
+    {
+      "id": "stele_north",
+      "pages": 5
+    },
+    {
+      "id": "stele_south",
+      "pages": 5
+    }
+  ],
+  "checks": [
+    "390px: all four paginations match original game code; every page, bounds, arrows, original text and mode retention pass",
+    "390px: page and text-mode deep links, reload, zoom and existing photo controls pass",
+    "1440px: all four paginations match original game code; every page, bounds, arrows, original text and mode retention pass",
+    "1440px: page and text-mode deep links, reload, zoom and existing photo controls pass"
+  ],
+  "passed": true
+}

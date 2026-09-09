@@ -1,0 +1,14 @@
+@font-face{font-family:SteleCubic;src:url('Cubic_11.woff2') format('woff2');font-display:swap}
+.viewer.stele-interactive{padding:0;background:#111b20;max-height:none;overflow:visible;text-align:center}
+.stele-modes{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px;text-align:left}
+.stele-modes button[aria-pressed=true]{background:#edc879;color:#142026;border-color:#edc879}
+.stele-stage{background:#0b1216;border-radius:10px;overflow:auto;max-height:64vh;max-height:64dvh;outline-offset:-3px;scrollbar-color:#627578 #0b1216}
+.stele-stage canvas{display:block;width:min(100%,72.28vh);width:min(100%,72.28dvh);max-width:850px;height:auto;margin:auto}
+.stele-stage.enlarged canvas{width:960px;max-width:none;min-width:960px}
+.stele-pages{display:flex;align-items:center;justify-content:center;gap:20px;margin:12px 0;color:#f0c311}
+.stele-pages button{color:#f0c311;min-height:44px}.stele-pages button[aria-disabled=true]{opacity:.35;cursor:default}
+.stele-pages span{min-width:65px;font-variant-numeric:tabular-nums;font-size:20px}
+.stele-hint{font-size:13px;color:var(--muted);margin:6px 0}
+.stele-interactive .stele-copy{padding:22px;text-align:left;background:#18262b;max-height:55vh;overflow:auto;scrollbar-gutter:stable}
+@media(max-width:600px){.stele-modes button{font-size:14px;padding:9px 11px}.stele-pages{gap:10px}.stele-pages button{font-size:14px;padding:9px 12px}.stele-interactive .stele-copy{padding:14px}.stele-stage.enlarged canvas{width:800px;min-width:800px}}
+@media(prefers-reduced-motion:no-preference){dialog[open]:has(.stele-interactive){animation:stele-open .2s ease-out}@keyframes stele-open{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
