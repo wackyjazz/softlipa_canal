@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-09T03:14:52.102Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "checks": [
+    "390px: all 12 sections, 58 flow-to-step links, chapter selection, screenshot links and no horizontal overflow",
+    "390px: branch/AND labels, conditional nightclub checklist, progress persistence and exact step reload",
+    "1440px: all 12 sections, 58 flow-to-step links, chapter selection, screenshot links and no horizontal overflow",
+    "1440px: branch/AND labels, conditional nightclub checklist, progress persistence and exact step reload",
+    "Homepage hero and chapter overview link into the new guide; chapter 8 destination and analytics are correct",
+    "Chapter-selection shortcut preserves current chapter; an actual linked dialogue opens with a 1200px screenshot"
+  ],
+  "passed": true
+}

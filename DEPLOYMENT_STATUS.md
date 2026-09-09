@@ -131,3 +131,12 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 石牌預設為原底圖／像素字型的金色直排翻頁模式，保留橫排原文、下載及收藏。分頁與原始遊戲程式比對一致（2／2／5／5頁）。左鍵下一頁、右鍵上一頁，可放大，模式切換保留頁次，網址支援直接開啟指定頁及原文模式。
 
 內容commit `bf46be9`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34300469720 。正式站390/1440px每篇每頁、鍵盤及按鈕邊界、原文切換、放大、深連結重整與照片回歸通過，報告verification/stele-pages-live-checks.json。維護方式见HANDOFF_ASSETS_AND_WEB.md最後一節。僅部署Pages，沒有Worker／R2／D1變更。
+
+
+## 2026-09-09 完整主線攻略與流程圖（已上線）
+
+正式入口：https://wackyjazz.github.io/softlipa_canal/walkthrough/index.html#ch01 。涵蓋10章主線、歸還錦囊與通關後兩節，共58個連續步驟與152個對話截圖連結。每章流程圖可點到對應文字步驟，明示前置条件、交談對象、解鎖結果、分支與卡關檢查；另有瀏覽器進度勾選與夜店交談清單。首頁主按鈕、主要導覽、章節概覽已連接新頁。
+
+內容commit `8822f6f`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34306324277 。正式站390/1440px全12節、58節點、精確步驟重整、勾選持久化、分支文字、首頁入口與實際1200px對話截圖連結驗證通過。報告verification/walkthrough-live-checks.json。原始場景條件隔離執行報告verification/walkthrough-gate-checks.json；已核對原始規則，但尚未從新遊戲全程實玩，頁面整理依據亦明確標示。
+
+重建及來源維護見HANDOFF_ASSETS_AND_WEB.md最後一節。原圖鑑293事件、734截圖及石牌雙模式保留；沒有Worker／R2／D1變更。新頁沿用visitors.js與beacon。
