@@ -198,3 +198,8 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 驗證：Windows Node執行guide_tools/probe_walkthrough_gates.cjs，以原版方法隔離執行導演雙觸發、東翔雙舞步、解籤師傅、天珠與穿廟、夜店交談全員等門檻；UI／音訊／移動以替身取代，並非全程實玩。build_walkthrough.py會在tmp/mainline-source/生成此檢查需要的方法文字。guide_tools/test_walkthrough.cjs [BASE_URL]驗證390/1440px全12節與58節點、精確步驟深連結、分支文字、進度持久化與首頁入口。網站明確標示尚未完成從新遊戲到通關的全程實玩，不將程式規則核對當成實玩驗證。
 
 新頁沿用visitors.js與Cloudflare beacon，圖片透過原圖鑑連結查看；不新增R2圖片，不更動Worker／D1。部署時同步guide/index.html、assets/app.js、assets/style.css、data/guide-data.js與walkthrough/至web/。檢查報告在verification/walkthrough-local-checks.json與walkthrough-gate-checks.json。
+
+
+## 2026-09-09 攻略人物名稱查證
+
+原始 app.asar.original 的 local_mj 顯示名稱為「在地MJ」；事件 eastXiang_nightclub_after（No.286）台詞為「好！我！西天翔！甘拜下風！」，已同時核對原始程式及 capture_masters/images/286-01.jpg。先前攻略把內部 eastXiang 譯成「東翔」有誤。第8、10章文字、流程圖與首頁章節資料統一改用「在地MJ」。重建驗證58步驟、152連結及所有來源引用通過；產出差異確認僅人物名稱替換，另更新首頁資料快取版本。
