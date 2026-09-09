@@ -145,3 +145,5 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 ## 2026-09-09 攻略人物名稱查證
 
 原始 app.asar.original 的 local_mj 顯示名稱為「在地MJ」；事件 eastXiang_nightclub_after（No.286）台詞為「好！我！西天翔！甘拜下風！」，已同時核對原始程式及 capture_masters/images/286-01.jpg。先前攻略把內部 eastXiang 譯成「東翔」有誤。第8、10章文字、流程圖與首頁章節資料統一改用「在地MJ」。重建驗證58步驟、152連結及所有來源引用通過；產出差異確認僅人物名稱替換，另更新首頁資料快取版本。
+
+更正已上線：內容 commit `418d132`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34309345250 ，正式站8.2與10.6名稱及全頁無「東翔」檢查通過。
