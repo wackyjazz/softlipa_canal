@@ -210,3 +210,5 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 ## 2026-09-09 No.088 CD 架站位修正
 
 使用者指出角色應更靠近CD架。原截圖captureObject視線間距把copy_cd站位從原始(140,280)往下推到(140,319)。capture_overrides.py改為此事件停用物件間距、保留原始互動格及walk_up；已用隔離原版引擎重擷取088-01並目視核對。僅此圖重新壓縮，其他733張manifest項目不變；原JPEG母檔有備份。查證紀錄verification/cd-position-checks.json。
+
+已上線：內容commit `6f4cc17`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34317988935 成功；遠端088-01 SHA及正式站瀏覽器1200px新圖載入通過。只新增1個R2物件，保留舊圖。

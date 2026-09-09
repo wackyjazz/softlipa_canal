@@ -13,5 +13,9 @@
   "source": "Original record_store.json copy_cd interaction x=120,y=280,width=40,height=20; captured with original engine",
   "oldSha256": "040c08fcdf34c47a410575446ad18d98167cb533e06c48f2bef78d5756a560f0",
   "sha256": "97b645cd750ef6183e85c24d56955764eabcc3729f38f559e7e68b4ef2bd2416",
-  "visualReviewPassed": true
+  "visualReviewPassed": true,
+  "remoteShaVerified": true,
+  "liveBrowserImageWidth": 1200,
+  "pagesRun": 34317988935,
+  "workerVersion": "8310cb2e-c5a9-4bd2-a5bf-2c465bd52d69"
 }
