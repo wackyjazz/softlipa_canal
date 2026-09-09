@@ -1,0 +1,104 @@
+{
+  "date": "2026-09-09T07:40:19.683Z",
+  "base": "file:///D:/wsl_home/rsdr_game/guide/lyrics/index.html",
+  "checks": [
+    {
+      "allTextUsesGameFont": {
+        "loaded": true,
+        "families": [
+          {
+            "selector": "body",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": "h1",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": ".track .number",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": ".track .name",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": ".track small",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": "#song-title",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": ".lyric-text",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": ".time",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": "button",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": "input",
+            "font": "Cubic, sans-serif"
+          },
+          {
+            "selector": "footer",
+            "font": "Cubic, sans-serif"
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    {
+      "width": 1920,
+      "noOverflow": true,
+      "readingNoOverflow": true,
+      "fontSize": "28px",
+      "timeShown": true
+    },
+    "Pixel CD loads; both fonts fit; plain font preserves lyrics, persists on reload and track change, and switches back to Cubic",
+    "All 12 tracks preserve source lyrics and empty states",
+    "Search and exact-line deep link survive reload",
+    "Text size and time markers persist"
+  ],
+  "passed": true
+}

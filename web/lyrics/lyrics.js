@@ -63,6 +63,18 @@
   $('#tracks').addEventListener('click', event => {
     if (event.target.closest('a')?.hash === location.hash) render();
   });
+  const setFont = font => {
+    const plain = font === 'plain';
+    $('#lyric-lines').classList.toggle('plain-font', plain);
+    document.querySelectorAll('[data-font]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.font === (plain ? 'plain' : 'game')));
+    });
+  };
+  setFont(setting('font'));
+  document.querySelectorAll('[data-font]').forEach(button => button.onclick = () => {
+    setFont(button.dataset.font);
+    setting('font', button.dataset.font);
+  });
   const setSize = size => {
     document.documentElement.style.setProperty('--lyric-size', `${size}px`);
     document.querySelectorAll('[data-size]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.size) === size)));

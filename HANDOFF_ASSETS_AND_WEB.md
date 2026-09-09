@@ -219,3 +219,8 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 全頁統一Cubic_11遊戲字體，包括曲目、歌詞、表單、時間標記與頁尾；字型預載。米白曲目區搭配深綠歌詞閱讀區、暖金標題、CSS唱片裝飾與清楚的選中狀態；手機雙欄曲目、歌詞換行及桌面曲目捲動。資料與JS行為不變。320/390/768/1024/1440/1920px大字＋時間標記無溢出；12曲原文、搜尋深連結及閱讀設定持久化通過。測試guide_tools/test_lyrics_design.cjs，報告verification/lyrics-design-local-checks.json。只部署Pages，沿用字型及分析程式。
 
 新版已上線：最終內容commit `d98fea3`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34323834061 成功。正式站全頁遊戲字型載入、六種寬度大字及時間標記、原文與搜尋/設定回歸通過，報告verification/lyrics-design-live-checks.json。
+
+
+## 2026-09-09 歌詞點陣CD與字體切換
+
+依使用者要求移除黑膠裝飾，以pixel-cd.svg銀色點陣CD取代。閱讀工具列新增遊戲字體／一般字體：僅歌詞區與時間標記切換Cubic或系統無襯線字體，預設Cubic；localStorage canal-lyrics-font記住選擇。換曲／重新整理保留偏好，既有字級與時間開關獨立。測試guide_tools/test_lyrics_design.cjs擴充兩種字體的排版、原文不變、持久化與切回Cubic；本機通過，報告verification/lyrics-cd-font-local-checks.json。僅Pages更新。

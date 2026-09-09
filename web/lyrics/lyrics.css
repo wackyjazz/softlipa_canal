@@ -34,10 +34,7 @@ h1 { font-size: clamp(34px, 4.4vw, 56px); font-weight: 400; line-height: 1.45; m
 h1 span { color: #a25e36; }
 .intro .artist { font-size: 18px; margin: 12px 0; }
 .note { max-width: 680px; color: var(--muted); font-size: 15px; }
-/* A quiet record-sleeve motif, drawn in CSS so no extra image is needed. */
-.record-art { position: absolute; right: 52px; top: 55px; width: 216px; height: 216px; border: 1px solid #bec8b5; background: #dde2d2; box-shadow: 7px 7px 0 #d5dac9; transform: rotate(5deg); }
-.record-art::before { content: ''; position: absolute; inset: 13px; border-radius: 50%; background: radial-gradient(circle, var(--paper) 0 3px, #e2a371 4px 27px, #365044 28px 30px, transparent 31px), repeating-radial-gradient(circle, #263c33 0 3px, #34493e 4px 5px); }
-.record-art::after { content: ''; position: absolute; inset: auto 12px 10px auto; width: 24px; height: 7px; background: #a15f3d; }
+.cd-art { position: absolute; right: 52px; top: 55px; width: 216px; height: 216px; image-rendering: pixelated; }
 .layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); align-items: start; gap: 36px; max-width: 1280px; margin: auto; padding: 16px 36px 72px; }
 .sidebar { min-width: 0; padding-top: 8px; }
 .sidebar > label { font-size: 18px; }
@@ -61,7 +58,9 @@ h1 span { color: #a25e36; }
 #song-summary { font-size: 15px; color: #c0ccb6; margin-bottom: 12px; }
 .reading-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; border-block: 1px solid #536b56; padding: 16px 0; margin: 20px 0 0; font-size: 15px; }
 .reading-tools label { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
-.font-tools { display: flex; gap: 4px; }
+.font-tools, .font-family-tools { display: flex; gap: 4px; }
+.font-family-tools { flex-wrap: wrap; }
+.font-family-tools [data-font=plain], #lyric-lines.plain-font { font-family: system-ui, "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
 #reading button { border-color: #71836a; }
 #reading button:hover { background: #3b5543; }
 #reading button[aria-pressed=true] { background: #ecd8af; border-color: #ecd8af; color: #233d35; }
@@ -97,12 +96,12 @@ footer { max-width: 1280px; margin: auto; padding: 26px 36px; border-top: 1px so
   .layout { grid-template-columns: 240px minmax(0, 1fr); gap: 24px; padding-inline: 24px; }
   #reading { padding-inline: 26px; }
   .intro { padding-right: 260px; }
-  .record-art { right: 35px; width: 175px; height: 175px; }
+  .cd-art { right: 35px; width: 175px; height: 175px; }
 }
 @media (max-width: 800px) {
   .layout { grid-template-columns: 1fr; gap: 28px; padding: 8px 22px 48px; }
   .intro { padding: 32px 22px 20px; }
-  .record-art { display: none; }
+  .cd-art { display: none; }
   .top { padding: 18px 22px; font-size: 14px; gap: 20px; }
   .intro .eyebrow { font-size: 13px; letter-spacing: 1px; }
   h1 { margin-block: 16px; }
