@@ -117,3 +117,10 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 使用者提供公開 beacon 後，已加入首頁、圖庫、歌詞三頁，來源 guide/ 與部署 web/ 同步。內容 commit `caae324`；Pages 成功部署 https://github.com/wackyjazz/softlipa_canal/actions/runs/34197835854 。
 
 三頁正式瀏覽器驗證各自只載入一次 beacon（HTTP 200），Cloudflare RUM 收集端均回傳成功（HTTP 204；OPTIONS 200）。報告：部署 repo `verification/beacon-live-checks.json`。後台報表尚未登入查驗；Web Analytics 與 D1 今日訪客為獨立統計。本次只部署 Pages，Worker／D1／R2 設定未變。
+
+
+## 2026-09-09 石牌文字典藏（已上線）
+
+原始設計典藏新增署名佚名的〈談選擇〉四篇：東區之一、安平之二、北區之三、南區之四，目錄共542項。首頁新增石牌入口，圖庫支援分類、全文搜尋、橫排原文閱讀、下載、收藏與深連結。來源原文及分行保留，縮圖沿用原始石牌底圖。
+
+內容commit `78ac50d`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34299913319 。線上390px／1440px四篇全文、捲到底、收藏重整、深連結、照片回歸與首頁入口驗證通過，四個正式原文下載逐位元核對一致。報告 `verification/stele-live-checks.json`。原始擷取與維護見HANDOFF_ASSETS_AND_WEB.md最後一節。本次未變更Worker／R2／D1；visitors.js及beacon保留。

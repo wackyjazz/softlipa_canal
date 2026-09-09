@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-09T01:37:46.107Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "checks": [
+    "390px: all four complete texts, images, controls, end-of-text scroll and no overflow",
+    "Stele deep link restores complete text after reload",
+    "1440px: all four complete texts, images, controls, end-of-text scroll and no overflow",
+    "Stone aliases, author, title and full-text sentences find the original entries",
+    "Stele collection selection persists after reload and is restored to previous state",
+    "Existing photo gallery and image controls still work after stele reading",
+    "Homepage featured link opens four stele cards; existing analytics retained"
+  ],
+  "passed": true,
+  "deployedTextDownloadsByteIdentical": true
+}
