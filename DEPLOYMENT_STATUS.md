@@ -154,3 +154,8 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 使用者指出角色應更靠近CD架。原截圖captureObject視線間距把copy_cd站位從原始(140,280)往下推到(140,319)。capture_overrides.py改為此事件停用物件間距、保留原始互動格及walk_up；已用隔離原版引擎重擷取088-01並目視核對。僅此圖重新壓縮，其他733張manifest項目不變；原JPEG母檔有備份。查證紀錄verification/cd-position-checks.json。
 
 已上線：內容commit `6f4cc17`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34317988935 成功；遠端088-01 SHA及正式站瀏覽器1200px新圖載入通過。只新增1個R2物件，保留舊圖。
+
+
+## 2026-09-09 歌詞頁遊戲字體與視覺更新
+
+全頁統一Cubic_11遊戲字體，包括曲目、歌詞、表單、時間標記與頁尾；字型預載。米白曲目區搭配深綠歌詞閱讀區、暖金標題、CSS唱片裝飾與清楚的選中狀態；手機雙欄曲目、歌詞換行及桌面曲目捲動。資料與JS行為不變。320/390/768/1024/1440/1920px大字＋時間標記無溢出；12曲原文、搜尋深連結及閱讀設定持久化通過。測試guide_tools/test_lyrics_design.cjs，報告verification/lyrics-design-local-checks.json。只部署Pages，沿用字型及分析程式。
