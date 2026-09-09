@@ -224,3 +224,5 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 ## 2026-09-09 歌詞點陣CD與字體切換
 
 依使用者要求移除黑膠裝飾，以pixel-cd.svg銀色點陣CD取代。閱讀工具列新增遊戲字體／一般字體：僅歌詞區與時間標記切換Cubic或系統無襯線字體，預設Cubic；localStorage canal-lyrics-font記住選擇。換曲／重新整理保留偏好，既有字級與時間開關獨立。測試guide_tools/test_lyrics_design.cjs擴充兩種字體的排版、原文不變、持久化與切回Cubic；本機通過，報告verification/lyrics-cd-font-local-checks.json。僅Pages更新。
+
+已上線：內容commit `dc5548f`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34325097916 成功。正式站CD載入、雙字體切換/記憶、手機/桌面排版與歌詞原文回歸通過，報告verification/lyrics-cd-font-live-checks.json。
