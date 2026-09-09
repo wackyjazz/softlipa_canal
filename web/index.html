@@ -5,15 +5,15 @@
   <meta name="theme-color" content="#193f3b">
   <meta name="description" content="《運河 幻の南都》完整圖文攻略：293 組事件、逐段對話截圖、主線流程與隱藏支線。">
   <script src="assets/visitors.js?v=20260908-1" defer></script><title>運河散策｜《幻の南都》全事件圖文攻略</title><link rel="icon" type="image/x-icon" href="favicon.ico?v=4c7848a33217" data-site-favicon>
-  <link rel="stylesheet" href="assets/style.css?v=20260909-steles">
-  <script src="data/guide-data.js?v=20260907-side-note-order" defer></script><script src="assets/app.js?v=20260907-player-guide" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260909-walkthrough">
+  <script src="data/guide-data.js?v=20260909-walkthrough" defer></script><script src="assets/app.js?v=20260909-walkthrough" defer></script>
 </head>
 <body>
   <a class="skip" href="#library">跳到事件圖鑑</a>
   <aside class="rail" aria-label="主要導覽">
     <a class="brand" href="#top" aria-label="運河散策首頁"><span class="brand-seal">運<br>河</span><span>散策<br><small>CANAL FIELD GUIDE</small></span></a>
     <div class="rail-caption">一本寫給南都的遊戲筆記</div>
-    <nav><a href="#overview"><span>01</span> 閱讀起點</a><a href="#routes"><span>02</span> 主線路書</a><a href="#branches"><span>03</span> 支線手帖</a><a href="#dialogue-search"><span>04</span> 對話查圖</a><a href="#library"><span>05</span> 全事件圖鑑</a><a href="#art-collection"><span>06</span> 原始設計圖庫</a><a href="#lyrics"><span>07</span> 歌詞閱讀</a><a href="#method"><span>08</span> 關於本攻略</a></nav>
+    <nav><a href="#overview"><span>01</span> 閱讀起點</a><a href="walkthrough/index.html"><span>02</span> 完整主線攻略</a><a href="#branches"><span>03</span> 支線手帖</a><a href="#dialogue-search"><span>04</span> 對話查圖</a><a href="#library"><span>05</span> 全事件圖鑑</a><a href="#art-collection"><span>06</span> 原始設計圖庫</a><a href="#lyrics"><span>07</span> 歌詞閱讀</a><a href="#method"><span>08</span> 關於本攻略</a></nav>
     <div class="rail-bottom"><div class="progress-label"><span>我的閱讀進度</span><b id="progress-label">0 / 293</b></div><progress id="read-progress" max="293" value="0" aria-label="已讀事件"></progress><div class="progress-actions"><button id="export-progress">匯出筆記</button><button id="import-progress">匯入筆記</button><input type="file" id="progress-file" accept="application/json,.json" hidden></div><p>進度保存在這個瀏覽器。<br>換裝置前可先匯出備份。</p></div>
   </aside>
   <main id="top">
@@ -21,7 +21,7 @@
     <section class="hero" id="overview">
       <div class="hero-image" id="hero-image"><img id="hero-art" width="1200" height="900" alt="運河街景與橋邊人物的原版遊戲畫面" fetchpriority="high"></div>
       <div class="hero-grain" aria-hidden="true"></div>
-      <div class="hero-copy"><div class="eyebrow light">TAINAN, ONE STORY AT A TIME.</div><p class="hero-kicker">沿著記憶，走進城市。</p><h1>運河<span>散策</span></h1><p class="hero-description">從高中房間到運河街角，<br>把每一次相遇，留成可以翻閱的攻略。</p><div class="hero-actions"><a class="button coral" href="#routes">開始主線旅程 <span>↗</span></a><a class="hero-link" href="#library">翻閱全部事件 →</a></div></div>
+      <div class="hero-copy"><div class="eyebrow light">TAINAN, ONE STORY AT A TIME.</div><p class="hero-kicker">沿著記憶，走進城市。</p><h1>運河<span>散策</span></h1><p class="hero-description">從高中房間到運河街角，<br>把每一次相遇，留成可以翻閱的攻略。</p><div class="hero-actions"><a class="button coral" href="walkthrough/index.html#ch01">開始主線旅程 <span>↗</span></a><a class="hero-link" href="#library">翻閱全部事件 →</a></div></div>
       <div class="hero-caption"><span class="live-dot"></span> 原版場景・事件重現 <span>SL EDITION</span></div>
       <div class="hero-index" aria-hidden="true">府城<br>遊戲<br>紀行</div>
     </section>
@@ -29,7 +29,7 @@
     <section class="stats" aria-label="攻略收錄統計"><div><strong id="stat-events">293</strong><span>組完整事件</span></div><div><strong id="stat-images">734</strong><span>張逐段畫面</span></div><div><strong id="stat-points">156</strong><span>組含地圖位置</span></div><div><strong id="stat-rules">119</strong><span>組含互動規則</span></div></section>
     <div class="content">
       <section class="start-note"><div class="note-mark">讀</div><div><h2>可以一路照著走，也可以只找卡住的地方。</h2><p>主線路書整理前進方向；事件圖鑑保存完整原文與每段畫面。這是<strong>含完整劇透</strong>的離線攻略，未找到獨立觸發點的段落會明確標註。</p></div><a href="#method">閱讀收錄方式 ↗</a></section>
-      <section id="routes" class="section-block"><div class="section-heading"><div><div class="eyebrow">THE MAIN JOURNEY</div><h2>主線路書<span>沿著故事往前走</span></h2></div><span class="section-number">01—12</span></div><div class="chapter-layout"><div class="chapter-list" id="chapter-list" role="tablist" aria-label="主線章節"></div><article class="chapter-detail" id="chapter-detail" role="tabpanel" tabindex="0"></article></div></section>
+      <section id="routes" class="section-block"><div class="section-heading"><div><div class="eyebrow">THE MAIN JOURNEY</div><h2>主線路書<span>沿著故事往前走</span></h2></div><span class="section-number">10章＋結尾</span></div><p class="walkthrough-entry">不知道下一步找誰？<a class="button" href="walkthrough/index.html#ch01">開啟完整攻略＋章節流程圖 ↗</a><span>58個步驟，包含前置條件、對話順序與卡關檢查。</span></p><div class="chapter-layout"><div class="chapter-list" id="chapter-list" role="tablist" aria-label="主線章節"></div><article class="chapter-detail" id="chapter-detail" role="tabpanel" tabindex="0"></article></div></section>
       <section id="branches" class="section-block"><div class="section-heading"><div><div class="eyebrow">OFF THE MAIN ROAD</div><h2>支線手帖<span>那些值得多停一會的地方</span></h2></div></div><div id="branch-grid" class="branch-grid"></div></section>
       <section id="dialogue-search" class="section-block dialogue-search" aria-labelledby="dialogue-search-title">
         <div class="section-heading"><div><div class="eyebrow">FIND THE EXACT MOMENT</div><h2 id="dialogue-search-title">對話查圖<span>記得一句話，就找得到那一幕</span></h2></div></div>

@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-09T03:10:03.689Z",
+  "base": "http://127.0.0.1:9340/",
+  "checks": [
+    "390px: all 12 sections, 58 flow-to-step links, chapter selection, screenshot links and no horizontal overflow",
+    "390px: branch/AND labels, conditional nightclub checklist, progress persistence and exact step reload",
+    "1440px: all 12 sections, 58 flow-to-step links, chapter selection, screenshot links and no horizontal overflow",
+    "1440px: branch/AND labels, conditional nightclub checklist, progress persistence and exact step reload",
+    "Homepage hero and chapter overview link into the new guide; chapter 8 destination and analytics are correct"
+  ],
+  "passed": true
+}

@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Director only follows after both ritual endpoints",
+    "College East Xiang solo only unlocks after both dance types",
+    "Exorcism needs the bead plus entry and passage flags",
+    "Obtaining the poem alone does not unlock the record-store task; master dialogue is required",
+    "Nightclub owner waits for the complete 10-person list, plus Gordon when present"
+  ],
+  "passed": true,
+  "method": "Original scene method execution with UI, audio and movement stubbed; prerequisite checks only, not a full playthrough."
+}

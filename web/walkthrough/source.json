@@ -1,0 +1,2530 @@
+{
+  "archive": "accelerated_portable_v2/resources/app.asar.original",
+  "archiveSha256": "44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef",
+  "bundle": "dist/assets/index-BbZAngKC.js",
+  "bundleSha256": "014bde754ab4fa16535a136ef0e07a0481c9b5ade2f222411109c2e73b84cc75",
+  "steps": [
+    {
+      "step": "ch01-s01",
+      "events": [
+        "e040",
+        "e041",
+        "e042",
+        "e051",
+        "e043"
+      ],
+      "methods": [
+        {
+          "method": "home--sceneStartChapter1",
+          "offset": 230926,
+          "sha256": "0f689fd359f87a65ef407ea6e21caed88143c23d9144f8b1d9cfd83058e39823"
+        },
+        {
+          "method": "home--triggerEvent",
+          "offset": 243616,
+          "sha256": "1b47e6187df254586bd4d64e0794f8a4dbdd979c655bb9ad328e8c3f89f0c198"
+        }
+      ],
+      "rules": {
+        "paint": {
+          "all": [
+            {
+              "dialog_name": "paint",
+              "scene": "home",
+              "after_event": "tutorial_interactive_mobile",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        },
+        "table_item": {
+          "chapter_1": [
+            {
+              "dialog_name": "mobile",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "tutorial_interactive_mobile",
+              "after_event": "open_mobile",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "cream",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "mom_yell_plant",
+              "after_event": "got_cream",
+              "filterSound": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch01-s02",
+      "events": [
+        "e050",
+        "e044",
+        "e045",
+        "e052"
+      ],
+      "methods": [
+        {
+          "method": "home--triggerEvent",
+          "offset": 243616,
+          "sha256": "1b47e6187df254586bd4d64e0794f8a4dbdd979c655bb9ad328e8c3f89f0c198"
+        }
+      ],
+      "rules": {
+        "bookshelf": {
+          "chapter_4": [
+            {
+              "dialog_name": "contact_book_not_here",
+              "scene": "home",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "bookshelf",
+              "scene": "home",
+              "after_event": "after_bookshelf",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        },
+        "table_item": {
+          "chapter_1": [
+            {
+              "dialog_name": "mobile",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "tutorial_interactive_mobile",
+              "after_event": "open_mobile",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "cream",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "mom_yell_plant",
+              "after_event": "got_cream",
+              "filterSound": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch01-s03",
+      "events": [
+        "e046",
+        "e047",
+        "e194",
+        "e048"
+      ],
+      "methods": [
+        {
+          "method": "home--triggerLeaveHint",
+          "offset": 240875,
+          "sha256": "a2f1824a297163adab143fff3ddd9702cd7b7c56b00ae192235fe9069a34bc0a"
+        },
+        {
+          "method": "home--teleportTo",
+          "offset": 245606,
+          "sha256": "3d007ed4138afeae7c4de185efda78defcf5ddfe3f7d4e8034eb8c652879bfa2"
+        },
+        {
+          "method": "tainan--triggerFirstTimeLeaveHome",
+          "offset": 460291,
+          "sha256": "0e92fb0b1d4fa768dc6841721b5d6db4c1549a164bea902fcb4b597460be6408"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch01-s04",
+      "events": [
+        "e196",
+        "e197",
+        "e198"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerDrowningEvent",
+          "offset": 461289,
+          "sha256": "a617a167a30879b432ff1c734e33ae0b1852624c9382d951907e32b3becc5f3c"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "west_central",
+          "trigger": "drowning",
+          "x": 1340,
+          "y": 2840,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_right"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch01-s05",
+      "events": [
+        "e199",
+        "e200"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerBridgeOldManEvent",
+          "offset": 462459,
+          "sha256": "38f75db8faa746655abf43bc398451ab0d74913ebc77ed7ee0eac40c69301c37"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "west_central",
+          "trigger": "bridge_old_man",
+          "x": 1840,
+          "y": 2840,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_right"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch01-s06",
+      "events": [
+        "e202",
+        "e203",
+        "e204"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterPsychicEvent",
+          "offset": 463197,
+          "sha256": "64c9e5f758d6c2866ceb8f5bc82f9050f736ace58bb8a5bba2f38c8603a4b768"
+        }
+      ],
+      "rules": {
+        "psychic": {
+          "chapter_1": [
+            {
+              "dialog_name": "psychic",
+              "dialog_name_save": true,
+              "scene": "tainan",
+              "condition": "bridge_old_man",
+              "after_event": "watch_ghost_boat",
+              "filterSound": true
+            }
+          ]
+        },
+        "shopkeeper": {
+          "chapter_1": [
+            {
+              "dialog_name": "shopkeeper",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "watch_ghost_boat",
+              "after_event": "choose_cap",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "show_caps",
+              "scene": "store",
+              "condition": "shopkeeper",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "already_has_red_cap",
+              "scene": "store",
+              "condition": "after_cap_bought",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "clerk",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "disc",
+              "after_event": "clerk_plant",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "clerk_repeat_right",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "shopkeeper_idle",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch01-s07",
+      "events": [
+        "e103",
+        "e106",
+        "e113",
+        "e116",
+        "e205"
+      ],
+      "methods": [
+        {
+          "method": "store--triggerAfterShopkeeperEvent",
+          "offset": 341421,
+          "sha256": "c39e6ee14264a1edb3c73a0925838ea1008d2427ad9e8fc0650c4aca54f90e4b"
+        },
+        {
+          "method": "store--triggerAfterGotRedCapEvent",
+          "offset": 341901,
+          "sha256": "7437b56dd466d7ee9319c9cc51ace807085775e8559cbe0b1e199cd982586332"
+        },
+        {
+          "method": "tainan--triggerToChinaTown",
+          "offset": 464225,
+          "sha256": "50f4cca3638df3f80c9d954ee0a4d6d9a137f5dbccd43555423585218ddd8782"
+        }
+      ],
+      "rules": {
+        "counter_left": {
+          "chapter_1": [
+            {
+              "dialog_name": "shopkeeper",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "watch_ghost_boat",
+              "after_event": "choose_cap",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "cap_red",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "shopkeeper",
+              "after_event": "got_red_cap",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "already_has_red_cap",
+              "scene": "store",
+              "condition": "after_cap_bought",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "clerk",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "disc",
+              "after_event": "clerk_plant",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "clerk_repeat",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "shopkeeper_idle",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch01-s08",
+      "events": [
+        "e201",
+        "e206"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGhostBoatEvent",
+          "offset": 465034,
+          "sha256": "83d46a0be88fb7a79d9077ed2478682bb1e449f62bcb1534b208762fb4e31a79"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "west_central",
+          "trigger": "barrier_up",
+          "x": 2020,
+          "y": 1340,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_up"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        },
+        {
+          "map": "west_central",
+          "trigger": "barrier_down",
+          "x": 2020,
+          "y": 820,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_down"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch01-s09",
+      "events": [
+        "e210",
+        "e211"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerChapter1End",
+          "offset": 467334,
+          "sha256": "63ca5ee6c306a952330d6263125465fe3fbd53a0f928edaf540e0cc210aa3efb"
+        },
+        {
+          "method": "tainan--toChapterThree",
+          "offset": 469097,
+          "sha256": "d6d4c8b6ecdf6faf14424bb64cfaba779af92bef149483f442f1fb7e3502eeb0"
+        }
+      ],
+      "rules": {
+        "old_man": {
+          "chapter_1": [
+            {
+              "dialog_name": "",
+              "after_event": "old_man",
+              "scene": "tainan"
+            }
+          ],
+          "chapter_4": [
+            {
+              "dialog_name": "",
+              "after_event": "old_man",
+              "scene": "tainan"
+            }
+          ],
+          "chapter_11": [
+            {
+              "dialog_name": "",
+              "after_event": "old_man",
+              "scene": "tainan"
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "old_man_not_here",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch02-s01",
+      "events": [
+        "e213"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerRitual",
+          "offset": 469821,
+          "sha256": "2d7f93dfa3e3f1d7d115f53c8e1bce3028e5ce62637d51698b222ea3ad5e33b0"
+        },
+        {
+          "method": "tainan--triggerDirectorFollow",
+          "offset": 470238,
+          "sha256": "9999290ae788f097b1abf1663b2a3062b3022371ad53597d652f3a01119bb029"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "west_central",
+          "trigger": "ritual_up",
+          "x": 2020,
+          "y": 840,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_up"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        },
+        {
+          "map": "west_central",
+          "trigger": "ritual_down",
+          "x": 2020,
+          "y": 1300,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_down"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch02-s02",
+      "events": [
+        "e214",
+        "e215"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerDirectorFollow",
+          "offset": 470238,
+          "sha256": "9999290ae788f097b1abf1663b2a3062b3022371ad53597d652f3a01119bb029"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "west_central",
+          "trigger": "director_follow",
+          "x": 2020,
+          "y": 1220,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_up, walk_down"
+            },
+            {
+              "name": "condition",
+              "type": "string",
+              "value": "ritual"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch02-s03",
+      "events": [
+        "e217",
+        "e218"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerWatchBattle",
+          "offset": 474358,
+          "sha256": "fc5974f3fa4efd50ef34ceefde985c446f2990ad963472fa39ecda4fc48ff166"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch02-s04",
+      "events": [
+        "e117",
+        "e118",
+        "e229"
+      ],
+      "methods": [
+        {
+          "method": "store--sceneInit",
+          "offset": 335008,
+          "sha256": "f1c9fab1cb09188254d6b843ddc083b338663a8e2a26ea5a7cddacaae6abc567"
+        },
+        {
+          "method": "store--triggerPaperEvent",
+          "offset": 342701,
+          "sha256": "a1689d02f36e38c84cca27fe4f54d64f60b9eb6242526387abe605d4e48cb8ec"
+        },
+        {
+          "method": "tainan--triggerToSeaFood",
+          "offset": 475798,
+          "sha256": "fca75ea4e2a81b1690870da9c5cb84dffa8059053cf7fa31e3d6c4fa269662a3"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch02-s05",
+      "events": [
+        "e125",
+        "e126",
+        "e127",
+        "e128"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerLighter",
+          "offset": 476507,
+          "sha256": "cb9af1b65428965dd4613203a1de4785e97aee1f9eba56e8aeebc7a924c82109"
+        },
+        {
+          "method": "tainan--triggerChapter3End",
+          "offset": 477811,
+          "sha256": "7809caec6b3c2398370408dec22242f00bfcf1600d6a740061f3ed9105a06e12"
+        },
+        {
+          "method": "home--sceneStartChapter3",
+          "offset": 231589,
+          "sha256": "d6c581760b9aaa83a8da52b25606382021752210392d319487c02a2bd298a11e"
+        }
+      ],
+      "rules": {
+        "lady_boss": {
+          "chapter_2": [
+            {
+              "dialog_name": "",
+              "condition": "after_got_paper",
+              "after_event": "eating_seafood",
+              "scene": "tainan"
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "plant_not_accepted_lady_boss",
+              "condition": "album_case",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "out_seafood",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true,
+              "disableAtNight": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch03-s01",
+      "events": [
+        "e059",
+        "e230"
+      ],
+      "methods": [
+        {
+          "method": "home--sceneStartChapter3",
+          "offset": 231589,
+          "sha256": "d6c581760b9aaa83a8da52b25606382021752210392d319487c02a2bd298a11e"
+        },
+        {
+          "method": "tainan--triggerDrowningManTalk",
+          "offset": 480889,
+          "sha256": "50aef6bf4e7de7981efa49582970080d2f1f462e1814c86e003377fdd75cd4d8"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch03-s02",
+      "events": [
+        "e130",
+        "e131",
+        "e129"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerHintToYuGuang",
+          "offset": 481913,
+          "sha256": "c99ea3211f0ecd59c0fa43d1e303b30a0917271a407b8b919a3aba7010434d49"
+        },
+        {
+          "method": "tainan--triggerHintToYuGuang2",
+          "offset": 482390,
+          "sha256": "95cd6d77bbdc3cd8206bd25c9959d61d8b3c0df03076a8e86221b9b8a972e7a0"
+        },
+        {
+          "method": "tainan--triggerNoWayToYuguang",
+          "offset": 484244,
+          "sha256": "0d3ae2ecf3525c38dda950569ac696d72bde34319433b1876cf1c74895f9fd2d"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch03-s03",
+      "events": [
+        "e133"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterFirstTimeToYuguang",
+          "offset": 484771,
+          "sha256": "da805a90f1d9395d50a783668e1065fdd37d1e761abe94766d6c6919867ffbc2"
+        }
+      ],
+      "rules": {
+        "first_time_to_yuguang": {
+          "chapter_3": [
+            {
+              "dialog_name": "first_time_to_yuguang",
+              "dialog_name_save": true,
+              "scene": "tainan",
+              "condition": "no_way_to_yuguang",
+              "after_event": "after_first_time_to_yuguang",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch03-s04",
+      "events": [
+        "e135",
+        "e134",
+        "e061"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerBridgeOpen",
+          "offset": 486498,
+          "sha256": "da9c5e24df3b93c98936a4d3c1579544aa1273ce277b09c97152b06ff0d4958e"
+        },
+        {
+          "method": "home--sceneStartChapter4",
+          "offset": 232272,
+          "sha256": "e3b965468e1fe0cbf6abe9f721806b6678c5ada00a74d3120c6e6c79d5286655"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "anping_left",
+          "trigger": "bridge_open",
+          "x": 2700,
+          "y": 2120,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_right"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch04-s01",
+      "events": [
+        "e061",
+        "e055",
+        "e057"
+      ],
+      "methods": [
+        {
+          "method": "home--sceneStartChapter4",
+          "offset": 232272,
+          "sha256": "e3b965468e1fe0cbf6abe9f721806b6678c5ada00a74d3120c6e6c79d5286655"
+        },
+        {
+          "method": "home--triggerAfterFindContactBook",
+          "offset": 241391,
+          "sha256": "e13618ac7898463aa7596e229fda7bcb004ab0023544ff263c1d6a9d87065b32"
+        }
+      ],
+      "rules": {
+        "bin": {
+          "chapter_4": [
+            {
+              "dialog_name": "bin_contact_book",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "mom_yell",
+              "after_event": "found_contact_book",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "bin",
+              "scene": "home",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s02",
+      "events": [
+        "e030",
+        "e033"
+      ],
+      "methods": [
+        {
+          "method": "hallway--triggerToTemple",
+          "offset": 224555,
+          "sha256": "b4c8d05b543bde6a8e4ef79b4ebcf2aa863e17f9d0b3a01e06d565d6dfaf1d1a"
+        }
+      ],
+      "rules": {
+        "teacher": {
+          "chapter_4": [
+            {
+              "dialog_name": "teacher_no_contact_book",
+              "scene": "hallway",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "teacher",
+              "dialog_name_save": true,
+              "condition": "bin_contact_book",
+              "scene": "hallway",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "teacher_repeat",
+              "scene": "hallway",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "teacher_not_here",
+              "scene": "hallway",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_5": [
+            {
+              "dialog_name": "teacher_repeat_2",
+              "scene": "hallway",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s03",
+      "events": [
+        "e232",
+        "e233"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGoToPray",
+          "offset": 487223,
+          "sha256": "e48e9cd0cfb279dd63f0c3253cee9eb07d374805d4478957ad8672b4a3969729"
+        }
+      ],
+      "rules": {
+        "pray": {
+          "chapter_4": [
+            {
+              "dialog_name": "pray_to_god",
+              "dialog_name_save": true,
+              "condition": "go_to_pray",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "pray",
+              "condition": "pray_to_god",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        },
+        "draw_poem": {
+          "chapter_4": [
+            {
+              "dialog_name": "draw_poem",
+              "condition": "pray_to_god",
+              "scene": "tainan",
+              "after_event": "after_draw_poem",
+              "filterSound": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s04",
+      "events": [
+        "e235",
+        "e238",
+        "e237",
+        "e236",
+        "e239"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterDrawPoem",
+          "offset": 488703,
+          "sha256": "3b304527e251996716aa4686aefaa2aa4b63134f26c55fa81ada5110bbec18c8"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s05",
+      "events": [
+        "e241",
+        "e243"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGoToRecordStore",
+          "offset": 487670,
+          "sha256": "3978b0473c3aabf1507882836352aa6a01316c9d8e7661a72c902f7286f4699d"
+        }
+      ],
+      "rules": {
+        "master": {
+          "chapter_4": [
+            {
+              "dialog_name": "master",
+              "dialog_name_save": true,
+              "condition": "after_draw_poem",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "after_master",
+              "condition": "master",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s06",
+      "events": [
+        "e084"
+      ],
+      "methods": [
+        {
+          "method": "tainan--buildEventRules",
+          "offset": 384856,
+          "sha256": "794c3003396f69fd203544c4ef0dfcf53ed52092075cd2e59992ca09d3ad7e67"
+        },
+        {
+          "method": "tainan--triggerHomeCookinEvent",
+          "offset": 490021,
+          "sha256": "0a32f1642d463140d1dc702658e582f5e69bf46d522d04606306360085e32c9b"
+        }
+      ],
+      "rules": {
+        "cd_left": {
+          "chapter_4": [
+            {
+              "dialog_name": "ask_home_cookin",
+              "dialog_name_save": true,
+              "condition": "go_to_record_store",
+              "scene": "record_store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "ask_home_cookin_repeat",
+              "scene": "record_store",
+              "condition": "go_to_record_store",
+              "after_event": "ask_home_cookin_again",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "ask_home_cookin_repeat_after_got",
+              "scene": "record_store",
+              "condition": "find_home_cookin",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "plant_not_accepted_record_store",
+              "condition": "album_case",
+              "scene": "record_store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "find_cd",
+              "dialog_name_save": true,
+              "condition": "after_talk_to_east_xiang",
+              "after_event": "choose_cd",
+              "scene": "record_store",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "album_Nas",
+              "scene": "record_store",
+              "condition": "find_cd",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "already_has_cd",
+              "scene": "record_store",
+              "condition": "album_2Pac",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "record_store_idle",
+              "scene": "record_store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s07",
+      "events": [
+        "e245",
+        "e247",
+        "e248",
+        "e250",
+        "e252"
+      ],
+      "methods": [
+        {
+          "method": "tainan--setupChapter4",
+          "offset": 416906,
+          "sha256": "9180add15542c3937c50670d084c03885a91cf25879c5e7a1ade6f8d3b4dd307"
+        },
+        {
+          "method": "tainan--triggerHomeCookinEvent",
+          "offset": 490021,
+          "sha256": "0a32f1642d463140d1dc702658e582f5e69bf46d522d04606306360085e32c9b"
+        },
+        {
+          "method": "tainan--triggerOldManHomeCookinEvent",
+          "offset": 491630,
+          "sha256": "f2bcc89a4e95fa20bd6671b7deadc9c0e700865c9a4614f1c6f2d8ed0324824a"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch04-s08",
+      "events": [
+        "e078",
+        "e079",
+        "e080",
+        "e035"
+      ],
+      "methods": [
+        {
+          "method": "platform--triggerTeacherSay",
+          "offset": 320397,
+          "sha256": "df8d16ca1adc374ee803de072953e408a3b4acd585c82aedc4be61c3b517f7a1"
+        },
+        {
+          "method": "platform--triggerListenOnThePlatform",
+          "offset": 320962,
+          "sha256": "8064ba432b9c63b50284be09e7f7434d09564448b23890dc514c57070a09dc9d"
+        }
+      ],
+      "rules": {
+        "play_song": {
+          "chapter_4": [
+            {
+              "dialog_name": "play_song",
+              "dialog_name_save": true,
+              "condition": "teacher_say",
+              "after_event": "listen_on_the_platform",
+              "scene": "platform",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "radio",
+              "scene": "platform",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch05-s01",
+      "events": [
+        "e035",
+        "e155",
+        "e156"
+      ],
+      "methods": [
+        {
+          "method": "hallway--sceneInit",
+          "offset": 221758,
+          "sha256": "87da0b84fea70f701a4bb5478c2dd5e23e7cb759ee164a932bd7d1a41dd476f2"
+        },
+        {
+          "method": "tainan--triggerCanRide",
+          "offset": 494506,
+          "sha256": "663a0e0425b150cc418d48aba8f8569503f7aada103d39b352105b7d7c96cbc9"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "east",
+          "trigger": "can_ride",
+          "x": 2880,
+          "y": 3640,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_down"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch05-s02",
+      "events": [
+        "e253"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterFirstTimeToGoldCoast",
+          "offset": 495104,
+          "sha256": "ffa92f3807fa0fcf6c64543897081df553cc3dde961fcd40db55a263e9b701f2"
+        }
+      ],
+      "rules": {
+        "first_time_to_gold_coast": {
+          "chapter_5": [
+            {
+              "dialog_name": "first_time_to_gold_coast",
+              "dialog_name_save": true,
+              "scene": "tainan",
+              "after_event": "after_first_time_to_gold_coast",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s01",
+      "events": [
+        "e175",
+        "e176"
+      ],
+      "methods": [
+        {
+          "method": "tainan--tirggerAfterDanceTeacher",
+          "offset": 495993,
+          "sha256": "b16d84e448a8883bb00f674f121cb738eae5006006089fa7c8016ff878da1e8d"
+        }
+      ],
+      "rules": {
+        "dance_teacher": {
+          "chapter_6": [
+            {
+              "dialog_name": "dance_teacher",
+              "dialog_name_save": true,
+              "scene": "tainan",
+              "after_event": "after_dance_teacher",
+              "filterSound": true
+            }
+          ]
+        },
+        "plant_shopkeeper": {
+          "chapter_6": [
+            {
+              "dialog_name": "plant_shopkeeper",
+              "dialog_name_save": true,
+              "condition": "dance_teacher",
+              "after_event": "got_dancing_plant",
+              "scene": "plant_shop",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_9": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_10": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_11": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_12": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s02",
+      "events": [
+        "e071",
+        "e072"
+      ],
+      "methods": [
+        {
+          "method": "plant_shop--triggerGotDancingPlant",
+          "offset": 312116,
+          "sha256": "31adec1b9356974bccdc59eba1651f71ee6b83ee422e2e4ea0a6a9df28debaf6"
+        }
+      ],
+      "rules": {
+        "plant_shopkeeper": {
+          "chapter_6": [
+            {
+              "dialog_name": "plant_shopkeeper",
+              "dialog_name_save": true,
+              "condition": "dance_teacher",
+              "after_event": "got_dancing_plant",
+              "scene": "plant_shop",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_9": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_10": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_11": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_12": [
+            {
+              "dialog_name": "plant_shop_idle",
+              "scene": "plant_shop",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s03",
+      "events": [
+        "e062",
+        "e063",
+        "e064"
+      ],
+      "methods": [
+        {
+          "method": "home--sceneStartChapter6",
+          "offset": 232936,
+          "sha256": "0dc90ae5d834a74f46c801215aeb81eb7749a98f5aa4f1a19821911924c688b4"
+        },
+        {
+          "method": "home--triggerGotCream",
+          "offset": 242069,
+          "sha256": "ab9bb07ed9fa55024c9234441528e552192f13c2b55bf332069d05bc3c845211"
+        }
+      ],
+      "rules": {
+        "table_item": {
+          "chapter_1": [
+            {
+              "dialog_name": "mobile",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "tutorial_interactive_mobile",
+              "after_event": "open_mobile",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "cream",
+              "dialog_name_save": true,
+              "scene": "home",
+              "condition": "mom_yell_plant",
+              "after_event": "got_cream",
+              "filterSound": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s04",
+      "events": [
+        "e065",
+        "e066"
+      ],
+      "methods": [
+        {
+          "method": "home--triggerGoGetAlbumCase",
+          "offset": 242648,
+          "sha256": "f40efd1eb454adc59c2c30f556e027c5ab159230fb32a5784b04db529a296619"
+        },
+        {
+          "method": "home--triggerGotAlbumCase",
+          "offset": 243173,
+          "sha256": "f13e6d3fb93c56543af189d345a98f92410fda4589596a77534ce77daacacc82"
+        }
+      ],
+      "rules": {
+        "album_case": {
+          "chapter_6": [
+            {
+              "dialog_name": "album_case",
+              "scene": "home",
+              "condition": "cream",
+              "after_event": "got_album_case",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s05",
+      "events": [
+        "e009",
+        "e010"
+      ],
+      "methods": [
+        {
+          "method": "grandma_house--triggerGotDisc",
+          "offset": 208770,
+          "sha256": "e03a8d4398df670a6c34b07f6b8bc8891fa4afe1c56b8f33be4cfadffe1402be"
+        }
+      ],
+      "rules": {
+        "disc": {
+          "chapter_6": [
+            {
+              "dialog_name": "disc",
+              "dialog_name_save": true,
+              "condition": "album_case",
+              "after_event": "got_disc",
+              "scene": "grandma_house",
+              "filterSound": true
+            }
+          ]
+        },
+        "shopkeeper": {
+          "chapter_1": [
+            {
+              "dialog_name": "shopkeeper",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "watch_ghost_boat",
+              "after_event": "choose_cap",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "show_caps",
+              "scene": "store",
+              "condition": "shopkeeper",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "already_has_red_cap",
+              "scene": "store",
+              "condition": "after_cap_bought",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "clerk",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "disc",
+              "after_event": "clerk_plant",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "clerk_repeat_right",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "shopkeeper_idle",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch06-s06",
+      "events": [
+        "e119",
+        "e120",
+        "e121"
+      ],
+      "methods": [
+        {
+          "method": "store--triggerClerkPlantEvent",
+          "offset": 343989,
+          "sha256": "8c489337cb59cf230396478128ee2f2816b125d9ffca370ee3dc06c561ce8d97"
+        }
+      ],
+      "rules": {
+        "shopkeeper": {
+          "chapter_1": [
+            {
+              "dialog_name": "shopkeeper",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "watch_ghost_boat",
+              "after_event": "choose_cap",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "show_caps",
+              "scene": "store",
+              "condition": "shopkeeper",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "already_has_red_cap",
+              "scene": "store",
+              "condition": "after_cap_bought",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "clerk",
+              "dialog_name_save": true,
+              "scene": "store",
+              "condition": "disc",
+              "after_event": "clerk_plant",
+              "filterSound": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "clerk_repeat_right",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "shopkeeper_idle",
+              "scene": "store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch07-s01",
+      "events": [
+        "e178",
+        "e180"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterSquidRiceNoodles",
+          "offset": 496704,
+          "sha256": "31b60f40fce9592314c009307fce5b59ffb6cfadb3150fbd09fbba1092bedea4"
+        }
+      ],
+      "rules": {
+        "squid_rice_noodles": {
+          "chapter_6": [
+            {
+              "dialog_name": "plant_not_accepted_squid_rice_noodles",
+              "condition": "album_case",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "squid_rice_noodles",
+              "dialog_name_save": true,
+              "scene": "tainan",
+              "after_event": "after_squid_rice_noodles",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "out_squid_rice_noodles",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true,
+              "disableAtNight": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch07-s02",
+      "events": [
+        "e181"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterFirstTimeToSquidRiceNoodles",
+          "offset": 497378,
+          "sha256": "3f626b3b1e94b178a24044804382a00b230afbbdb9c02ae935a198f6f4da2879"
+        }
+      ],
+      "rules": {
+        "first_time_to_squid_rice_noodles": {
+          "chapter_7": [
+            {
+              "dialog_name": "first_time_to_squid_rice_noodles",
+              "dialog_name_save": true,
+              "condition": "after_squid_rice_noodles",
+              "scene": "tainan",
+              "after_event": "after_first_time_to_squid_rice_noodles",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch07-s03",
+      "events": [
+        "e182"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerToNCKUAfterPlayerMove",
+          "offset": 498246,
+          "sha256": "f0e364191acc9fb63c7bec16adac85fb0a6000514ea80a08d653a4e1ba0ce240"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s01",
+      "events": [
+        "e002"
+      ],
+      "methods": [
+        {
+          "method": "gallery--triggerDance",
+          "offset": 199367,
+          "sha256": "51d98e1eb367ee76b70d8e6a68f1098be58579c1556991820b79ab6786d6b362"
+        },
+        {
+          "method": "gallery--triggerEastXiangTalk",
+          "offset": 197107,
+          "sha256": "e9a7a314141475034df168336b4e7123798ab058b3459ae06c5ee7e7b0b75f2c"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s02",
+      "events": [
+        "e004",
+        "e005",
+        "e007",
+        "e008"
+      ],
+      "methods": [
+        {
+          "method": "gallery--triggerEastXiangTalk",
+          "offset": 197107,
+          "sha256": "e9a7a314141475034df168336b4e7123798ab058b3459ae06c5ee7e7b0b75f2c"
+        },
+        {
+          "method": "gallery--triggerThisIsYourWorld",
+          "offset": 198484,
+          "sha256": "0ef2a488b462442915933e4ce5df351c555051b4619bae8453888fb74a317dff"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s03",
+      "events": [
+        "e089",
+        "e093",
+        "e094"
+      ],
+      "methods": [
+        {
+          "method": "record_store--triggerChooseCD",
+          "offset": 330013,
+          "sha256": "c813c2e65f31a806933c9b5931ea752dd8d4ae8822cbc93a1172f05a0093bcde"
+        },
+        {
+          "method": "record_store--triggerGotCD",
+          "offset": 330438,
+          "sha256": "dfa1a8f8bb4d5c0e7a8486eb47ee6968bd89cc79baf26450d7e649b2f36cebf2"
+        }
+      ],
+      "rules": {
+        "cd_right": {
+          "chapter_4": [
+            {
+              "dialog_name": "ask_home_cookin",
+              "dialog_name_save": true,
+              "condition": "go_to_record_store",
+              "scene": "record_store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "ask_home_cookin_repeat",
+              "scene": "record_store",
+              "condition": "go_to_record_store",
+              "after_event": "ask_home_cookin_again",
+              "filterSound": true,
+              "filterSoundEnd": true
+            },
+            {
+              "dialog_name": "ask_home_cookin_repeat_after_got",
+              "scene": "record_store",
+              "condition": "find_home_cookin",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "find_cd",
+              "dialog_name_save": true,
+              "condition": "after_talk_to_east_xiang",
+              "after_event": "choose_cd",
+              "scene": "record_store",
+              "filterSound": true
+            },
+            {
+              "dialog_name": "album_2Pac",
+              "dialog_name_save": true,
+              "scene": "record_store",
+              "condition": "find_cd",
+              "after_event": "got_cd",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "record_store_idle",
+              "scene": "record_store",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s04",
+      "events": [
+        "e011",
+        "e013"
+      ],
+      "methods": [
+        {
+          "method": "grandma_house--triggerDinnerEvent",
+          "offset": 211812,
+          "sha256": "bac7273ccd8d5ecb0c57710f92c7a220a3be87e2179455c316214890f7620eb0"
+        },
+        {
+          "method": "grandma_house--triggerGoGroceryShopping",
+          "offset": 210417,
+          "sha256": "47ae06cb1af7898b43236ce0536d3091633f960619de8126090741d02c7281ad"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s05",
+      "events": [
+        "e189",
+        "e171",
+        "e191"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterGoGroceryShopping",
+          "offset": 499135,
+          "sha256": "89a8eb44e7e71728f46e3eec09fa3ff41c907ad2654dd544aeb58cd4462176f1"
+        },
+        {
+          "method": "tainan--triggerDinnerAllBought",
+          "offset": 499742,
+          "sha256": "4f609dd40b8263d87f14bb30f85d04ecdcdcea644b3122c920a733555235bdb2"
+        }
+      ],
+      "rules": {
+        "beef_soup": {
+          "chapter_6": [
+            {
+              "dialog_name": "plant_not_accepted_beef_soup",
+              "condition": "album_case",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "beef_soup",
+              "dialog_name_save": true,
+              "condition": "go_grocery_shopping",
+              "scene": "tainan",
+              "after_event": "after_buying_beef_soup",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "out_beef_soup",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true,
+              "disableAtNight": true
+            }
+          ]
+        },
+        "congee": {
+          "chapter_6": [
+            {
+              "dialog_name": "plant_not_accepted_congee",
+              "condition": "album_case",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "congee",
+              "dialog_name_save": true,
+              "condition": "go_grocery_shopping",
+              "scene": "tainan",
+              "after_event": "after_buying_congee",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "out_congee",
+              "scene": "tainan",
+              "filterSound": true,
+              "filterSoundEnd": true,
+              "disableAtNight": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s06",
+      "events": [
+        "e016"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGrandmaRequire",
+          "offset": 500297,
+          "sha256": "1db2014d1208831fc906c7cc2a7254116ae68e614ef77429092fd2b13157d919"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s07",
+      "events": [
+        "e018"
+      ],
+      "methods": [
+        {
+          "method": "grandma_house--triggerGetMothBalls",
+          "offset": 215018,
+          "sha256": "5aaf310300e9a3fad0db263a1fe5c14a62dbbf6c2c67230faa02452d965fcfbc"
+        },
+        {
+          "method": "grandma_house--triggerEvent",
+          "offset": 217112,
+          "sha256": "d532fda1dd8a3e7865d7ac0f9a39a6d9460b59437fccb4ff017e92d8095fb0be"
+        }
+      ],
+      "rules": {
+        "mothballs": {
+          "chapter_8": [
+            {
+              "dialog_name": "",
+              "condition": "grandma_require",
+              "after_event": "get_mothballs",
+              "scene": "grandma_house",
+              "filterSound": true
+            }
+          ]
+        },
+        "put_mothballs": {
+          "chapter_1": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_2": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_3": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_4": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_5": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_6": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_7": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_8": [
+            {
+              "dialog_name": "put_mothballs",
+              "dialog_name_save": true,
+              "condition": "get_mothballs",
+              "after_event": "after_put_mothballs",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_9": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_10": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_11": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ],
+          "chapter_12": [
+            {
+              "dialog_name": "",
+              "after_event": "change_cloth",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch08-s08",
+      "events": [
+        "e021",
+        "e022"
+      ],
+      "methods": [
+        {
+          "method": "grandma_house--triggerAfterListenedToTheCD",
+          "offset": 213391,
+          "sha256": "5311ce815c4d9b71614e0aa78a0e46a73ccf7560913fdc2e649db8927fac0e27"
+        }
+      ],
+      "rules": {
+        "listened_to_the_CD": {
+          "chapter_8": [
+            {
+              "dialog_name": "play_cd",
+              "dialog_name_save": true,
+              "condition": "put_mothballs",
+              "after_event": "after_listened_to_the_CD",
+              "scene": "grandma_house",
+              "filterSound": true
+            }
+          ],
+          "all": [
+            {
+              "dialog_name": "cd_player",
+              "scene": "grandma_house",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch09-s01",
+      "events": [
+        "e136"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterWatchBridge",
+          "offset": 501567,
+          "sha256": "7f313785167ec291c167e94bc1f6226d02c25b59ea4142373242cef8a7f975d4"
+        }
+      ],
+      "rules": {
+        "watch_bridge": {
+          "chapter_9": [
+            {
+              "dialog_name": "watch_bridge",
+              "scene": "tainan",
+              "after_event": "after_watch_bridge",
+              "filterSound": true,
+              "filterSoundEnd": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch09-s02",
+      "events": [
+        "e137"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterWatchBridge",
+          "offset": 501567,
+          "sha256": "7f313785167ec291c167e94bc1f6226d02c25b59ea4142373242cef8a7f975d4"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch10-s01",
+      "events": [
+        "e138",
+        "e139",
+        "e140",
+        "e141",
+        "e142",
+        "e143"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerPossessedByGhost",
+          "offset": 502971,
+          "sha256": "64b39bb65ed0427bf2f6dc967cbe8ae7f6b2a31041d1cde39e1777157960f83d"
+        }
+      ],
+      "rules": {
+        "ghost_left": {
+          "chapter_10": [
+            {
+              "dialog_name": "ghost_left",
+              "dialog_name_save": true,
+              "after_event": "possessed_by_ghost",
+              "scene": "tainan",
+              "filterSound": true
+            }
+          ]
+        },
+        "ghost_up": {
+          "chapter_10": [
+            {
+              "dialog_name": "ghost_up",
+              "dialog_name_save": true,
+              "after_event": "possessed_by_ghost",
+              "scene": "tainan",
+              "filterSound": true
+            }
+          ]
+        },
+        "ghost_down": {
+          "chapter_10": [
+            {
+              "dialog_name": "ghost_down",
+              "dialog_name_save": true,
+              "after_event": "possessed_by_ghost",
+              "scene": "tainan",
+              "filterSound": true
+            }
+          ]
+        }
+      },
+      "triggerPoints": []
+    },
+    {
+      "step": "ch10-s02",
+      "events": [
+        "e183",
+        "e184"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerAfterNunTalk",
+          "offset": 505502,
+          "sha256": "1c200c2ac2a9d5b9725692454519ede14d4fc0bb910bdc4de8c65f25b264e0f7"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch10-s03",
+      "events": [
+        "e186"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerExorcism",
+          "offset": 506595,
+          "sha256": "9b908abb2999d4241f6e6ef695c76cec67789175875405b709027d2fe66ac12c"
+        },
+        {
+          "method": "tainan--triggerGoToNextLocation",
+          "offset": 507559,
+          "sha256": "0adad738d0d9c8ee43de0f86a1d7649a5ab42686a6a9c03e5af5035c80c5b72d"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "south",
+          "trigger": "exorcism_enter",
+          "x": 6040,
+          "y": 4580,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_up"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        },
+        {
+          "map": "south",
+          "trigger": "exorcism_pass",
+          "x": 5900,
+          "y": 4560,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_left"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        },
+        {
+          "map": "south",
+          "trigger": "exorcism",
+          "x": 5800,
+          "y": 4620,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_down"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch10-s04",
+      "events": [
+        "e187",
+        "e188",
+        "e254",
+        "e255"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGoToNextLocation",
+          "offset": 507559,
+          "sha256": "0adad738d0d9c8ee43de0f86a1d7649a5ab42686a6a9c03e5af5035c80c5b72d"
+        },
+        {
+          "method": "tainan--triggerDiscuss",
+          "offset": 508244,
+          "sha256": "3627b08042067d481d716b48bdab96d24a92c1548fe9831aab465dae31f1f398"
+        },
+        {
+          "method": "tainan--triggerOldManSkateBoarding",
+          "offset": 510476,
+          "sha256": "2f61169e78d81cd278a304c63faf5b1b564a0e6ac787ecb3813fb6900d42a4e1"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch10-s05",
+      "events": [
+        "e144",
+        "e145",
+        "e146",
+        "e292"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerOldManSkateBoarding",
+          "offset": 510476,
+          "sha256": "2f61169e78d81cd278a304c63faf5b1b564a0e6ac787ecb3813fb6900d42a4e1"
+        },
+        {
+          "method": "nightclub--sceneInit",
+          "offset": 274569,
+          "sha256": "802f7b49cb2e26f456cdea655dd1f523a8c7e1ec4fb85064d5e3e8e967ecbf1a"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": [
+        {
+          "map": "anping",
+          "trigger": "old_man_skateboarding",
+          "x": 2740,
+          "y": 2040,
+          "properties": [
+            {
+              "name": "animeState",
+              "type": "string",
+              "value": "walk_left, walk_right, walk_up, walk_down"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "value": "event:tainan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "ch10-s06",
+      "events": [
+        "e280",
+        "e282",
+        "e277",
+        "e281",
+        "e279",
+        "e278",
+        "e283",
+        "e284",
+        "e276",
+        "e285",
+        "e286"
+      ],
+      "methods": [
+        {
+          "method": "nightclub--getAvailableRecordTalkTargets",
+          "offset": 297816,
+          "sha256": "a1a3354e7bda58dab7b7f73b56d79d122f6022933573c20ac6c61a6e5a7a0958"
+        },
+        {
+          "method": "nightclub--triggerRecordTalked",
+          "offset": 297895,
+          "sha256": "2d6b5c7e1211c6bf82ec4c240de6426900f28aeaef5a443f6653f7c77f9cbe4e"
+        },
+        {
+          "method": "nightclub--triggerThisIsYourWorld",
+          "offset": 295913,
+          "sha256": "7a1645530e7dcdc1da1b84fadcf6ccd8bf216a06bab23b20935613d4e2ce3fa7"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch10-s07",
+      "events": [
+        "e290",
+        "e291",
+        "e147"
+      ],
+      "methods": [
+        {
+          "method": "nightclub--triggerNightClubOwnerEnter",
+          "offset": 302505,
+          "sha256": "cf41620382538f7526e0663272b243c904201e71978cddfda88748c83f769020"
+        },
+        {
+          "method": "tainan--triggerGoToLastTalk",
+          "offset": 512427,
+          "sha256": "0049cbffed70c47126c615f92d77222a3553b1d0f8b9bd7a7c9f8cc188f1e64d"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch11-s01",
+      "events": [
+        "e147"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerGoToLastTalk",
+          "offset": 512427,
+          "sha256": "0049cbffed70c47126c615f92d77222a3553b1d0f8b9bd7a7c9f8cc188f1e64d"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch11-s02",
+      "events": [
+        "e256",
+        "e257"
+      ],
+      "methods": [
+        {
+          "method": "tainan--triggerLastTalk",
+          "offset": 513166,
+          "sha256": "57189ad69af20639b998643a4276f8a3a42d58d260722209fea75a9d02b81672"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch12-s01",
+      "events": [],
+      "methods": [
+        {
+          "method": "ending--create",
+          "offset": 163520,
+          "sha256": "6c29ab4b1817862b8bf24c744c56d6040bd72baa33d8ba6b83b917d8f7171ddb"
+        },
+        {
+          "method": "ending--saveEndingCompleteGame",
+          "offset": 165149,
+          "sha256": "45061fc8779f7e5a1c225c9d07858e11a24e68e5350d3558645db2197789db5e"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    },
+    {
+      "step": "ch12-s02",
+      "events": [
+        "e069",
+        "e070"
+      ],
+      "methods": [
+        {
+          "method": "home--sceneStartChapter12",
+          "offset": 234275,
+          "sha256": "1419ed53c077d82a1170832fa447090cda087b1f4eb28be55c561e81a77dbd02"
+        }
+      ],
+      "rules": {},
+      "triggerPoints": []
+    }
+  ]
+}

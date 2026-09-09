@@ -185,3 +185,16 @@ tmp/check_player_guide.cjs驗證293筆、Gina只命中楊教授第5張、手機/
 共用實作在工作區asset_tools/stele-reader/，add_steles.py重新擷取時同步至full_asset_pack及guide/collection；integrate_guide.py同步該資料夾。字型來自原始素材包，沒有外部字型請求。部署資料夾為web/collection/stele-reader/。
 
 測試asset_tools/test_stele_pages.cjs將每一篇每一頁與原始Fr分頁程式比較，並在390/1440px驗證邊界、方向鍵、模式與頁次保留、深連結重整、放大及照片回歸；test_steles.cjs保留原文搜尋／收藏測試。原版比對類別來自保留ASAR的dist/assets/index-BbZAngKC.js，自class Fr extends至class Rr extends前，暫存tmp/original-stele-class.js。報告verification/stele-pages-local-checks.json。
+
+
+## 2026-09-09 完整主線攻略與流程圖
+
+新增walkthrough/index.html：10個原版任務章節＋歸還錦囊／通關後兩節，共58步、152個對話截圖連結。逐步交代地點／人物、前置條件、操作、完成結果與卡關檢查。流程圖為可點選的HTML節點與連線，依条件分流和兩項皆須完成有明確標籤；第10章包含10名固定人物＋條件式楊教授的交談清單。步驟與清單勾選以localStorage canal-mainline-progress-v1獨立保存，不動遊戲存檔或舊圖鑑已讀進度。
+
+Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽任務同步為連續步驟，修正原第9章混入幽靈事件的摘要。原版只有10個任務章名，終章與通關後明確為另行整理。原圖鑑293事件與734截圖引用維持；GorDoN學生版仍排除。
+
+內容來源：guide_tools/walkthrough_content.py；生成：python3 guide_tools/build_walkthrough.py。從保留的原始ASAR抽取場景方法，檢查每步對應method／rules／地圖觸發物件與公开event ID，輸出walkthrough/source.json與verification.json。此生成器會同步首頁guide-data.js的章節摘要，所以重新執行publish.py後應再執行build_walkthrough.py。前端CSS/JS在guide/walkthrough/；build_deploy_package.py已加入walkthrough資料夾複製。
+
+驗證：Windows Node執行guide_tools/probe_walkthrough_gates.cjs，以原版方法隔離執行導演雙觸發、東翔雙舞步、解籤師傅、天珠與穿廟、夜店交談全員等門檻；UI／音訊／移動以替身取代，並非全程實玩。build_walkthrough.py會在tmp/mainline-source/生成此檢查需要的方法文字。guide_tools/test_walkthrough.cjs [BASE_URL]驗證390/1440px全12節與58節點、精確步驟深連結、分支文字、進度持久化與首頁入口。網站明確標示尚未完成從新遊戲到通關的全程實玩，不將程式規則核對當成實玩驗證。
+
+新頁沿用visitors.js與Cloudflare beacon，圖片透過原圖鑑連結查看；不新增R2圖片，不更動Worker／D1。部署時同步guide/index.html、assets/app.js、assets/style.css、data/guide-data.js與walkthrough/至web/。檢查報告在verification/walkthrough-local-checks.json與walkthrough-gate-checks.json。

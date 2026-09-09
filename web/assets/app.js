@@ -84,7 +84,7 @@
     const chapter = data.chapters[index];
     $('#chapter-list').innerHTML = data.chapters.map((item,i) => `<button class="chapter-tab" role="tab" id="chapter-tab-${i}" aria-controls="chapter-detail" aria-selected="${i===index}" tabindex="${i===index?0:-1}" data-chapter="${i}"><b>${String(item.number).padStart(2,'0')}</b><span>${esc(item.title)}</span></button>`).join('');
     $('#chapter-detail').setAttribute('aria-labelledby','chapter-tab-'+index);
-    $('#chapter-detail').innerHTML = `<div class="chapter-eyebrow">CHAPTER ${String(chapter.number).padStart(2,'0')}</div><h3>${esc(chapter.title)}</h3><p class="chapter-lead">${esc(chapter.lead)}</p><ol class="route-steps">${chapter.mission.map(step=>`<li>${esc(step.name)}</li>`).join('')}</ol><div class="route-links">${links(chapter.events)}</div><p class="route-note">${esc(chapter.note)}</p>`;
+    $('#chapter-detail').innerHTML = `<div class="chapter-eyebrow">CHAPTER ${String(chapter.number).padStart(2,'0')}</div><h3>${esc(chapter.title)}</h3><p class="chapter-lead">${esc(chapter.lead)}</p><p><a class="button" href="walkthrough/index.html#ch${String(chapter.number).padStart(2,'0')}">本章完整攻略＋流程圖 ↗</a></p><ol class="route-steps">${chapter.mission.map(step=>`<li>${esc(step.name)}</li>`).join('')}</ol><div class="route-links">${links(chapter.events)}</div><p class="route-note">${esc(chapter.note)}</p>`;
   }
   function updateDetailActions() {
     if (!current) return;
