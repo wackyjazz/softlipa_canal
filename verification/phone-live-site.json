@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "date": "2026-09-10T06:57:43.391Z",
-  "pagesRun": 34447375557,
-  "commit": "93f9f64d1b703c91f579f6f061c4b9d637d0d08d",
+  "date": "2026-09-10T07:02:20.061Z",
+  "pagesRun": 34447814673,
+  "commit": "8e81224db8ee5e9d9e90161a2064c35b53743165",
   "all734ImageVersionsMatch": true,
   "checks": [
     {
@@ -10,6 +10,7 @@
       "event": "e022",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/022-01.avif?v=20260907-r5&sha=1ca79a4857ac"
     },
@@ -18,6 +19,7 @@
       "event": "e038",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/038-01.avif?v=20260907-r5&sha=c031a29997d2"
     },
@@ -26,6 +28,7 @@
       "event": "e039",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/039-01.avif?v=20260907-r5&sha=d0831010fa6f"
     },
@@ -34,6 +37,7 @@
       "event": "e044",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/044-01.avif?v=20260907-r5&sha=02e3ff8019a1"
     },
@@ -42,6 +46,7 @@
       "event": "e050",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/050-01.avif?v=20260907-r5&sha=817a114dcbac"
     },
@@ -50,6 +55,7 @@
       "event": "e071",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/071-01.avif?v=20260907-r5&sha=6ccb28584229"
     },
@@ -58,6 +64,7 @@
       "event": "e083",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/083-01.avif?v=20260907-r5&sha=86696f930a14"
     },
@@ -66,6 +73,7 @@
       "event": "e088",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/088-01.avif?v=20260907-r5&sha=dfc7669dbf4d"
     },
@@ -74,6 +82,7 @@
       "event": "e128",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/128-01.avif?v=20260907-r5&sha=df8e02119d7d"
     },
@@ -82,6 +91,7 @@
       "event": "e137",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/137-01.avif?v=20260907-r5&sha=fac8fc2d6881"
     },
@@ -90,6 +100,7 @@
       "event": "e158",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/158-01.avif?v=20260907-r5&sha=37eed562e3ba"
     },
@@ -98,6 +109,7 @@
       "event": "e178",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/178-01.jpg?v=20260907-r5&sha=9948f66e8b77"
     },
@@ -106,6 +118,7 @@
       "event": "e194",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/194-01.avif?v=20260907-r5&sha=d6b7325dc3e8"
     },
@@ -114,6 +127,7 @@
       "event": "e257",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/257-01.avif?v=20260907-r5&sha=b2be4b65c3ce"
     },
@@ -122,6 +136,7 @@
       "event": "e274",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/274-01.avif?v=20260907-r5&sha=ca7f2e54fa0a"
     },
@@ -130,6 +145,7 @@
       "event": "e022",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/022-01.avif?v=20260907-r5&sha=1ca79a4857ac"
     },
@@ -138,6 +154,7 @@
       "event": "e038",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/038-01.avif?v=20260907-r5&sha=c031a29997d2"
     },
@@ -146,6 +163,7 @@
       "event": "e039",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/039-01.avif?v=20260907-r5&sha=d0831010fa6f"
     },
@@ -154,6 +172,7 @@
       "event": "e044",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/044-01.avif?v=20260907-r5&sha=02e3ff8019a1"
     },
@@ -162,6 +181,7 @@
       "event": "e050",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/050-01.avif?v=20260907-r5&sha=817a114dcbac"
     },
@@ -170,6 +190,7 @@
       "event": "e071",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/071-01.avif?v=20260907-r5&sha=6ccb28584229"
     },
@@ -178,6 +199,7 @@
       "event": "e083",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/083-01.avif?v=20260907-r5&sha=86696f930a14"
     },
@@ -186,6 +208,7 @@
       "event": "e088",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/088-01.avif?v=20260907-r5&sha=dfc7669dbf4d"
     },
@@ -194,6 +217,7 @@
       "event": "e128",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/128-01.avif?v=20260907-r5&sha=df8e02119d7d"
     },
@@ -202,6 +226,7 @@
       "event": "e137",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/137-01.avif?v=20260907-r5&sha=fac8fc2d6881"
     },
@@ -210,6 +235,7 @@
       "event": "e158",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/158-01.avif?v=20260907-r5&sha=37eed562e3ba"
     },
@@ -218,6 +244,7 @@
       "event": "e178",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/178-01.jpg?v=20260907-r5&sha=9948f66e8b77"
     },
@@ -226,6 +253,7 @@
       "event": "e194",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/194-01.avif?v=20260907-r5&sha=d6b7325dc3e8"
     },
@@ -234,6 +262,7 @@
       "event": "e257",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/257-01.avif?v=20260907-r5&sha=b2be4b65c3ce"
     },
@@ -242,6 +271,7 @@
       "event": "e274",
       "width": 1200,
       "height": 900,
+      "zoomHintOutside": true,
       "noOverflow": true,
       "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/274-01.avif?v=20260907-r5&sha=ca7f2e54fa0a"
     }

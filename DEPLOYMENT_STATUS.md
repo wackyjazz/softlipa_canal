@@ -181,3 +181,5 @@ R2新增702個物件，32個沿用，全部734個物件的大小、MD5 ETag、Co
 19張正式Worker圖片的實際內容雜湊與格式核對通過；正式站搜尋Gina、重整／舊深連結、櫃檯入口、390px、542项圖庫與11張照片回歸通過。報告 verification/phone-live-images.json、phone-general-live-checks.json、phone-recapture.json、phone-source-evidence.json。本機校對頁 research/phone-recapture/index.html；兩份ZIP已重建並逐檔校驗。
 
 正式站全部734張圖片版本對照一致；15組指定場景×1440/390px共30次原尺寸載入、無溢出檢查通過，並目視確認CD架桌面與橋邊夜景手機版。報告verification/phone-live-site.json，截圖phone-live-1440.png、phone-live-390.png。
+
+最終目視校對發現原「點擊放大」浮標會遮住新手機，已移到圖片下方且維持整張可點擊。CSS版本20260910-phone2；最終內容commit `8e81224db8ee5e9d9e90161a2064c35b53743165`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34447814673 。更新後全部734個正式圖片版本、15事件×桌面/手機共30次載入與提示不覆蓋畫面檢查通過；原尺寸目視確認手機完整可見。驗收需停用測試瀏覽器舊HTML快取。ZIP已再次重建並校驗，含新的圖片外放大提示。
