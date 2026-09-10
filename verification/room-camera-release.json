@@ -1,0 +1,387 @@
+{
+  "passed": true,
+  "date": "2026-09-10T08:24:21.937Z",
+  "events": [
+    "e002",
+    "e009",
+    "e029",
+    "e050",
+    "e071",
+    "e088",
+    "e102"
+  ],
+  "frames": [
+    "002-01",
+    "009-01",
+    "029-01",
+    "050-01",
+    "071-01",
+    "071-02",
+    "071-03",
+    "071-04",
+    "071-05",
+    "071-06",
+    "071-07",
+    "071-08",
+    "071-09",
+    "071-10",
+    "071-11",
+    "071-12",
+    "088-01",
+    "102-01"
+  ],
+  "frameCount": 18,
+  "unchangedPublicFrames": 716,
+  "nativeCameraVerified": true,
+  "minimumPsnr": 40.67839061869502,
+  "minimumTextPsnr": 40.67907219029435,
+  "minimumPhonePsnr": 40.11466827885279,
+  "backup": "tmp/room-camera-release/before",
+  "audit": {
+    "date": "2026-09-10T08:18:16.826Z",
+    "scope": "Same event position, original scene camera follow versus capture framing. Native interaction additionally exercised for e088.",
+    "checks": [
+      {
+        "id": "e088",
+        "scene": "record_store",
+        "before": {
+          "player": {
+            "x": 140,
+            "y": 280
+          },
+          "zoom": 1.6,
+          "scrollX": -460,
+          "scrollY": -105,
+          "midPoint": {
+            "x": 140,
+            "y": 345
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "after": {
+          "player": {
+            "x": 140,
+            "y": 280
+          },
+          "zoom": 1.6,
+          "scrollX": -460,
+          "scrollY": -170,
+          "midPoint": {
+            "x": 140,
+            "y": 280
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 104
+        },
+        "interaction": {
+          "steps": [
+            {
+              "x": 220,
+              "y": 320
+            },
+            {
+              "x": 200,
+              "y": 320
+            },
+            {
+              "x": 180,
+              "y": 320
+            },
+            {
+              "x": 160,
+              "y": 320
+            },
+            {
+              "x": 140,
+              "y": 320
+            },
+            {
+              "x": 140,
+              "y": 300
+            },
+            {
+              "x": 140,
+              "y": 280
+            }
+          ],
+          "inside": true,
+          "direction": true,
+          "dialogVisible": true,
+          "lineFin": true,
+          "phone": {
+            "visible": true,
+            "alpha": 1,
+            "texture": "mobile",
+            "x": 1180,
+            "y": 30,
+            "width": 66,
+            "height": 112,
+            "originX": 1,
+            "originY": 0,
+            "tableVisible": null,
+            "policy": {
+              "acquired": true,
+              "visible": true,
+              "collecting": false,
+              "tableVisible": false,
+              "reason": "acquired-exploration",
+              "evidence": "UIScene.create / home.triggerEvent(open_mobile)"
+            }
+          },
+          "player": {
+            "x": 140,
+            "y": 280
+          },
+          "camera": {
+            "following": true,
+            "scrollX": -460,
+            "scrollY": -170
+          },
+          "nativeShowDialog": "async showDialog(t,e,i,s){const a=s;await new Promise(r=>{this.dialog.show({dialogName:t,dialogType:e,speaker:i,callback:o=>{a&&a(o),r()}})})}",
+          "originalHandleOverlap": "async handleOverlap(t){const{name:e}=t;if(t.scene===\"nightclub\"&&this.registry.get(\"nightclubOwnerEntering\"))return;if(this.stele.hasStele(e)){this.resetKeyboardState(),this.registry.set(\"keyBoardStopInput\",!0),this.registry.set(\"menuStopControl\",!0),this.registry.set(\"playerStopControl\",!0),await this.showStele(e),this.resetKeyboardState(),this.registry.set(\"keyBoardStopInput\",!1),this.registry.set(\"menuStopControl\",!1),this.registry.set(\"playerStopControl\",!1);return}if(!Object.prototype.hasOwnProperty.call(ds,e)){(e.startsWith(\"cat_\")||e.startsWith(\"random_pedestrian_\")||e.startsWith(\"talk_pedestrian_\")||e.startsWith(\"random_couple_\")||e.startsWith(\"random_gangster_group_\"))&&this.scene.isActive(t.scene)&&await this.scene.get(t.scene).triggerEvent(e);return}const i=ds[e],s=this.registry.get(\"chapter\"),a=this.registry.get(\"triggeredEvents\")||new Set,r=T=>{this.registry.set(\"menuStopControl\",!T),this.registry.set(\"playerStopControl\",!T)},o=i[`chapter_${s}`]||[],l=T=>!(T.disableAtNight&&this.registry.get(\"nightTime\")===!0),c=T=>{var b;return!!((b=T.after_event)!=null&&b.startsWith(\"after_\")||T.after_event&&T.dialog_name===\"\")},g=T=>c(T)?a.has(T.after_event):a.has(T.dialog_name),p=T=>T.find(b=>l(b)&&!g(b)&&(!b.condition||a.has(b.condition))),y=T=>T.find(b=>b.dialog_name===\"grandma_tv\"?!a.has(b.dialog_name):l(b)&&(!b.condition||a.has(b.condition))&&(!b.dialog_name_save||!a.has(b.dialog_name))),k=(Object.prototype.hasOwnProperty.call(i,`chapter_${s}`)?p(o):void 0)||y(i.all||[]);if(!k||!this.canRunNpcPresenceDialog(k.dialog_name))return;const{dialog_name:E,scene:P,after_event:N,dialog_name_save:A,filterSound:x,filterSoundEnd:L}=k;x&&this.audio.toggleFilter(!0);const R=!!(c(k)&&A&&a.has(E));A&&this.registry.set(\"triggeredEvents\",a.add(E)),r(!1),R||await this.showDialog(E,\"dialog\"),L&&this.audio.toggleFilter(!1),!(t.scene===\"nightclub\"&&this.registry.get(\"nightclubOwnerEntering\"))&&(N&&!a.has(N)?this.scene.isActive(P)&&await this.scene.get(P).triggerEvent(N):r(!0))}"
+        }
+      },
+      {
+        "id": "e009",
+        "scene": "grandma_house",
+        "before": {
+          "player": {
+            "x": 300,
+            "y": 169
+          },
+          "zoom": 1.6,
+          "scrollX": -300,
+          "scrollY": -216,
+          "midPoint": {
+            "x": 300,
+            "y": 234
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.events.once(d.Scenes.Events.SHUTDOWN,this.cleanupSceneResources,this),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.floor_mask=this.add.graphics().setDepth(999),this.floor_mask.fillStyle(3223343,1),this.floor_mask.fillRect(0,-60,600,460),this.closet_mask=this.add.graphics().setDepth(10),this.closet_mask.fillStyle(3223343,1),this.closet_mask.fillRect(100,0,62,141),this.closet_mask.fillRect(100,141,68,260),this.gecko=this.add.image(180,40,\"gecko\"),this.randomGecko(),this.floor_mask.setPosition(0,this.player.y<=380?480:0),this.orangeHoodie=this.add.image(140,242,\"hoodie-orange\").setAlpha(0),this.player.y<=380&&this.player.x<=180&&this.openDoor(),this.sceneInit()}"
+        },
+        "after": {
+          "player": {
+            "x": 300,
+            "y": 169
+          },
+          "zoom": 1.6,
+          "scrollX": -300,
+          "scrollY": -281,
+          "midPoint": {
+            "x": 300,
+            "y": 169
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.events.once(d.Scenes.Events.SHUTDOWN,this.cleanupSceneResources,this),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.floor_mask=this.add.graphics().setDepth(999),this.floor_mask.fillStyle(3223343,1),this.floor_mask.fillRect(0,-60,600,460),this.closet_mask=this.add.graphics().setDepth(10),this.closet_mask.fillStyle(3223343,1),this.closet_mask.fillRect(100,0,62,141),this.closet_mask.fillRect(100,141,68,260),this.gecko=this.add.image(180,40,\"gecko\"),this.randomGecko(),this.floor_mask.setPosition(0,this.player.y<=380?480:0),this.orangeHoodie=this.add.image(140,242,\"hoodie-orange\").setAlpha(0),this.player.y<=380&&this.player.x<=180&&this.openDoor(),this.sceneInit()}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 104
+        }
+      },
+      {
+        "id": "e029",
+        "scene": "hallway",
+        "before": {
+          "player": {
+            "x": 720,
+            "y": 160
+          },
+          "zoom": 1.6,
+          "scrollX": 120,
+          "scrollY": -245,
+          "midPoint": {
+            "x": 720,
+            "y": 205
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit();const e=this.registry.get(\"nightTime\");this.nightMask=this.add.graphics().setDepth(999).setVisible(e),this.nightMask.fillStyle(1120583,.45),this.nightMask.fillRect(0,0,160,420),this.nightMask.fillRect(160,0,1080,260)}"
+        },
+        "after": {
+          "player": {
+            "x": 720,
+            "y": 160
+          },
+          "zoom": 1.6,
+          "scrollX": 120,
+          "scrollY": -290,
+          "midPoint": {
+            "x": 720,
+            "y": 160
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit();const e=this.registry.get(\"nightTime\");this.nightMask=this.add.graphics().setDepth(999).setVisible(e),this.nightMask.fillStyle(1120583,.45),this.nightMask.fillRect(0,0,160,420),this.nightMask.fillRect(160,0,1080,260)}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 72
+        }
+      },
+      {
+        "id": "e050",
+        "scene": "home",
+        "before": {
+          "player": {
+            "x": 708,
+            "y": 199
+          },
+          "zoom": 1.6,
+          "scrollX": 108,
+          "scrollY": -186,
+          "midPoint": {
+            "x": 708,
+            "y": 264
+          },
+          "following": false,
+          "create": "create(){var i,s;this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.save=this.registry.get(\"save\"),this.teleportFrom=this.registry.get(\"teleportFrom\"),this.resetSceneState();const t=64;(i=this.left_clock_rt)==null||i.destroy(),this.left_clock_rt=null,this.left_clock_rt=this.add.renderTexture(273,59,t,t).setOrigin(.5).setDepth(3),this.left_clock_rt.texture.setFilter(d.Textures.FilterMode.NEAREST),(s=this.right_clock_rt)==null||s.destroy(),this.right_clock_rt=null,this.right_clock_rt=this.add.renderTexture(883,59,t,t).setOrigin(.5).setDepth(3),this.right_clock_rt.texture.setFilter(d.Textures.FilterMode.NEAREST),this.tmp_hour_hand=this.make.graphics({x:0,y:0}),this.tmp_hour_hand.fillStyle(6385006,1).fillRect(-1,-1,8,2),this.tmp_minute_hand=this.make.graphics({x:0,y:0}),this.tmp_minute_hand.fillStyle(6385006,1).fillRect(-1,-1,10,2),this.setPlayerAndMap();const e=this.cameras.main;e.setZoom(1.6),e.startFollow(this.player),e.setBackgroundColor(\"#312F2F\"),e.setPostPipeline(\"Postprocessing\");for(const a of this.chapterEntryHandlers)if(a.condition()){a.handler();return}this.startChapter1FromNewGame()}"
+        },
+        "after": {
+          "player": {
+            "x": 708,
+            "y": 199
+          },
+          "zoom": 1.6,
+          "scrollX": 108,
+          "scrollY": -251,
+          "midPoint": {
+            "x": 708,
+            "y": 199
+          },
+          "following": true,
+          "create": "create(){var i,s;this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.save=this.registry.get(\"save\"),this.teleportFrom=this.registry.get(\"teleportFrom\"),this.resetSceneState();const t=64;(i=this.left_clock_rt)==null||i.destroy(),this.left_clock_rt=null,this.left_clock_rt=this.add.renderTexture(273,59,t,t).setOrigin(.5).setDepth(3),this.left_clock_rt.texture.setFilter(d.Textures.FilterMode.NEAREST),(s=this.right_clock_rt)==null||s.destroy(),this.right_clock_rt=null,this.right_clock_rt=this.add.renderTexture(883,59,t,t).setOrigin(.5).setDepth(3),this.right_clock_rt.texture.setFilter(d.Textures.FilterMode.NEAREST),this.tmp_hour_hand=this.make.graphics({x:0,y:0}),this.tmp_hour_hand.fillStyle(6385006,1).fillRect(-1,-1,8,2),this.tmp_minute_hand=this.make.graphics({x:0,y:0}),this.tmp_minute_hand.fillStyle(6385006,1).fillRect(-1,-1,10,2),this.setPlayerAndMap();const e=this.cameras.main;e.setZoom(1.6),e.startFollow(this.player),e.setBackgroundColor(\"#312F2F\"),e.setPostPipeline(\"Postprocessing\");for(const a of this.chapterEntryHandlers)if(a.condition()){a.handler();return}this.startChapter1FromNewGame()}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 104
+        }
+      },
+      {
+        "id": "e071",
+        "scene": "plant_shop",
+        "before": {
+          "player": {
+            "x": 120,
+            "y": 160
+          },
+          "zoom": 1.6,
+          "scrollX": -470,
+          "scrollY": -255,
+          "midPoint": {
+            "x": 130,
+            "y": 195
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "after": {
+          "player": {
+            "x": 120,
+            "y": 160
+          },
+          "zoom": 1.6,
+          "scrollX": -480,
+          "scrollY": -290,
+          "midPoint": {
+            "x": 120,
+            "y": 160
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "screenTranslation": {
+          "x": 16,
+          "y": 56
+        }
+      },
+      {
+        "id": "e002",
+        "scene": "gallery",
+        "before": {
+          "player": {
+            "x": 580,
+            "y": 220
+          },
+          "zoom": 1.6,
+          "scrollX": -20,
+          "scrollY": -165,
+          "midPoint": {
+            "x": 580,
+            "y": 285
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\");const e=this.add.graphics().setDepth(10);e.fillStyle(3223343,1),e.fillRect(-200,0,200,420),this.sceneInit();const i=this.registry.get(\"nightTime\");this.nightMask=this.add.graphics().setDepth(999).setVisible(i),this.nightMask.fillStyle(1120583,.45);const s=this.mapBounds??new d.Geom.Rectangle(0,0,0,0);this.nightMask.fillRect(s.x,s.y,s.width-20,s.height)}"
+        },
+        "after": {
+          "player": {
+            "x": 580,
+            "y": 220
+          },
+          "zoom": 1.6,
+          "scrollX": -20,
+          "scrollY": -230,
+          "midPoint": {
+            "x": 580,
+            "y": 220
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\");const e=this.add.graphics().setDepth(10);e.fillStyle(3223343,1),e.fillRect(-200,0,200,420),this.sceneInit();const i=this.registry.get(\"nightTime\");this.nightMask=this.add.graphics().setDepth(999).setVisible(i),this.nightMask.fillStyle(1120583,.45);const s=this.mapBounds??new d.Geom.Rectangle(0,0,0,0);this.nightMask.fillRect(s.x,s.y,s.width-20,s.height)}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 104
+        }
+      },
+      {
+        "id": "e102",
+        "scene": "store",
+        "before": {
+          "player": {
+            "x": 96,
+            "y": 180
+          },
+          "zoom": 1.6,
+          "scrollX": -504,
+          "scrollY": -235,
+          "midPoint": {
+            "x": 96,
+            "y": 215
+          },
+          "following": false,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "after": {
+          "player": {
+            "x": 96,
+            "y": 180
+          },
+          "zoom": 1.6,
+          "scrollX": -504,
+          "scrollY": -270,
+          "midPoint": {
+            "x": 96,
+            "y": 180
+          },
+          "following": true,
+          "create": "create(){this.ui=this.scene.get(\"UIScene\"),this.audio=this.scene.get(\"AudioScene\"),this.resetSceneState(),this.setPlayerAndMap();const t=this.cameras.main;t.setZoom(1.6),t.startFollow(this.player),t.setPostPipeline(\"Postprocessing\"),this.sceneInit()}"
+        },
+        "screenTranslation": {
+          "x": 0,
+          "y": 56
+        }
+      }
+    ],
+    "passed": true,
+    "originalAsarSha256": "44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef",
+    "sourceVerified": true,
+    "findings": {
+      "e088": "Capture camera center has a +65 world-unit Y offset; native 1.6x follow moves the room down 104 screen pixels. Original copy_cd overlap and dialogue reproduced after 7 native movement steps from the entrance. The original phone still overlaps part of the rightmost wall record.",
+      "sampleScope": "Seven ordinary indoor scenes tested. Platform and nightclub scripted cameras were not validated by this investigation.",
+      "limitation": "Isolated original-engine scene with capture setup and disabled save writes/audio/story auto-entry; not a fresh-save full playthrough. Published guide assets were not modified by this audit."
+    }
+  }
+}

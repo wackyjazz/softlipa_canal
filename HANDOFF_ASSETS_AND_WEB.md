@@ -247,3 +247,14 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 正式上線：內容commit93f9f64；Pages34447375557成功；Worker ea53fed7-296f-4d8a-8199-e2121755bec4。702新物件／32沿用，19個正式GET內容核對通過。兩份ZIP已重建逐檔驗證。
 
 最終目視校對發現原「點擊放大」浮標會遮住新手機，已移到圖片下方且維持整張可點擊。CSS版本20260910-phone2；最終內容commit `8e81224db8ee5e9d9e90161a2064c35b53743165`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34447814673 。更新後全部734個正式圖片版本、15事件×桌面/手機共30次載入與提示不覆蓋畫面檢查通過；原尺寸目視確認手機完整可見。驗收需停用測試瀏覽器舊HTML快取。ZIP已再次重建並校驗，含新的圖片外放大提示。
+
+
+## 2026-09-10 七個已審視事件的原版室內鏡頭
+
+使用者核准 room-camera 對照後上線七個事件：002、009、029、050、071、088、102。071 的12段對話一起重擷取，共18張；其餘716張公開圖片雜湊不變。capture_runtime.js 新增事件限定的 captureNativeCamera，恢复原版 create() 的 startFollow(player)，七個事件的 events.json／capture_overrides.py 持久化此設定。沒有把尚未核對的其他事件鏡頭一併改動。
+
+088 原擷取鏡頭中心 y+65，1.6倍縮放使上方104px被裁掉；修正後三張牆上黑膠入鏡，最右側仍部分被原生手機遮住。research/room-camera/audit.json 保存原版ASAR核對與從入口走到CD架觸發原生handleOverlap／showDialog的查證。其他六事件核對同站位原版鏡頭。
+
+重建工具 capture_room_camera.cjs → compress_phone.cjs tmp/room-camera-release → apply_room_camera.py。18幀逐張斷言鏡頭跟隨、縮放、scroll及站位與核准對照一致；原文／文字邊界、全圖／文字／手機區域PSNR≥40及目視檢查通過。備份 tmp/room-camera-release/before；正式驗證紀錄 verification/room-camera-release.json。此為隔離原版引擎事件驗證，未宣稱全流程實玩。
+
+注意：publish.py／build_walkthrough.py 會重建首頁章節摘要。本次僅更新圖片，已保留發布前章節資料，驗證只有七個事件capture／image欄位改動。
