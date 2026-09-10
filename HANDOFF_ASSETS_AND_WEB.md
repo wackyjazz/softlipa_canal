@@ -226,3 +226,20 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 依使用者要求移除黑膠裝飾，以pixel-cd.svg銀色點陣CD取代。閱讀工具列新增遊戲字體／一般字體：僅歌詞區與時間標記切換Cubic或系統無襯線字體，預設Cubic；localStorage canal-lyrics-font記住選擇。換曲／重新整理保留偏好，既有字級與時間開關獨立。測試guide_tools/test_lyrics_design.cjs擴充兩種字體的排版、原文不變、持久化與切回Cubic；本機通過，報告verification/lyrics-cd-font-local-checks.json。僅Pages更新。
 
 已上線：內容commit `dc5548f`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34325097916 成功。正式站CD載入、雙字體切換/記憶、手機/桌面排版與歌詞原文回歸通過，報告verification/lyrics-cd-font-live-checks.json。
+
+
+## 2026-09-10 原生手機介面與過場截圖修正
+
+原 capture_runtime.js 在每次事件把 ui.mobile 設為透明。改由 phone_policy.js 依原版流程設定手機持有／顯示狀態，再呼叫原生 UIScene.showMobile／hideMobile。使用原始 dist/ui/mobile.png、原位置(1180,30)、66×112、origin(1,0)及原後處理。取得前／拿取當句不顯示；open_mobile 起顯示且家中桌上手機消失。一般探索／對話顯示；after_chapter_1_end、after_chapter_3_end、last_talk 依原碼隱藏。可重複互動的初始家中物件沿用取得前場景，書櫃選用開過選單後的教學狀態。
+
+292事件重擷取704張：656張顯示、48張依劇情隱藏。序章30張原圖及取樣資料未變；公開仍293事件734張，No275仍排除。原母檔及圖片備份 tmp/phone-recapture/before；新母檔 capture_masters/images。隨機路人／貓及動畫時點由原版生成，可與個別實玩不同。
+
+同時核對歌曲後原始流程並修正022(聽完CD移到480,140看夜窗、恢復阿媽)、128(原生nightMask顯示)、137(橋邊對話仍是第9章夜間)。capture_overrides.py及events.json同步；不是重新套用全部舊override。
+
+自檢：16組凍結同幀、只切換原生手機alpha的PNG像素比較，手機外差異皆0；原生取得手機trigger實測；3個歌曲後場景狀態及序章檢查；704張全圖／對話／手機區域壓縮PSNR各≥40dB。19張無法兼顧大小與門檻時保留JPEG，總計715 AVIF＋19 JPEG，734個獨立雜湊。740個內部文字／選項引用透過原渲染器核對原文及邊界。原入口、阿媽19張、038/039、088與序章取樣回歸檢查保留。
+
+逐事件首圖縮圖目視，並抽查教學、夜景、CD架、输入框、夜店選項的原尺寸。這是來源核對＋原版引擎事件狀態重現，**不是新存檔全流程逐段實玩**，不可宣稱所有畫面與任意實玩逐像素相同。完整報告 guide/verification/phone-recapture.json、phone-source-evidence.json；本機比較頁 research/phone-recapture/index.html。
+
+重建：audit_phone_source.py → build_capture.py → 啟動獨立tmp/guide_capture(9336) → capture_phone.cjs → probe_phone.cjs／review_phone.cjs → compress_phone.cjs → 完成實際目視校對後記錄manualReviewComplete → apply_phone_captures.py → publish.py → build_phone_review.py。分階段輸出在tmp/phone-recapture，不先覆蓋正式圖。再執行verify.py、verify_capture_fixes.py、verify_compression.cjs、test_site.cjs。
+
+測試工具修正：CDP忽略Edge自行打開的Rewards內部頁；test_site開跑清除隔離測試筆記，Gina預期只命中可達的No274一筆。使用本次啟動的擷取程序11368已精確結束，沒有操作使用者其他遊戲。

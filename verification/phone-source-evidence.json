@@ -1,0 +1,319 @@
+{
+  "source": "accelerated_portable_v2/resources/app.asar.original",
+  "sourceSha256": "44d4d25857a4c5f57643846ea4a81bb0e144ffaa780c7fbf08b5abcecc40f1ef",
+  "nativePhoneAsset": [
+    {
+      "file": "dist/ui/mobile.png",
+      "sha256": "0292692bdc86bb53e170043000d8dba90f72d123001b6f039eddef0edbecfac9"
+    }
+  ],
+  "methods": [
+    {
+      "scene": "grandma_house",
+      "method": "triggerAfterListenedToTheCD",
+      "offset": 213391,
+      "code": "async triggerAfterListenedToTheCD(){const t=this.registry.get(\"triggeredEvents\")||new Set;t.has(\"play_cd\")&&(this.registry.set(\"triggeredEvents\",t.add(\"back_to_listen_cd\").add(\"after_listened_to_the_CD\")),this.setEventControls(!0,!0),await this.ui.showInspiration(9),this.audio.fadeoutMusic(!0),await this.ui.leaveScene(),this.audio.toggleFilter(!1),this.randomGecko(),this.ui.hideMobile(),this.player.playAnimation(\"walk_down\"),this.player.changeDanceFrameRate(89),await m(this,500),await this.audio.preloadSong(\"chapter_8\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"5\"),this.registry.set(\"playerStopControl\",!1),this.playing=!0,this.player.listenSong(),await this.audio.playSong(\"chapter_8\",!0),this.playing=!1,this.player.stopListenSong(),this.player.changeDanceFrameRate(87),await m(this,500),this.registry.set(\"playerStopControl\",!0),this.registry.set(\"dialogStopControl\",!1),await this.ui.leaveScene(),this.randomGecko(),this.player.moveToPosition(480,140,\"walk_up\"),this.ui.showMobile(),this.showGrandmaAfterCD(),this.registry.set(\"nightTime\",!0),this.ensureNightMask(),await m(this,500),await this.ui.enterScene(),this.audio.playMusic(\"bgm-indoor\"),await m(this,500),this.audio.toggleFilter(!0),await this.ui.showDialog(\"after_play_cd\",\"dialog\"),this.audio.toggleFilter(!1),this.registry.set(\"chapter\",9),this.registry.set(\"nightTime\",Et(9)),await this.ui.showTitle(9),await m(this,500),this.ui.dealWithMissions(1,!0),t.delete(\"grandma\"),t.delete(\"grandma_tv\"),this.registry.set(\"triggeredEvents\",t.add(\"play_cd\").add(\"GorDoN_left\").add(\"GorDoN_right\").add(\"grandma_order\")),this.setEventControls(!1,!1))}",
+      "timeline": [
+        {
+          "offset": 369,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 987,
+          "call": "this.ui.showMobile()"
+        },
+        {
+          "offset": 1231,
+          "call": "showDialog(\"after_play_cd\""
+        }
+      ]
+    },
+    {
+      "scene": "home",
+      "method": "sceneStartChapter12",
+      "offset": 234275,
+      "code": "async sceneStartChapter12(){this.registry.set(\"menuStopControl\",!0),this.registry.set(\"playerStopControl\",!0),await m(this,500),this.ui.showMobile(),this.player.playAnimation(\"sleep\"),await this.ui.enterScene(!0);const t=this.registry.get(\"triggeredEvents\")||new Set;t.has(\"first_time\")&&!this.registry.get(\"musicPlaying\")&&this.audio.playMusic(\"bgm-indoor\"),this.player.setPosition(780,140),this.player.playAnimation(\"woke\"),await m(this,1e3),this.registry.set(\"keyBoardStopInput\",!1),this.audio.toggleFilter(!0),await this.ui.showDialog(\"hello_again\",\"dialog\"),await this.ui.showDialog(\"complete\",\"narration\"),this.registry.set(\"triggeredEvents\",t.add(\"free_roam\")),this.audio.toggleFilter(!1),this.registry.set(\"menuStopControl\",!1),this.registry.set(\"playerStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 128,
+          "call": "this.ui.showMobile()"
+        },
+        {
+          "offset": 528,
+          "call": "showDialog(\"hello_again\""
+        },
+        {
+          "offset": 577,
+          "call": "showDialog(\"complete\""
+        }
+      ]
+    },
+    {
+      "scene": "home",
+      "method": "canNotGoOut",
+      "offset": 238627,
+      "code": "async canNotGoOut(){const t=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"playerStopControl\",!0),this.audio.toggleFilter(!0),await this.ui.showDialog(t.has(\"tutorial_interactive_mobile\")&&!t.has(\"first_open_menu\")?\"cannot_go_out_mobile\":\"cannot_go_out\",\"dialog\",\"SL\"),this.audio.toggleFilter(!1),this.registry.set(\"playerStopControl\",!1),await this.player.simulateMove(0,-1),await this.player.simulateMove(0,-1)}",
+      "timeline": []
+    },
+    {
+      "scene": "home",
+      "method": "triggerLeaveHint",
+      "offset": 240875,
+      "code": "async triggerLeaveHint(){const t=this.registry.get(\"triggeredEvents\")||new Set;!t.has(\"after_bookshelf\")||t.has(\"ready_to_leave\")||(this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),this.audio.toggleFilter(!0),await this.ui.showDialog(\"tutorial_save\",\"narration\"),await this.ui.showDialog(\"leave_hint\",\"dialog\"),this.audio.toggleFilter(!1),this.registry.set(\"triggeredEvents\",t.add(\"ready_to_leave\")),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1))}",
+      "timeline": [
+        {
+          "offset": 256,
+          "call": "showDialog(\"tutorial_save\""
+        },
+        {
+          "offset": 310,
+          "call": "showDialog(\"leave_hint\""
+        }
+      ]
+    },
+    {
+      "scene": "home",
+      "method": "triggerEvent",
+      "offset": 243616,
+      "code": "async triggerEvent(t){var s,a,r,o;const e=this.registry.get(\"chapter\"),i=this.registry.get(\"triggeredEvents\")||new Set;switch(t){case\"after_bookshelf\":if(!i.has(\"first_open_menu\")){this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1);return}this.registry.set(\"triggeredEvents\",i.add(\"after_bookshelf\")),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1);break;case\"open_mobile\":e===1&&((s=this.mobile)==null||s.setAlpha(0),this.ui.showMobile(),this.registry.set(\"dialogStopControl\",!0),this.registry.set(\"menuStopControl\",!1),await m(this,500),await this.ui.showDialog(\"open_mobile\",\"narration\"),this.registry.set(\"triggeredEvents\",i.add(\"open_mobile\")),this.registry.set(\"dialogStopControl\",!1),this.ui.isMenuVisible()||this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1));break;case\"tutorial_interactive_mobile\":e===1&&(this.registry.set(\"dialogStopControl\",!0),await m(this,500),await Promise.all([this.registry.set(\"dialogStopControl\",!1),this.ui.showDialog(\"tutorial_interactive_mobile\",\"narration\")]),this.registry.set(\"triggeredEvents\",i.add(\"tutorial_interactive_mobile\")),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1));break;case\"found_contact_book\":e===4&&this.triggerAfterFindContactBook();break;case\"got_cream\":e===6&&this.triggerGotCream();break;case\"leave_hint\":e===1?this.triggerLeaveHint():e===6&&this.triggerGoGetAlbumCase();break;case\"got_album_case\":e===6&&this.triggerGotAlbumCase();break;case\"mom_turn_left\":(a=this.mom)==null||a.turnAround(\"right\");break;case\"mom_turn_down\":(r=this.mom)==null||r.turnAround(\"down\");break;case\"dancing_plant_dance\":(o=this.dancing_plant)==null||o.play(\"dancing-plant\");break;case\"vibration\":this.audio.playSE(\"sound-effect-mission\");break;default:this.triggerDialogEvent(t)}}",
+      "timeline": [
+        {
+          "offset": 483,
+          "call": "this.ui.showMobile()"
+        },
+        {
+          "offset": 618,
+          "call": "showDialog(\"open_mobile\""
+        },
+        {
+          "offset": 1041,
+          "call": "showDialog(\"tutorial_interactive_mobile\""
+        }
+      ]
+    },
+    {
+      "scene": "nightclub",
+      "method": "triggerNightClubOwnerEnter",
+      "offset": 302505,
+      "code": "async triggerNightClubOwnerEnter(){var t;this.nightclubOwnerEntering||(this.nightclubOwnerEntering=!0,this.registry.set(\"nightclubOwnerEntering\",!0)),this.registry.set(\"dialogStopControl\",!0),this.registry.set(\"overlapObject\",null),this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),this.audio.toggleFilter(!0),this.cameras.main.stopFollow(),await m(this,1e3),await this.pinCamera(620,642,1e3,\"Linear\"),await m(this,1e3),this.player.y<340&&this.player.moveToPosition(220,320,\"walk_right\"),this.nightclub_owner||(this.nightclub_owner=new bs(this,620,640).setDepth(10),await m(this,1e3),this.cameras.main.startFollow(this.nightclub_owner,!0,1,1,0,2),await((t=this.nightclub_owner)==null?void 0:t.enter(this.player.y<340,this.player.x,this.player.y))),this.player.y>=340&&this.player.playAnimation(\"walk_down\"),await m(this,500),this.registry.set(\"dialogStopControl\",!1),await this.ui.showDialog(`nightclub_owner${this.player.y<340?\"_dance_teacher\":\"\"}`,\"dialog\"),this.cameras.main.stopFollow(),await this.ui.showInspiration(11),await this.ui.leaveScene(),await this.pinCamera(260,280,200,\"Linear\"),this.nightclub_owner.destroy(),this.nightclub_owner=null,this.player.moveToPosition(260,80,\"walk_down\"),this.applyListeningStateLayout(),this.audio.fadeoutMusic(!0),await m(this,500),this.ui.dealWithMissions(4,!1,!0),await m(this,500),this.mask.setAlpha(0),this.ui.hideMobile(),this.mask.setAlpha(.5),await this.audio.preloadSong(\"chapter_10\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"6\"),this.registry.set(\"playerStopControl\",!1),this.player.listenSong(),await this.audio.playSong(\"chapter_10\",{ui:!0,onStart:()=>{f(this,{targets:this.mask,alpha:.2,duration:1200,yoyo:!0,repeat:-1}),this.npcRandomDance()}}),this.stopNpcRandomDance(),this.registry.set(\"playerStopControl\",!0),this.player.stopListenSong(),this.ui.showMobile(),await m(this,500),await this.ui.leaveScene(),this.registry.set(\"chapter\",11),this.registry.set(\"teleportFrom\",{scene:\"nightclub\",position:\"left\"}),this.resetSceneState(),H(this.registry),this.scene.start(\"tainan\"),this.registry.set(\"menuStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 1384,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 1848,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "platform",
+      "method": "triggerListenOnThePlatform",
+      "offset": 320962,
+      "code": "async triggerListenOnThePlatform(){var e,i,s;const t=this.registry.get(\"triggeredEvents\")||new Set;t.has(\"play_song\")&&(this.audio.setSchoolDrumVolume(1),this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),(e=this.teacher)==null||e.playAnimation(\"smile\"),this.students.forEach(a=>a.playAnimation()),await this.ui.showDialog(\"after_play_song\",\"dialog\"),this.registry.set(\"dialogStopControl\",!0),await this.ui.showInspiration(5),this.audio.fadeoutMusic(!0),await this.ui.leaveScene(),this.audio.setSchoolDrumVolume(0),this.ui.hideMobile(),this.player.moveToPosition(380,260,\"walk_down\"),this.player.changeDanceFrameRate(90),await m(this,500),this.audio.toggleFilter(!1),this.students.forEach(a=>a.stopAnimation()),await this.audio.preloadSong(\"chapter_4\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"3\"),this.registry.set(\"playerStopControl\",!1),this.playing=!0,this.students.forEach(a=>a.playAnimation()),(i=this.teacher)==null||i.playAnimation(\"nod\"),this.player.listenSong(),await this.audio.playSong(\"chapter_4\",!0),this.playing=!1,this.registry.set(\"playerStopControl\",!0),this.registry.set(\"dialogStopControl\",!1),(s=this.teacher)==null||s.playAnimation(\"idle\"),this.students.forEach(a=>a.stopAnimation()),this.player.stopListenSong(),this.player.changeDanceFrameRate(87),this.ui.dealWithMissions(this.getPlaySongMissionNumber(t),!1,!0),this.registry.set(\"triggeredEvents\",t.add(\"play_song\")),await m(this,500),await this.ui.leaveScene(),this.ui.showMobile(),await m(this,1e3),this.registry.set(\"teleportFrom\",null),this.registry.set(\"chapter\",5),H(this.registry),this.destroySchoolNpcs(),this.scene.start(\"hallway\"),this.registry.set(\"menuStopControl\",!1))}",
+      "timeline": [
+        {
+          "offset": 343,
+          "call": "showDialog(\"after_play_song\""
+        },
+        {
+          "offset": 546,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 1484,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "store",
+      "method": "triggerClerkPlantEvent",
+      "offset": 343989,
+      "code": "async triggerClerkPlantEvent(){var t,e,i,s;this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),this.registry.set(\"keyBoardStopInput\",!0),this.dancing_plant?this.dancing_plant.setAlpha(1):(this.dancing_plant=this.add.sprite(60,150,\"dancing-plant\").setDepth(4),this.anims.exists(\"dancing-plant\")||this.anims.create({key:\"dancing-plant\",frames:this.anims.generateFrameNumbers(\"dancing-plant\",{start:0,end:3}),frameRate:3,repeat:-1}),this.dancing_plant.play(\"dancing-plant\")),(t=this.clerk)==null||t.turnAround(\"down\"),await m(this,1e3),this.registry.set(\"keyBoardStopInput\",!1),await this.ui.showDialog(\"clerk_plant\",\"dialog\"),this.registry.set(\"dialogStopControl\",!0),await this.ui.showInspiration(7),await this.ui.leaveScene(),this.audio.fadeoutMusic(!0),this.ui.dealWithMissions(5,!1,!0),this.player.changeDanceFrameRate(92),this.ui.hideMobile(),await m(this,500),this.player.moveToPosition(100,180,\"walk_down\"),await this.audio.preloadSong(\"chapter_6\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"4\"),this.registry.set(\"playerStopControl\",!1),this.playing=!0,(e=this.clerk)==null||e.listenSong(),this.player.listenSong(),await this.audio.playSong(\"chapter_6\",!0),(i=this.clerk)==null||i.stopListenSong(),this.player.stopListenSong(),this.playing=!1,await m(this,500),this.registry.set(\"playerStopControl\",!0),this.registry.set(\"dialogStopControl\",!1),await this.ui.leaveScene(),(s=this.clerk)==null||s.turnAround(\"down\"),this.player.moveToPosition(100,180,\"walk_up\"),this.player.changeDanceFrameRate(87),this.ui.showMobile(),await m(this,500),this.audio.playMusic(\"bgm-indoor\"),await this.ui.enterScene(),await this.ui.showDialog(\"after_clerk\",\"dialog\"),this.audio.toggleFilter(!1),this.registry.set(\"chapter\",7),this.registry.set(\"dialogStopControl\",!0),await m(this,500),await this.ui.showTitle(7),this.ui.dealWithMissions(1,!0),this.registry.set(\"dialogStopControl\",!1),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 619,
+          "call": "showDialog(\"clerk_plant\""
+        },
+        {
+          "offset": 855,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 1547,
+          "call": "this.ui.showMobile()"
+        },
+        {
+          "offset": 1662,
+          "call": "showDialog(\"after_clerk\""
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerChapter1End",
+      "offset": 467334,
+      "code": "async triggerChapter1End(){var e,i,s,a;const t=this.registry.get(\"triggeredEvents\")||new Set;!t.has(\"ghost_boat\")&&!t.has(\"barrier\")||(this.audio.toggleFilter(!0),this.cameras.main.stopFollow(),await f(this,{targets:this.awning_1,alpha:0,duration:500}),await this.pinCamera(1900,1e3,800,\"Linear\"),await m(this,500),await this.ui.showDialog(\"chapter_2_end\",\"dialog\"),this.registry.set(\"dialogStopControl\",!0),await m(this,500),await this.ui.showInspiration(2),await this.ui.leaveScene(),this.fadeoutSceneAudio(!0),await m(this,500),this.ui.dealWithMissions(3,!1,!0),this.registry.set(\"wearRedCap\",!1),this.player.moveToPosition(1860,1e3),this.player.changeDanceFrameRate(86),await this.pinCamera(1810,1e3,500,\"Linear\"),await m(this,500),this.ui.hideMobile(),(e=this.boat_man_1)==null||e.destroy(),this.boat_man_1=null,(i=this.boat_shoes)==null||i.destroy(),this.boat_shoes=null,this.awning_2.setAlpha(0),this.awning_3.setAlpha(0),await this.audio.preloadSong(\"chapter_1\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"1\"),this.registry.set(\"playerStopControl\",!1),(s=this.old_man)==null||s.listenSong(),this.player.listenSong(),await this.audio.playSong(\"chapter_1\",!0),this.registry.set(\"playerStopControl\",!0),this.player.stopListenSong(),(a=this.old_man)==null||a.onBoat(),this.player.playAnimation(\"walk_left\"),this.registry.set(\"dialogStopControl\",!1),await this.ui.showDialog(\"after_chapter_1_end\",\"dialog\"),await m(this,500),this.registry.set(\"triggeredEvents\",t.add(\"old_man_talk\").add(\"gangsters\")),await this.ui.leaveScene(),this.ui.showMobile(),this.player.moveToPosition(2040,1e3),this.player.changeDanceFrameRate(87),f(this,{targets:[this.awning_1,this.awning_2,this.awning_3],alpha:1,duration:500}),await m(this,1e3),this.toChapterThree())}",
+      "timeline": [
+        {
+          "offset": 329,
+          "call": "showDialog(\"chapter_2_end\""
+        },
+        {
+          "offset": 736,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 1380,
+          "call": "showDialog(\"after_chapter_1_end\""
+        },
+        {
+          "offset": 1544,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerChapter3End",
+      "offset": 477811,
+      "code": "async triggerChapter3End(){var t,e,i,s;if(!this.chapter3EndInProgress){this.chapter3EndInProgress=!0,this.eventLocked=!1;try{(t=this.smoking)==null||t.setAlpha(1),(e=this.director_bottom)==null||e.setAlpha(1),this.player.moveToPosition(840,760,\"walk_down\"),this.player.changeDanceFrameRate(88),this.cameras.main.stopFollow(),await this.pinCamera(880,760,50,\"Linear\"),this.ui.hideMobile(),this.audio.toggleFilter(!1),await this.audio.preloadSong(\"chapter_2\"),await this.ui.enterScene(),await this.ui.showDanceMove(\"2\"),this.setTemporaryPlayerBoundsFromCamera();const a=this.triggerSmoking(),r=this.audio.playSong(\"chapter_2\",!0);await a,this.player.listenSong(),await r,this.registry.set(\"playerStopControl\",!0),this.clearTemporaryPlayerBounds(),this.player.stopListenSong(),this.restoreSmokingPerformanceState(),await m(this,500),await this.ui.leaveScene(),this.destoryTargets([this.smoking]),this.smoking=null,this.player.moveToPosition(840,760,\"walk_down\"),this.player.changeDanceFrameRate(87),(i=this.director)==null||i.moveToPosition(920,760,\"director-walk-down\"),this.nightMask.setVisible(!0),this.registry.set(\"playerStopControl\",!0),await m(this,500),await this.ui.enterScene(),await m(this,500),this.player.playAnimation(\"walk_right\"),(s=this.director)==null||s.moveToPosition(920,760,\"director-walk-left\"),this.audio.toggleFilter(!0),this.restoreSmokingPerformanceState(),await this.ui.showDialog(\"after_chapter_3_end\",\"dialog\"),this.audio.toggleFilter(!1),this.destoryTargets([this.djWoman,this.rapper_right,this.rapper_left]),this.djWoman=null,this.rapper_right=null,this.rapper_left=null,this.audience&&(this.audience.list.forEach(l=>{const c=`audience-${l.name}`;this.npcBlocks.delete(c),l.destroy()}),this.audience=null);const o=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"triggeredEvents\",o.add(\"smoke_together\")),this.fadeoutSceneAudio(!0),await this.ui.leaveScene(),this.ui.showMobile(),this.nightMask.setVisible(!1),await m(this,1e3),this.destoryTargets([this.director]),this.director=null,this.registry.set(\"teleportFrom\",void 0),H(this.registry),this.scene.start(\"home\"),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1)}finally{this.restoreSmokingPerformanceState(),this.clearTemporaryPlayerBounds(),this.chapter3EndInProgress=!1}}}",
+      "timeline": [
+        {
+          "offset": 367,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 1395,
+          "call": "showDialog(\"after_chapter_3_end\""
+        },
+        {
+          "offset": 1904,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerAfterFirstTimeToYuguang",
+      "offset": 484771,
+      "code": "async triggerAfterFirstTimeToYuguang(){this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),await m(this,500),await this.ui.showInspiration(4),this.fadeoutSceneAudio(!0);const t=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"triggeredEvents\",t.add(\"first_time_to_yuguang\").add(\"after_first_time_to_yuguang\")),await this.ui.leaveScene(),await m(this,500),this.ui.hideMobile(),this.scene.pause(),await this.playChapter(\"chapter_3\",this,0,159.5),this.syncChapterMapTiles(!0,4),Object.keys(this.according_tiles).forEach(e=>{this.according_tiles[e].forEach(i=>{var s,a,r;(r=(a=(s=i.map)==null?void 0:s.layer)==null?void 0:a.name)!=null&&r.includes(\"after_chapter/\")&&i.map.setAlpha(1)})}),this.ui.dealWithMissions(1,!1,!0),this.destoryTargets([this.drowning_man]),this.drowning_man=null,this.removeListenPoint(),this.scene.resume(),this.ui.showMobile(),await this.ui.enterScene(),this.audio.playMusic(\"bgm-outdoor\"),this.registry.set(\"chapter\",4),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 401,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 874,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerAfterFirstTimeToGoldCoast",
+      "offset": 495104,
+      "code": "async triggerAfterFirstTimeToGoldCoast(){this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),await m(this,500),await this.ui.showInspiration(6),this.fadeoutSceneAudio(!0);const t=this.registry.get(\"triggeredEvents\")||new Set;if(this.registry.set(\"triggeredEvents\",t.add(\"first_time_to_gold_coast\").add(\"after_first_time_to_gold_coast\")),await this.ui.leaveScene(),await m(this,500),this.ui.hideMobile(),this.scene.pause(),await this.playChapter(\"chapter_5\",this,0,151),this.ui.dealWithMissions(1,!1,!0),this.removeListenPoint(),this.scene.resume(),this.ui.showMobile(),!this.dance_teacher){const{start:e}=ze;this.dance_teacher=new ne(this,e.x,e.y),this.dance_teacher.playAnimation()}await this.ui.enterScene(),this.audio.playMusic(\"bgm-outdoor\"),this.registry.set(\"chapter\",6),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 412,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 578,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerAfterFirstTimeToSquidRiceNoodles",
+      "offset": 497378,
+      "code": "async triggerAfterFirstTimeToSquidRiceNoodles(){this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),await m(this,500),await this.ui.showInspiration(8),this.fadeoutSceneAudio(!0);const t=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"triggeredEvents\",t.add(\"first_time_to_squid_rice_noodles\").add(\"after_first_time_to_squid_rice_noodles\")),await this.ui.leaveScene(),await m(this,500),this.ui.hideMobile(),this.scene.pause(),await this.playChapter(\"chapter_7\",this,2,136),this.removeListenPoint(),this.scene.resume(),this.registry.set(\"chapter\",8),this.registry.set(\"displayChapter\",8),this.ui.showMobile(),await this.ui.enterScene(),this.audio.playMusic(\"bgm-outdoor\"),this.registry.set(\"menuStopControl\",!1),this.registry.set(\"playerStopControl\",!1),this.pendingToNCKUAfterPlayerMove=!0,this.toNCKUPlayerMoveStarted=!1}",
+      "timeline": [
+        {
+          "offset": 432,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 633,
+          "call": "this.ui.showMobile()"
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerAfterWatchBridge",
+      "offset": 501567,
+      "code": "async triggerAfterWatchBridge(){this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),await m(this,500),await this.ui.showInspiration(10),this.fadeoutSceneAudio(!0);const t=this.registry.get(\"triggeredEvents\")||new Set;this.registry.set(\"triggeredEvents\",t.add(\"watch_bridge\").add(\"after_watch_bridge\")),await this.ui.leaveScene(),await m(this,500),this.ui.hideMobile(),this.scene.pause(),await this.playChapter(\"chapter_9\",this,4,124),this.ui.dealWithMissions(1,!1,!0),this.removeListenPoint(),this.scene.resume(),this.ui.showMobile(),await this.ui.enterScene(),this.audio.playMusic(\"bgm-outdoor\"),this.audio.toggleFilter(!0),await m(this,500),await this.ui.showDialog(\"after_watch_brdige\",\"dialog\"),this.audio.toggleFilter(!1),this.registry.set(\"chapter\",10),this.registry.set(\"nightTime\",Et(10,t)),await m(this,1e3),await this.ui.showTitle(10),this.spawnGhost(),this.ui.dealWithMissions(1,!0),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1)}",
+      "timeline": [
+        {
+          "offset": 377,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 543,
+          "call": "this.ui.showMobile()"
+        },
+        {
+          "offset": 687,
+          "call": "showDialog(\"after_watch_brdige\""
+        }
+      ]
+    },
+    {
+      "scene": "tainan",
+      "method": "triggerLastTalk",
+      "offset": 513166,
+      "code": "async triggerLastTalk(){var i;const t=this.registry.get(\"items\")||new Set,e=this.registry.get(\"triggeredEvents\")||new Set;if(!t.has(\"pouch\")){this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1);return}this.registry.set(\"playerStopControl\",!0),this.registry.set(\"menuStopControl\",!0),this.audio.toggleFilter(!0),this.cameras.main.stopFollow(),await f(this,{targets:this.awning_1,alpha:0,duration:500}),await this.pinCamera(1900,1e3,800,\"Linear\"),await m(this,500),await this.ui.showDialog(\"last_talk_start\",\"dialog\"),await m(this,500),await this.ui.leaveScene(),await this.fadeoutSceneAudio(!0),this.audio.playMusic(\"bgm-onlySurround\"),this.player.moveToPosition(1860,1e3),await this.pinCamera(1810,1e3,500,\"Linear\"),await m(this,500),this.ui.hideMobile(),await this.ui.enterScene(),await this.ui.showDialog(\"last_talk\",\"dialog\"),await m(this,100),(i=this.pouch)==null||i.setVisible(!1),await m(this,500),await this.audio.finishLoopingSE(\"sound-effect-charging\"),this.audio.playSE(\"sound-effect-montage\"),await this.playEndingMontage(),await m(this,1200),this.fadeoutSceneAudio(!0),this.audio.toggleFilter(!1),await this.ui.leaveScene(),this.ui.dealWithMissions(this.getChapter10ReturnPouchMissionNumber(e),!1,!0,10),this.registry.set(\"chapter\",12),this.registry.set(\"displayChapter\",12),this.registry.set(\"playerStopControl\",!1),this.registry.set(\"menuStopControl\",!1),this.loaded=!1,await m(this,500),H(this.registry),this.scene.start(\"chapter_intro\")}",
+      "timeline": [
+        {
+          "offset": 507,
+          "call": "showDialog(\"last_talk_start\""
+        },
+        {
+          "offset": 764,
+          "call": "this.ui.hideMobile()"
+        },
+        {
+          "offset": 826,
+          "call": "showDialog(\"last_talk\""
+        }
+      ]
+    },
+    {
+      "scene": "UIScene",
+      "method": "create",
+      "offset": 683050,
+      "code": "create(){const t=this.cameras.main.width,e=this.cameras.main.height;this.cameras.main.setPostPipeline(\"Postprocessing\"),this.chapterTitle=new Qn(this,t/2,e/2,t,e).setAlpha(0).setDepth(1),this.dialog=new ii(this,t/2,e-164,t-140,200),this.mobile=this.add.image(t-20,30,\"mobile\").setOrigin(1,0).setAlpha(0),this.missionHint=new br(this,t-340,80,480,100),this.menu=new kr(this),this.mask=this.add.container(0,0);const s=this.add.graphics().fillStyle(0,1).fillRect(0,0,t,e);this.mask.add([s]),this.alert=new fr(this),this.qrCode=new vr(this),this.inspiration=new wr(this,t/2,e/2),this.danceMove=new tr(this,t/2,e/2),this.animation=new Jn(this,t/2,e/2),this.poem=new xr(this),this.stele=new Fr(this),this.audio=this.scene.get(\"AudioScene\"),(this.registry.get(\"triggeredEvents\")||new Set).has(\"mobile\")&&this.showMobile(),this.input.keyboard.on(\"keydown\",this.keyBoardSetting,this),this.events.once(\"shutdown\",this.cleanup,this)}",
+      "timeline": [
+        {
+          "offset": 802,
+          "call": "showMobile()"
+        }
+      ]
+    }
+  ],
+  "decisions": {
+    "hiddenSongDialogues": {
+      "after_chapter_1_end": "showMobile follows dialogue",
+      "after_chapter_3_end": "showMobile follows dialogue",
+      "last_talk": "hideMobile precedes dialogue"
+    },
+    "visibleAfterSong": [
+      "after_play_cd",
+      "after_clerk",
+      "after_watch_brdige"
+    ],
+    "pickup": "UIScene.handleOverlap records mobile before pickup dialogue; home.triggerEvent(open_mobile) subsequently removes table prop and displays HUD.",
+    "optionalHome": "Repeatable initial-room props are captured before pickup, except bookshelf during the post-menu tutorial.",
+    "postSongCorrections": {
+      "after_play_cd": "Original position (480,140), grandma restored, night windows; HUD visible.",
+      "after_chapter_3_end": "Native nightMask visible; HUD hidden.",
+      "after_watch_brdige": "Still chapter 9 at night; HUD restored before dialogue."
+    }
+  },
+  "limitation": "Source-backed native scene reconstruction and targeted trigger probes; not a complete keyboard playthrough from a fresh save."
+}

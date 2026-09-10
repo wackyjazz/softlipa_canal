@@ -1,0 +1,14 @@
+{
+  "events": 294,
+  "originalDialogueLines": 736,
+  "screenshots": 734,
+  "sameTextReferenceEvents": 1,
+  "withdrawnEvents": 0,
+  "dimensions": "1200 × 900",
+  "distinctImageHashes": 734,
+  "captureFailures": 0,
+  "exactDialogueMatch": true,
+  "imageChecksumsVerified": true,
+  "entryLinksValid": true,
+  "mappedEvents": 156
+}
