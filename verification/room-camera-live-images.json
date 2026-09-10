@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "029-01.avif",
+      "sha256": "79fc7e9b7ae0fbd55efea2552b176786481c82cca5186706ee4d10f9eaf7f433",
+      "bytes": 127858,
+      "passed": true
+    },
+    {
+      "name": "050-01.avif",
+      "sha256": "dc67510c9f82a024aa1a6728f7aeebd37fdb36b07d4d5d8f1f448fcab4b4df09",
+      "bytes": 121850,
+      "passed": true
+    },
+    {
+      "name": "009-01.avif",
+      "sha256": "112435ca6a942038479d50439626f9ba59d645d028bf9b511cded38dd116f721",
+      "bytes": 112951,
+      "passed": true
+    },
+    {
+      "name": "002-01.avif",
+      "sha256": "b8612049c5ff8643a7eb662b9a5b8a9dab1540bf2cd7855a966b0dd5d9d6e1da",
+      "bytes": 129336,
+      "passed": true
+    },
+    {
+      "name": "071-01.avif",
+      "sha256": "ca662fe98a118fba84373e28962aa5800423664ba7d8dbdfb221ded5bd1a5055",
+      "bytes": 132393,
+      "passed": true
+    },
+    {
+      "name": "071-02.avif",
+      "sha256": "1be74772b2db1ca5c11a29a5252e5f50cbbfe8cd747899eb17b27d48a37958f3",
+      "bytes": 131614,
+      "passed": true
+    },
+    {
+      "name": "071-03.avif",
+      "sha256": "d53e3b72b208c47c7b9915e9c1048adbdb53516eabea86eb5a0e56cd730ba3c4",
+      "bytes": 132509,
+      "passed": true
+    },
+    {
+      "name": "071-04.avif",
+      "sha256": "4f4c26f3f1c86937db1eec96dbb748afa300192383beb67c974e03de0a74c52f",
+      "bytes": 135218,
+      "passed": true
+    },
+    {
+      "name": "071-05.avif",
+      "sha256": "d223ec3bfdd7587d5d2fe5376b0a8b607d5c792b461d14dcf88ab4a0b1218942",
+      "bytes": 133114,
+      "passed": true
+    },
+    {
+      "name": "071-06.avif",
+      "sha256": "2161a47ccc3e23673ad6f63e5b1933123be55a91a1556340ff33c52df60bb7e5",
+      "bytes": 134228,
+      "passed": true
+    },
+    {
+      "name": "071-07.avif",
+      "sha256": "421e519c5484dfd235ad047e4cc33767b512db6d154c3514d456e0295d033ce4",
+      "bytes": 131379,
+      "passed": true
+    },
+    {
+      "name": "071-08.avif",
+      "sha256": "6f42a6d3ad0fd6bb6e8f4ed0865b351f7c4cdd3311a72b9df0b57e9bdb9c6fda",
+      "bytes": 130258,
+      "passed": true
+    },
+    {
+      "name": "071-09.avif",
+      "sha256": "b34f3e3cd2be71b69850acb54d7d96382ee72bbaea4f20ec39464d1f2f32c929",
+      "bytes": 137328,
+      "passed": true
+    },
+    {
+      "name": "071-10.avif",
+      "sha256": "1416c14dc2c79e03e221b04354e519eb8a4be594730cccb3ceb0e4185f0aaf63",
+      "bytes": 129848,
+      "passed": true
+    },
+    {
+      "name": "071-11.avif",
+      "sha256": "743fd21ef38a0b59999646d97e66531784d817b6a33dde8aeccf9c4f06d999af",
+      "bytes": 138620,
+      "passed": true
+    },
+    {
+      "name": "071-12.avif",
+      "sha256": "3364fecf0a404eabe1ad166a3fbda127319255d6dc3679c257e33c1185a19cf2",
+      "bytes": 128821,
+      "passed": true
+    },
+    {
+      "name": "102-01.avif",
+      "sha256": "8e4509a12cb95100bf815ef51eccb8524c1b9d8daa837bdb6e92f7ec45468e45",
+      "bytes": 121631,
+      "passed": true
+    },
+    {
+      "name": "088-01.avif",
+      "sha256": "13ede0146bf8ef3ff5da4b9cf703fc2669a1800c1e6e663336745a697c8e01d6",
+      "bytes": 149217,
+      "passed": true
+    }
+  ]
+}

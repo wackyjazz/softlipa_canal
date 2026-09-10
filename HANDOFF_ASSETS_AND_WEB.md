@@ -258,3 +258,5 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 重建工具 capture_room_camera.cjs → compress_phone.cjs tmp/room-camera-release → apply_room_camera.py。18幀逐張斷言鏡頭跟隨、縮放、scroll及站位與核准對照一致；原文／文字邊界、全圖／文字／手機區域PSNR≥40及目視檢查通過。備份 tmp/room-camera-release/before；正式驗證紀錄 verification/room-camera-release.json。此為隔離原版引擎事件驗證，未宣稱全流程實玩。
 
 注意：publish.py／build_walkthrough.py 會重建首頁章節摘要。本次僅更新圖片，已保留發布前章節資料，驗證只有七個事件capture／image欄位改動。
+
+正式發布成功：內容 commit `f147898080136eb219429b431d1c6c514c43e194`；Pages 流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34455430037 。Worker版本 `08041feb-48fb-4cd4-93b4-e6265e6e1c3e`。18個新R2物件上傳／716沿用，全部734物件大小、MD5 ETag、Content-Type驗證；Windows Node正式GET逐一核對18張SHA256及Content-Type成功。瀏覽器停用快取後，734個圖片版本與7事件×桌面／手機共14次載入、放大提示在圖外皆通過；目視088兩種尺寸正確。驗證紀錄 verification/room-camera-live-images.json、room-camera-live-site.json 及兩張正式站截圖。

@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "date": "2026-09-10T08:30:29.235Z",
+  "pagesRun": 34455430037,
+  "commit": "f147898080136eb219429b431d1c6c514c43e194",
+  "all734ImageVersionsMatch": true,
+  "checks": [
+    {
+      "viewport": 1440,
+      "event": "e002",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/002-01.avif?v=20260907-r5&sha=b8612049c5ff"
+    },
+    {
+      "viewport": 1440,
+      "event": "e009",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/009-01.avif?v=20260907-r5&sha=112435ca6a94"
+    },
+    {
+      "viewport": 1440,
+      "event": "e029",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/029-01.avif?v=20260907-r5&sha=79fc7e9b7ae0"
+    },
+    {
+      "viewport": 1440,
+      "event": "e050",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/050-01.avif?v=20260907-r5&sha=dc67510c9f82"
+    },
+    {
+      "viewport": 1440,
+      "event": "e071",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/071-01.avif?v=20260907-r5&sha=ca662fe98a11"
+    },
+    {
+      "viewport": 1440,
+      "event": "e088",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/088-01.avif?v=20260907-r5&sha=13ede0146bf8"
+    },
+    {
+      "viewport": 1440,
+      "event": "e102",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/102-01.avif?v=20260907-r5&sha=8e4509a12cb9"
+    },
+    {
+      "viewport": 390,
+      "event": "e002",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/002-01.avif?v=20260907-r5&sha=b8612049c5ff"
+    },
+    {
+      "viewport": 390,
+      "event": "e009",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/009-01.avif?v=20260907-r5&sha=112435ca6a94"
+    },
+    {
+      "viewport": 390,
+      "event": "e029",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/029-01.avif?v=20260907-r5&sha=79fc7e9b7ae0"
+    },
+    {
+      "viewport": 390,
+      "event": "e050",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/050-01.avif?v=20260907-r5&sha=dc67510c9f82"
+    },
+    {
+      "viewport": 390,
+      "event": "e071",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/071-01.avif?v=20260907-r5&sha=ca662fe98a11"
+    },
+    {
+      "viewport": 390,
+      "event": "e088",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/088-01.avif?v=20260907-r5&sha=13ede0146bf8"
+    },
+    {
+      "viewport": 390,
+      "event": "e102",
+      "width": 1200,
+      "height": 900,
+      "zoomHintOutside": true,
+      "noOverflow": true,
+      "url": "https://canal-guide-images.wackyjazz1.workers.dev/images/102-01.avif?v=20260907-r5&sha=8e4509a12cb9"
+    }
+  ]
+}
