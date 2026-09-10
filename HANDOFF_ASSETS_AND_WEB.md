@@ -243,3 +243,5 @@ Homepage hero、主要導覽、主線路書與每章概覽連到新頁；概覽�
 重建：audit_phone_source.py → build_capture.py → 啟動獨立tmp/guide_capture(9336) → capture_phone.cjs → probe_phone.cjs／review_phone.cjs → compress_phone.cjs → 完成實際目視校對後記錄manualReviewComplete → apply_phone_captures.py → publish.py → build_phone_review.py。分階段輸出在tmp/phone-recapture，不先覆蓋正式圖。再執行verify.py、verify_capture_fixes.py、verify_compression.cjs、test_site.cjs。
 
 測試工具修正：CDP忽略Edge自行打開的Rewards內部頁；test_site開跑清除隔離測試筆記，Gina預期只命中可達的No274一筆。使用本次啟動的擷取程序11368已精確結束，沒有操作使用者其他遊戲。
+
+正式上線：內容commit93f9f64；Pages34447375557成功；Worker ea53fed7-296f-4d8a-8199-e2121755bec4。702新物件／32沿用，19個正式GET內容核對通過。兩份ZIP已重建逐檔驗證。

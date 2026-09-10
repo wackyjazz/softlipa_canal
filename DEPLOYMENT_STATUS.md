@@ -168,3 +168,16 @@ Worker版本94774cc6-d437-4f7e-8a4f-5da5c4e085a5；8個單元測試通過，線�
 依使用者要求移除黑膠裝飾，以pixel-cd.svg銀色點陣CD取代。閱讀工具列新增遊戲字體／一般字體：僅歌詞區與時間標記切換Cubic或系統無襯線字體，預設Cubic；localStorage canal-lyrics-font記住選擇。換曲／重新整理保留偏好，既有字級與時間開關獨立。測試guide_tools/test_lyrics_design.cjs擴充兩種字體的排版、原文不變、持久化與切回Cubic；本機通過，報告verification/lyrics-cd-font-local-checks.json。僅Pages更新。
 
 已上線：內容commit `dc5548f`，Pages流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34325097916 成功。正式站CD載入、雙字體切換/記憶、手機/桌面排版與歌詞原文回歸通過，報告verification/lyrics-cd-font-live-checks.json。
+
+
+## 2026-09-10 原生 RSDR 手機與過場截圖（已上線）
+
+以保留的原版引擎重擷取292事件704張；656張顯示手機、48張依原版劇情隱藏，序章30張及逐格取樣不變。家中拿手機前／當句／開選單提示後各自呈現正確HUD和桌上道具狀態。另修正022聽完CD的位置與夜窗、128歌曲後夜色遮罩、137橋邊歌曲後夜景。原文及公開293事件、734張收錄不變。
+
+19張保留JPEG以維持全圖／文字／手機品質門檻，其餘715 AVIF。新圖全圖／對話／手機區域PSNR各≥40dB，總131,322,743bytes。16組同幀原生HUD切換像素驗證、740文字引用原渲染邊界核對、原生拿手機流程及先前站位檢查通過。原版引擎依事件狀態重現，未從新遊戲全流程逐段實玩；隨機人物／貓及動畫時點可能不同。
+
+R2新增702個物件，32個沿用，全部734個物件的大小、MD5 ETag、Content-Type與本機SHA來源核對。舊R2物件未刪除。Worker版本 `ea53fed7-296f-4d8a-8199-e2121755bec4`；13個既有Worker／訪客測試通過，未改付費方案、Referer或D1邏輯。內容commit `93f9f64d1b703c91f579f6f061c4b9d637d0d08d`，Pages成功流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34447375557 。
+
+19張正式Worker圖片的實際內容雜湊與格式核對通過；正式站搜尋Gina、重整／舊深連結、櫃檯入口、390px、542项圖庫與11張照片回歸通過。報告 verification/phone-live-images.json、phone-general-live-checks.json、phone-recapture.json、phone-source-evidence.json。本機校對頁 research/phone-recapture/index.html；兩份ZIP已重建並逐檔校驗。
+
+正式站全部734張圖片版本對照一致；15組指定場景×1440/390px共30次原尺寸載入、無溢出檢查通過，並目視確認CD架桌面與橋邊夜景手機版。報告verification/phone-live-site.json，截圖phone-live-1440.png、phone-live-390.png。

@@ -195,5 +195,21 @@
     "liveChecks": "verification/visitors-live-checks.json",
     "webAnalyticsEnabled": false,
     "webAnalyticsBlocker": "Existing OAuth lacks RUM access (403); public beacon snippet requested"
+  },
+  "nativePhoneRecapture": {
+    "date": "2026-09-10",
+    "capturedImages": 704,
+    "visiblePhone": 656,
+    "hiddenPhone": 48,
+    "retainedIntroImages": 30,
+    "source": "verification/phone-source-evidence.json",
+    "checks": "verification/phone-recapture.json",
+    "liveImages": "verification/phone-live-images.json",
+    "liveSite": "verification/phone-live-site.json",
+    "pagesRun": 34447375557,
+    "pagesCommit": "93f9f64d1b703c91f579f6f061c4b9d637d0d08d",
+    "workerVersion": "ea53fed7-296f-4d8a-8199-e2121755bec4",
+    "uploadedObjects": 702,
+    "all734PublishedVersionsVerified": true
   }
 }

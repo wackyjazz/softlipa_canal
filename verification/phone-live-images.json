@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "001-01.avif",
+      "status": 200,
+      "sha256": "a376078ab244d6951ff3a2dd688a3ddb1ce0972031559c6ecedb0460ce252b8f",
+      "bytes": 51880,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "022-01.avif",
+      "status": 200,
+      "sha256": "1ca79a4857ac74e8e2903d7250ca46128fcb68f1e2cc25d3835ec6ffb63f8b51",
+      "bytes": 114735,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "038-01.avif",
+      "status": 200,
+      "sha256": "c031a29997d24716b1a7753608222fe4c4a9891639657015ebccf36d7daf75d5",
+      "bytes": 151609,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "039-01.avif",
+      "status": 200,
+      "sha256": "d0831010fa6f99c72c54550dd074e16ecaf3e51c1a8d826fae9d44bdb048b19e",
+      "bytes": 108381,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "044-01.avif",
+      "status": 200,
+      "sha256": "02e3ff8019a1edd3872aebc279acf7cca31fba8c01582e0a16a396fafcfdcd78",
+      "bytes": 128439,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "050-01.avif",
+      "status": 200,
+      "sha256": "817a114dcbaceb8b69cfbe54413502394ec1a1c2ed18e13603658a952210aa25",
+      "bytes": 124304,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "071-01.avif",
+      "status": 200,
+      "sha256": "6ccb28584229dbb844ebc019fa7b9efd9d07417122ab93880be9f3950afcee1e",
+      "bytes": 159689,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "083-01.avif",
+      "status": 200,
+      "sha256": "86696f930a143fb58a84c9e7bf07e1adebb295bd54f64791e780c5eaf3a27b91",
+      "bytes": 122040,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "088-01.avif",
+      "status": 200,
+      "sha256": "dfc7669dbf4defd219e2971e449d8d6fd693a7b27a2bf49adf22bbe25e2418ec",
+      "bytes": 136689,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "128-01.avif",
+      "status": 200,
+      "sha256": "df8e02119d7df970ff276fb1f72c5c4fdf6cb3cf1641b07636e9d0a5845a71f1",
+      "bytes": 111232,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "137-01.avif",
+      "status": 200,
+      "sha256": "fac8fc2d6881b7d295a854bbce79fe3aec85a1ca06b416ffdf6368ea82fc03f9",
+      "bytes": 161602,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "158-01.avif",
+      "status": 200,
+      "sha256": "37eed562e3baf0e1a9769fcb6b55a4214393577e062328a887ac900adb1e75f4",
+      "bytes": 248902,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "178-01.jpg",
+      "status": 200,
+      "sha256": "9948f66e8b77e687f8e962f6e67d4133006c7481225e5f1a8f4553329ca76d79",
+      "bytes": 304353,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "194-01.avif",
+      "status": 200,
+      "sha256": "d6b7325dc3e8acb25b09ed745d3c415754de3ba0221475c11bb7dc7e28e9b7d2",
+      "bytes": 222728,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "211-01.avif",
+      "status": 200,
+      "sha256": "6ac3229ebaaa01002b27c55fec4178710720a92c0041297334b2801b83f00df4",
+      "bytes": 214442,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "245-01.avif",
+      "status": 200,
+      "sha256": "8a65f26c9f1f11237fd22b5af1da4a4ce9d7011ab3f02c17539c6c09dd341542",
+      "bytes": 161705,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "257-01.avif",
+      "status": 200,
+      "sha256": "b2be4b65c3ce22f85f42f85fe8d974ff2b9c46400d6ca6f36125b62849e1fec7",
+      "bytes": 208575,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "274-05.avif",
+      "status": 200,
+      "sha256": "d7541a72a1e58ecaf5045982e9763e758a230a463ef108279e70d3c5b9e662c7",
+      "bytes": 148666,
+      "matchesNativeCapture": true
+    },
+    {
+      "name": "284-03.avif",
+      "status": 200,
+      "sha256": "4ede72139a79024293887d5074d9126ad59f44d073806683be3ede896067ee8d",
+      "bytes": 167673,
+      "matchesNativeCapture": true
+    }
+  ],
+  "workerVersion": "ea53fed7-296f-4d8a-8199-e2121755bec4"
+}

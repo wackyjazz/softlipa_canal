@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-10T06:56:13.469Z",
+  "base": "https://wackyjazz.github.io/softlipa_canal/",
+  "checks": [
+    "Public Pages homepage: 24 initial event cards",
+    "Gina opens professor frame 5; 1200px image loads from real R2 gateway",
+    "Exact dialogue deep-link survives reload",
+    "Removed No275 link redirects to the actual No274 professor encounter",
+    "Counter entrance keyword finds No.083 and loads image",
+    "Mobile guide and event dialog fit 390px; no JS errors",
+    "542-asset gallery, 11 photos, full-resolution photo and deep-link work online",
+    "Mobile gallery has no overflow or JS errors",
+    "Gallery returns to project-subpath guide correctly"
+  ],
+  "passed": true
+}
