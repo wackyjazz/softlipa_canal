@@ -23,13 +23,13 @@ v0.3 的備份清單會區分「啟用前」「解除前」「還原前」，並
 
 | 版本 | 狀態 |
 | --- | --- |
-| Windows x64 EXE | v0.3 雙向切換介面已測試，正在重新打包 |
-| Mac Apple Silicon APP | v0.3 正在原生環境重新建置與測試 |
-| Mac Intel APP | v0.3 正在原生環境重新建置與測試 |
+| Windows x64 EXE | v0.3 原生 GUI 雙向切換與打包後啟動通過 |
+| Mac Apple Silicon APP | v0.3 在 macOS 15 arm64 建置，31 項測試、GUI 雙向切換與 APP 啟動通過 |
+| Mac Intel APP | v0.3 在 macOS 15 Intel 建置，31 項測試、GUI 雙向切換與 APP 啟動通過 |
 
 一般玩家應拿到對應平台的應用程式包，下面的 Python / CLI 指令是給開發者使用。Mac 包內已有 APP 與執行環境；不要把來源碼 ZIP 當作安裝包。
 
-前版 v0.2 的 Mac 建置紀錄：[GitHub Actions #38209474072](https://github.com/wackyjazz/softlipa_canal/actions/runs/38209474072)。v0.3 沿用獨立的 `build/homecookin-macos-20261012` 分支建置，不修改既有網站主分支或部署網站。
+v0.3 Mac 建置紀錄：[GitHub Actions #38228849883](https://github.com/wackyjazz/softlipa_canal/actions/runs/38228849883)，原始碼 commit `e8aa0ce6bdeed9f178ef282acd35347574193bbc`。沿用獨立的 `build/homecookin-macos-20261012` 分支建置，不修改既有網站主分支或部署網站。下載檔案放在 `exports/v0.3/`，先前 v0.2 的檔案仍保留。
 
 ## 桌面版設計
 
@@ -135,7 +135,7 @@ python3 -m unittest discover -s homecookin_unlocker/tests -v
 
 測試使用臨時合成存檔，涵蓋解鎖、原始備份、還原、拒絕不適用進度、損毀與並行寫入。另有原遊戲 JavaScript 編解碼函式的交叉驗證腳本，使用本機原始 ASAR 擷取函式後在 Node.js 執行；不啟動遊戲、不接觸玩家存檔。
 
-v0.3 新增解除彩蛋、啟用後的新進度保留、解除備份還原、重複操作、分支拒絕與快照檢查測試。31 項本機測試已通過；Windows 原生 GUI 已測試「啟用 → 解除 → 再啟用 → 還原」。各平台封裝驗證紀錄會隨建置更新。
+v0.3 新增解除彩蛋、啟用後的新進度保留、解除備份還原、重複操作、分支拒絕與快照檢查測試。31 項測試在 WSL、Mac arm64、Mac Intel 通過；Windows 與兩種 Mac 原生 GUI 均通過「啟用 → 解除 → 再啟用 → 還原」。三平台封裝啟動均通過，Mac APP 完整性簽章檢查通過。测试只使用合成存檔，未操作玩家進度。
 
 前版 v0.2 驗證：24 項自動測試在 WSL、macOS arm64、macOS Intel 通過，三平台原生 GUI 與封裝啟動通過。原版 JavaScript 函式成功解碼 Python 產生的合成存檔，原版產生的存檔也通過 Python 解碼。以上仍不代表完成原遊戲內彩蛋驗收。
 
