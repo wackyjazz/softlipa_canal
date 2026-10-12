@@ -6,6 +6,10 @@
 
 Windows 下載 `HomeCookinUnlocker-Windows-x64.zip`，解壓縮後雙擊 `HomeCookinUnlocker.exe`。桌面版內含所需執行環境，**不需要安裝 Python、不需要輸入指令**。
 
+Mac 下載對應的 `HomeCookinUnlocker-macOS-arm64.zip`（Apple Silicon：M1 / M2 / M3 等）或 `HomeCookinUnlocker-macOS-x64.zip`（Intel），解壓縮後將 `HomeCookinUnlocker.app` 拖入「應用程式」，再雙擊開啟。可在蘋果選單的「關於這台 Mac」查看晶片／處理器種類。
+
+Mac 測試版未使用 Developer ID 憑證簽署，也未經 Apple 公證。若首次開啟顯示無法驗證開發者或無法檢查 App，可依 [Apple 的操作說明](https://support.apple.com/zh-tw/102445)，在嘗試開啟後前往「系統設定 → 隱私權與安全性 → 強制打開」。此操作只針對你確認來源的這個 App，不需關閉整個系統的安全保護。
+
 1. 程式自動尋找存檔；有需要才按「選擇存檔」。
 2. 確認顯示「這份存檔可以解鎖」，完全關閉遊戲。
 3. 勾選「我已完全關閉遊戲」，按「備份並開啟彩蛋資格」。
@@ -16,10 +20,12 @@ Windows 下載 `HomeCookinUnlocker-Windows-x64.zip`，解壓縮後雙擊 `HomeCo
 | 版本 | 狀態 |
 | --- | --- |
 | Windows x64 EXE | 已產生免安裝桌面測試版；尚未使用發行者憑證簽署 |
-| Mac Apple Silicon APP | 介面及原生建置流程已備妥；尚無 Mac 環境完成打包與驗證 |
-| Mac Intel APP | 介面及原生建置流程已備妥；尚無 Mac 環境完成打包與驗證 |
+| Mac Apple Silicon APP | 已在 GitHub macOS 15 arm64 環境建置，通過 24 項測試、原生 GUI 解鎖／還原與封裝 APP 啟動檢查 |
+| Mac Intel APP | 已在 GitHub macOS 15 Intel 環境建置，通過 24 項測試、原生 GUI 解鎖／還原與封裝 APP 啟動檢查 |
 
-一般玩家應拿到對應平台的應用程式包，下面的 Python / CLI 指令是給開發者使用。Mac 的來源碼或工作流程不等於已完成的 Mac 應用程式。
+一般玩家應拿到對應平台的應用程式包，下面的 Python / CLI 指令是給開發者使用。Mac 包內已有 APP 與執行環境；不要把來源碼 ZIP 當作安裝包。
+
+Mac 建置紀錄：[GitHub Actions #38209474072](https://github.com/wackyjazz/softlipa_canal/actions/runs/38209474072)，原始碼 commit `f74ac5fc849d5ed4280f3dc7c554c444638edd82`。使用獨立的 `build/homecookin-macos-20261012` 分支，沒有修改既有網站主分支或部署網站。
 
 ## 桌面版設計
 
@@ -41,7 +47,7 @@ python homecookin_unlocker/build_desktop.py --output desktop-build
 
 Windows 產出單一無主控台 EXE；macOS 產出含執行環境的 APP。ZIP 只放應用程式、簡短使用說明和建置資訊，不把 Python 腳本當作玩家入口。
 
-專案的 `.github/workflows/homecookin-desktop.yml` 提供手動觸發的 Windows x64、Mac arm64、Mac x64 建置與測試。需先放進可用的 GitHub 儲存庫再執行；目前沒有上傳專案或啟動遠端工作流程。建置環境使用原生架構，產物是未簽署的測試包。
+專案的 `.github/workflows/homecookin-desktop.yml` 提供手動觸發的三平台建置；本次使用 `.github/workflows/homecookin-macos.yml` 在獨立建置分支完成兩種 Mac 原生架構的測試及打包。macOS 產物帶有打包工具的 ad-hoc 簽章，通過 `codesign --verify --deep --strict`；這不等於 Developer ID 簽署或 Apple 公證。
 
 正式發佈還需要：
 
@@ -56,7 +62,7 @@ Windows 產出單一無主控台 EXE；macOS 產出含執行環境的 APP。ZIP 
 - 依專案中的 Windows 原版 **1.0.0** 程式分析，支援 `CLSAVE2` 格式的 `save.dat`。
 - 這個格式標記不是遊戲版本號；工具不宣稱能辨識所有新版本。會檢查 HMAC、壓縮格式與必要欄位，不符合即停止。
 - Windows / Mac 共用 Python 標準函式庫核心；開發者直接執行 CLI 時需 **Python 3.9 以上**，無第三方套件。桌面建置環境使用 Python 3.13；打包後的玩家版本不需要 Python。
-- **Mac 的存檔格式與兩平台實機彩蛋流程尚待驗證。** Mac 路徑依目前跨平台主程序推導，不能視為已通過相容性測試。
+- Mac 版已在原生 macOS 15 測試合成存檔及桌面操作。**實際 Mac 原版遊戲存檔、兩平台遊戲內彩蛋流程與更舊 macOS 版本仍待驗證。** Mac 預設存檔路徑依遊戲跨平台主程序推導。
 - 不支援直接編輯舊版 `save.json`；請先讓原遊戲讀取並存成 `save.dat`。
 
 ## 命令列核心使用方式（開發者）
@@ -123,7 +129,7 @@ python3 -m unittest discover -s homecookin_unlocker/tests -v
 
 測試使用臨時合成存檔，涵蓋解鎖、原始備份、還原、拒絕不適用進度、損毀與並行寫入。另有原遊戲 JavaScript 編解碼函式的交叉驗證腳本，使用本機原始 ASAR 擷取函式後在 Node.js 執行；不啟動遊戲、不接觸玩家存檔。
 
-驗證結果：24 項自動測試通過（WSL / Python 3.10.12），包含桌面狀態與操作前快照保護；Windows 原生 Tk 視窗以合成存檔驗證按鈕狀態、解鎖、備份清單與還原。打包後的 Windows EXE 在移除 Python 相關 PATH / PYTHONPATH / PYTHONHOME 的子程序環境中成功開啟原生視窗，啟動沒有修改測試存檔。原版 JavaScript 函式在 Windows Node.js 25.5.0 成功解碼 Python 產生的合成存檔，並確認只有 `isMember` 改變；原版函式產生的存檔也通過 Python 解碼。這些結果不代表已完成 Mac 桌面版測試或遊戲內彩蛋驗收。
+驗證結果：24 項自動測試在 WSL、macOS arm64、macOS Intel 通過，包含桌面狀態與操作前快照保護；三平台原生 Tk 視窗以合成存檔驗證按鈕狀態、解鎖、備份清單與還原。打包後的 Windows EXE 與兩種 Mac APP 均在移除建置用 Python 環境的子程序設定中成功啟動，啟動沒有修改測試存檔。Mac APP 的封裝簽章也通過驗證。原版 JavaScript 函式在 Windows Node.js 25.5.0 成功解碼 Python 產生的合成存檔，並確認只有 `isMember` 改變；原版函式產生的存檔也通過 Python 解碼。以上仍不代表完成原遊戲內彩蛋驗收。
 
 在有原始 ASAR 的專案目錄可重跑交叉驗證：
 
