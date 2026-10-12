@@ -113,7 +113,7 @@ def assess(data):
     if branch_flags:
         return False, "已有分支紀錄（" + ", ".join(branch_flags) + "）；不自動清除，請使用較早存檔。"
     if data["isMember"]:
-        return True, "資格已啟用，不需要再修改；繼續原本第四章流程即可。"
+        return True, "資格已啟用；分岔前可解除，也可直接繼續原本第四章流程。"
     if data["chapter"] < 4:
         return True, "可解鎖；之後在第四章依原劇情向唱片行詢問《家常音樂》。"
     if "ask_home_cookin" not in events:
@@ -214,7 +214,7 @@ def make_backup(path, raw, action, output):
         "tool": "homecookin-unlocker", "version": 1, "action": action,
         "created_utc": stamp, "target": str(path),
         "backup_sha256": digest(raw), "output_sha256": digest(output),
-        "changed_fields": ["isMember"] if action == "unlock" else ["whole_save"],
+        "changed_fields": ["isMember"] if action in {"unlock", "disable"} else ["whole_save"],
     }
     durable_write(folder / "manifest.json",
                   json.dumps(metadata, ensure_ascii=False, indent=2).encode("utf-8"))
@@ -254,27 +254,38 @@ def replace_save(path, before, after, action, acknowledged):
     return backup
 
 
-def unlock(path, acknowledged=False, *, expected_sha256=None):
+def set_membership(path, enabled, acknowledged=False, *, expected_sha256=None):
+    """Change eligibility only before the branch point, in either direction."""
+    if type(enabled) is not bool:
+        raise UnlockError("彩蛋資格必須是布林值。")
     ensure_closed(path, acknowledged)
     with locked(path):
         before = read_bytes(path)
         if expected_sha256 is not None and digest(before) != expected_sha256:
-            raise UnlockError("存檔已變更，請重新檢查後再解鎖。")
+            raise UnlockError("存檔已變更，請重新檢查後再切換彩蛋。")
         data = decode(before)
         allowed, reason = assess(data)
         if not allowed:
             raise UnlockError(reason)
-        if data["isMember"]:
+        if data["isMember"] == enabled:
             return None
         updated = dict(data)
-        updated["isMember"] = True
+        updated["isMember"] = enabled
         after = encode(updated)
         # Only this field may differ. All unrecognized fields are preserved.
         verified = decode(after)
         verified["isMember"] = data["isMember"]
         if verified != data:
             raise UnlockError("偵測到非預期欄位變動，沒有修改原存檔。")
-        return replace_save(path, before, after, "unlock", acknowledged)
+        return replace_save(path, before, after, "unlock" if enabled else "disable", acknowledged)
+
+
+def unlock(path, acknowledged=False, *, expected_sha256=None):
+    return set_membership(path, True, acknowledged, expected_sha256=expected_sha256)
+
+
+def disable(path, acknowledged=False, *, expected_sha256=None):
+    return set_membership(path, False, acknowledged, expected_sha256=expected_sha256)
 
 
 def restore(path, folder, acknowledged=False, *, expected_sha256=None):
@@ -304,24 +315,26 @@ def print_status(path):
     data = decode(read_bytes(path))
     allowed, reason = assess(data)
     print("存檔：", path)
-    print("格式：CLSAVE2（依 Windows 原版 1.0.0 分析；Mac 尚待實機驗證）")
+    print("格式：CLSAVE2（依原版 1.0.0 分析；原遊戲內流程仍待驗證）")
     print("章節：", data["chapter"], "／isMember：", data["isMember"])
     print("判定：", reason)
     if allowed and not data["isMember"]:
-        print("預計變更：isMember: false → true；其他欄位保持原值。")
+        print("可啟用彩蛋：isMember: false → true；其他欄位保持原值。")
+    elif allowed:
+        print("可解除彩蛋：isMember: true → false；其他欄位保持原值。")
     return data, allowed
 
 
 def menu(path):
-    print("家常音樂彩蛋解鎖工具 v0.1\n1. 檢查存檔\n2. 解鎖資格\n3. 還原備份\n0. 離開")
+    print("家常音樂彩蛋切換工具 v0.3\n1. 檢查存檔\n2. 啟用彩蛋\n3. 還原備份\n4. 解除彩蛋\n0. 離開")
     choice = input("選擇：").strip()
     if choice == "0":
         return
-    if choice not in {"1", "2", "3"}:
+    if choice not in {"1", "2", "3", "4"}:
         raise UnlockError("無效選項。")
-    if choice in {"1", "2"}:
+    if choice in {"1", "2", "4"}:
         data, allowed = print_status(path)
-        if choice == "1" or not allowed or data["isMember"]:
+        if choice == "1" or not allowed or data["isMember"] == (choice == "2"):
             return
     folder = None
     if choice == "3":
@@ -333,18 +346,21 @@ def menu(path):
     if input("請完全關閉遊戲；確認執行請輸入 YES：").strip() != "YES":
         print("已取消，沒有修改。")
         return
-    backup = unlock(path, True) if choice == "2" else restore(path, folder, True)
+    if choice == "3":
+        backup = restore(path, folder, True)
+    else:
+        backup = set_membership(path, choice == "2", True)
     print("已完成。" if backup else "內容已符合，不需要修改。")
     if backup:
         print("操作前備份：", backup)
-    if choice == "2":
+    if choice in {"2", "4"}:
         print("請使用「繼續遊戲」讀檔；新遊戲需重新解鎖。")
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", nargs="?", default="menu",
-                        choices=["menu", "status", "unlock", "restore"])
+                        choices=["menu", "status", "unlock", "disable", "restore"])
     parser.add_argument("--save", help="save.dat 完整路徑；省略則尋找原版預設位置")
     parser.add_argument("--backup", help="還原用的備份資料夾（含 manifest.json）")
     parser.add_argument("--game-closed", action="store_true", help="確認遊戲已完全關閉")
@@ -358,10 +374,12 @@ def main(argv=None):
             menu(path)
         elif args.action == "status":
             print_status(path)
-        elif args.action == "unlock":
+        elif args.action in {"unlock", "disable"}:
             print_status(path)
-            backup = unlock(path, args.game_closed)
-            print("資格已啟用，請繼續遊戲讀檔。" if backup else "資格已啟用，沒有重複修改。")
+            enabled = args.action == "unlock"
+            backup = set_membership(path, enabled, args.game_closed)
+            label = "啟用" if enabled else "解除"
+            print(f"彩蛋資格已{label}，請繼續遊戲讀檔。" if backup else "資格已符合，沒有重複修改。")
             if backup:
                 print("原檔備份：", backup)
         else:

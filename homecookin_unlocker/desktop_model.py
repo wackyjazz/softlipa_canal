@@ -47,11 +47,12 @@ def inspect_save(path):
                         description="這份進度已超過彩蛋分岔點，或走進另一條分支。\n"
                         "請選擇第四章分岔前的存檔；目前進度會保持原樣。", **common)
     if data["isMember"]:
-        return SaveView(state="ready", title="彩蛋資格已開啟",
-                        description="不用再次解鎖。請回到遊戲選擇「繼續遊戲」，依第四章原本流程探索。", **common)
-    return SaveView(state="eligible", title="這份存檔可以解鎖",
-                    description="開啟謎之男子彩蛋的出現資格。\n"
-                    "劇情、道具和任務進度都會保留；修改前會自動備份。", **common)
+        return SaveView(state="ready", title="目前：彩蛋已啟用",
+                        description="這份存檔具有謎之男子的出現資格。\n"
+                        "選擇「解除彩蛋」可關閉資格，讓尚未分岔的劇情依一般路線進行。", **common)
+    return SaveView(state="eligible", title="目前：彩蛋未啟用",
+                    description="選擇「啟用彩蛋」，讓第四章有機會遇見謎之男子。\n"
+                    "分岔前可再解除；兩種操作都會自動備份，保留目前進度。", **common)
 
 
 @dataclass(frozen=True)
@@ -82,7 +83,7 @@ def list_backups(path):
             data = core.decode(raw)
             time = datetime.strptime(metadata["created_utc"], "%Y%m%dT%H%M%S.%fZ")
             time = time.replace(tzinfo=timezone.utc).astimezone()
-            action = "解鎖前" if metadata.get("action") == "unlock" else "還原前"
+            action = {"unlock": "啟用前", "disable": "解除前", "restore": "還原前"}.get(metadata.get("action"), "操作前")
             member = "資格已開啟" if data["isMember"] else "資格未開啟"
             label = f'{time:%Y/%m/%d %H:%M:%S}  ·  第 {data["chapter"]} 章  ·  {action}  ·  {member}'
             results.append(BackupView(folder, label, data["chapter"], data["isMember"]))

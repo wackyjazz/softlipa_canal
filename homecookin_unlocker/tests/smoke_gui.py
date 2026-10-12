@@ -42,9 +42,11 @@ def main():
             wait(root, lambda: app.view is not None and not app.busy)
             assert app.view.state == "eligible"
             assert str(app.primary["state"]) == "disabled"
+            assert str(app.disable_button["state"]) == "disabled"
             app.closed.set(True)
             app.update_buttons()
             assert str(app.primary["state"]) == "normal"
+            assert str(app.disable_button["state"]) == "disabled"
             root.update()
             assert app.primary.winfo_y() + app.primary.winfo_height() <= app.primary.master.winfo_height()
             if args.screenshot:
@@ -65,6 +67,24 @@ def main():
             assert len(backups) == 1
             assert (backups[0] / "save.dat").read_bytes() == original
             assert str(app.primary["state"]) == "disabled"
+            # Exercise the second direction, then re-enable before restore.
+            assert str(app.disable_button["state"]) == "disabled"  # closed acknowledgement resets
+            app.closed.set(True)
+            app.update_buttons()
+            assert str(app.disable_button["state"]) == "normal"
+            app.disable_button.invoke()
+            wait(root, lambda: not app.busy)
+            assert not errors, errors
+            assert app.view.state == "eligible"
+            assert core.decode(path.read_bytes()) == fixture
+            assert str(app.disable_button["state"]) == "disabled"
+            assert len(list((path.parent / core.BACKUP_FOLDER).iterdir())) == 2
+            app.closed.set(True)
+            app.update_buttons()
+            app.primary.invoke()
+            wait(root, lambda: not app.busy)
+            assert app.view.state == "ready"
+            assert core.decode(path.read_bytes()) == dict(fixture, isMember=True)
             app.show_backups()
             wait(root, lambda: not app.busy)
             assert app.restore_window is not None
@@ -93,6 +113,7 @@ def main():
             wait(root, lambda: not app.busy)
             assert app.view.state == "blocked"
             assert str(app.primary["state"]) == "disabled"
+            assert str(app.disable_button["state"]) == "disabled"
             path.unlink()
             app.refresh()
             wait(root, lambda: not app.busy)
@@ -100,6 +121,7 @@ def main():
             assert not errors, errors
             print(json.dumps({"gui_smoke": "passed", "synthetic_saves_only": True,
                               "states": ["eligible", "ready", "blocked", "missing"],
+                              "enable_disable_enable": "passed",
                               "backup_dialog_and_restore": "passed"}))
         finally:
             root.destroy()

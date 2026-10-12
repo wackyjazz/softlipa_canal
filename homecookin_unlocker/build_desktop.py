@@ -63,7 +63,7 @@ def main():
             raise SystemExit("Output APP already exists; choose a fresh --output.")
         shutil.copytree(source, target, symlinks=True)
     shutil.copy2(root / "QUICK_START.txt", bundle / "使用說明.txt")
-    metadata = {"version": "0.2.0", "platform": label, "python": platform.python_version(),
+    metadata = {"version": "0.3.0", "platform": label, "python": platform.python_version(),
                 "signed": bool(os.environ.get("MAC_CODESIGN_IDENTITY")) if sys.platform == "darwin" else False,
                 "gameplay_verified": False}
     (bundle / "build-info.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")

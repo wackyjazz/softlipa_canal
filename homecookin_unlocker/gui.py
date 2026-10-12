@@ -11,7 +11,7 @@ from tkinter import filedialog, messagebox, ttk
 import desktop_model as model
 import unlock as core
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 BG = "#F5F2EA"
 CARD = "#FFFFFF"
 INK = "#243B35"
@@ -29,7 +29,7 @@ class UnlockApp:
         self.closed = tk.BooleanVar(value=False)
         self.path = None
         self.restore_window = None
-        root.title("家常音樂 · 彩蛋解鎖工具")
+        root.title("家常音樂 · 彩蛋切換工具")
         root.geometry("820x720")
         root.minsize(min(760, root.winfo_screenwidth() - 60), min(680, root.winfo_screenheight() - 100))
         root.configure(background=BG)
@@ -63,8 +63,8 @@ class UnlockApp:
         words = tk.Frame(top, bg=BG)
         words.pack(side="left", fill="x", expand=True)
         self.label(words, "HOME COOKIN’  /  運河", 10, MUTED).pack(anchor="w")
-        self.label(words, "讓謎之男子登場", 25, bold=True).pack(anchor="w", pady=(6, 5))
-        self.label(words, "開啟彩蛋資格，接著回到原本的冒險。", 11, MUTED).pack(anchor="w")
+        self.label(words, "選擇你的相遇", 25, bold=True).pack(anchor="w", pady=(6, 5))
+        self.label(words, "啟用或解除彩蛋，接著回到原本的冒險。", 11, MUTED).pack(anchor="w")
         vinyl = tk.Canvas(top, width=100, height=100, bg=BG, highlightthickness=0)
         vinyl.pack(side="right", padx=(12, 0))
         vinyl.create_oval(6, 6, 94, 94, fill=INK, outline=INK)
@@ -75,7 +75,7 @@ class UnlockApp:
 
         steps = tk.Frame(outer, bg=PALE, padx=16, pady=10)
         steps.pack(fill="x", pady=(22, 18))
-        self.label(steps, "01  找到存檔     →     02  開啟資格     →     03  繼續遊戲", 11,
+        self.label(steps, "01  找到存檔     →     02  選擇彩蛋     →     03  繼續遊戲", 11,
                    bg=PALE).pack(anchor="w")
 
         card = tk.Frame(outer, bg=CARD, padx=22, pady=18)
@@ -103,9 +103,15 @@ class UnlockApp:
         self.check = ttk.Checkbutton(outer, text="我已完全關閉遊戲", variable=self.closed,
                                      command=self.update_buttons)
         self.check.pack(anchor="w", pady=(18, 10))
-        self.primary = ttk.Button(outer, text="備份並開啟彩蛋資格", style="Primary.TButton",
+        choices = tk.Frame(outer, bg=BG)
+        choices.pack(fill="x")
+        choices.columnconfigure((0, 1), weight=1, uniform="actions")
+        self.primary = ttk.Button(choices, text="啟用彩蛋", style="Primary.TButton",
                                   command=self.unlock_clicked)
-        self.primary.pack(fill="x", ipady=3)
+        self.primary.grid(row=0, column=0, sticky="ew", ipady=3, padx=(0, 6))
+        self.disable_button = ttk.Button(choices, text="解除彩蛋", command=self.disable_clicked)
+        self.disable_button.grid(row=0, column=1, sticky="ew", ipady=3, padx=(6, 0))
+        self.label(outer, "僅切換尚未觸發的出現資格；已發生的劇情不會倒退。", 9, MUTED).pack(anchor="w", pady=(7, 0))
         self.progress = ttk.Progressbar(outer, mode="indeterminate")
         self.progress.pack(fill="x", pady=(8, 6))
         bottom = tk.Frame(outer, bg=BG)
@@ -137,10 +143,12 @@ class UnlockApp:
 
     def update_buttons(self):
         eligible = self.view is not None and self.view.state == "eligible"
+        removable = self.view is not None and self.view.state == "ready"
         for control in getattr(self, "controls", []):
             control.configure(state="disabled" if self.busy else "normal")
         if hasattr(self, "primary"):
             self.primary.configure(state="normal" if eligible and self.closed.get() and not self.busy else "disabled")
+            self.disable_button.configure(state="normal" if removable and self.closed.get() and not self.busy else "disabled")
             self.restore_button.configure(state="normal" if self.path and not self.busy else "disabled")
 
     def start_job(self, fn, done):
@@ -221,24 +229,33 @@ class UnlockApp:
         self.start_job(lambda: model.inspect_save(path), self.show_view)
 
     def unlock_clicked(self):
-        if self.busy or not self.view or self.view.state != "eligible" or not self.closed.get():
+        self.change_membership_clicked(True)
+
+    def disable_clicked(self):
+        self.change_membership_clicked(False)
+
+    def change_membership_clicked(self, enabled):
+        expected_state = "eligible" if enabled else "ready"
+        if self.busy or not self.view or self.view.state != expected_state or not self.closed.get():
             return
         view = self.view
-        self.title.configure(text="正在備份並開啟資格…")
+        action = "啟用" if enabled else "解除"
+        self.title.configure(text=f"正在備份並{action}彩蛋…")
         self.description.configure(text="請稍候，並保持遊戲關閉。")
 
         def work():
-            backup = core.unlock(view.path, True, expected_sha256=view.sha256)
+            backup = core.set_membership(view.path, enabled, True, expected_sha256=view.sha256)
             return model.inspect_save(view.path), backup
 
         def finished(result):
             updated, backup = result
             self.show_view(updated)
-            if updated.state == "ready":
-                self.title.configure(text="完成！彩蛋資格已開啟")
-                self.description.configure(text="現在可以關閉工具，回到遊戲選擇「繼續遊戲」。\n"
-                                           "第四章向唱片行詢問《家常音樂》，再回到街道探索。\n"
-                                           "需要復原時，可從下方「還原備份」找回原本進度。")
+            if updated.state == ("ready" if enabled else "eligible"):
+                self.title.configure(text=f"完成！彩蛋已{action}")
+                hint = ("第四章向唱片行詢問《家常音樂》，再回到街道探索。" if enabled else
+                        "尚未分岔的劇情會依一般路線進行；現有進度保持原樣。")
+                self.description.configure(text="現在可以關閉工具，回到遊戲選擇「繼續遊戲」。\n" + hint +
+                                           "\n分岔前可再次切換；完整進度回復請使用「還原備份」。")
             self.closed.set(False)
         self.start_job(work, finished)
 
@@ -250,7 +267,7 @@ class UnlockApp:
 
     def backup_dialog(self, backups):
         if not backups:
-            messagebox.showinfo("還沒有可還原的備份", "此存檔尚無可驗證的工具備份。成功解鎖前會自動建立備份。",
+            messagebox.showinfo("還沒有可還原的備份", "此存檔尚無可驗證的工具備份。啟用或解除彩蛋前會自動建立備份。",
                                 parent=self.root)
             return
         dialog = tk.Toplevel(self.root)
@@ -307,12 +324,12 @@ class UnlockApp:
         restore_btn.configure(command=restore_selected)
 
     def show_details(self):
-        text = f"家常音樂彩蛋解鎖工具 {VERSION}\n\n"
+        text = f"家常音樂彩蛋切換工具 {VERSION}\n\n"
         if self.view:
             text += f"存檔：{self.view.path}\n\n{self.view.details}\n\n"
         text += "適用依據：Windows 原版 1.0.0 的存檔格式。\n"
         text += "只修改彩蛋資格；不改遊戲程式、道具或事件紀錄。\n"
-        text += "Mac 相容性與遊戲內彩蛋仍待實機驗證。"
+        text += "原版 Mac 存檔與遊戲內彩蛋流程仍待實際遊玩驗證。"
         messagebox.showinfo("版本與檢查詳情", text, parent=self.root)
 
     def on_close(self):
