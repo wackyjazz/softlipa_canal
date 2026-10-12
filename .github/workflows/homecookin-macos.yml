@@ -1,0 +1,52 @@
+name: Home Cookin native Mac builds
+
+on:
+  push:
+    branches: ['build/homecookin-macos-*']
+    paths:
+      - 'homecookin_unlocker/**'
+      - '.github/workflows/homecookin-macos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mac-app:
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            architecture: arm64
+          - os: macos-15-intel
+            architecture: x64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          architecture: ${{ matrix.architecture }}
+      - name: Install packager
+        run: python -m pip install -r homecookin_unlocker/requirements-build.txt
+      - name: Verify native GUI availability
+        run: python -c 'import platform, tkinter; print(platform.platform(), tkinter.TkVersion)'
+      - name: Test save handling and UI states
+        run: python -m unittest discover -s homecookin_unlocker/tests -v
+      - name: Exercise native UI with synthetic save
+        run: python homecookin_unlocker/tests/smoke_gui.py
+      - name: Build standalone APP
+        run: python homecookin_unlocker/build_desktop.py --output desktop-build
+      - name: Check the packaged APP
+        run: python homecookin_unlocker/tests/smoke_macos_app.py desktop-build/app/HomeCookinUnlocker.app --report desktop-build/verification.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HomeCookinUnlocker-macOS-${{ matrix.architecture }}
+          path: |
+            desktop-build/*.zip
+            desktop-build/*.sha256
+            desktop-build/verification.json
+          if-no-files-found: error
+          retention-days: 14
