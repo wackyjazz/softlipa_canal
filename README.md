@@ -1,6 +1,39 @@
-# 運河攻略：GitHub Pages ＋私人 R2 圖庫
+# 運河散策｜《幻の南都》圖文攻略
 
-已包含最新對話查圖功能、精確畫面連結、No.274 楊教授原版截圖，以及 No.275 的教授版同文對照。正式網站已發布：[https://wackyjazz.github.io/softlipa_canal/](https://wackyjazz.github.io/softlipa_canal/)。部署交接與更新方式請讀 [DEPLOYMENT_STATUS.md](DEPLOYMENT_STATUS.md)。使用者確認 Workers Free，部署沒有升級方案。
+[開啟完整攻略](https://wackyjazz.github.io/softlipa_canal/) · [主線流程圖](https://wackyjazz.github.io/softlipa_canal/walkthrough/index.html) · [彩蛋工具下載](https://wackyjazz.github.io/softlipa_canal/#homecookin-tool)
+
+《運河 幻の南都》非官方圖文攻略，收錄 293 組事件、734 個畫面引用、主線流程、支線、歌詞與原始設計典藏。喜歡遊戲，也歡迎前往[任性的人官網](https://rsdr.online/)支持蛋堡杜振熙《運河》專輯。
+
+## 家常音樂彩蛋切換工具：Windows / Mac
+
+**v0.3.0 公開測試版**，提供視窗介面，不需要安裝 Python 或輸入指令。支援「啟用彩蛋」與「解除彩蛋」，只調整本機存檔的 `isMember` 資格值，每次修改前自動備份，保留其他任務、道具與章節。
+
+| 你的電腦 | 下載 | 開啟方式 |
+| --- | --- | --- |
+| Windows 64 位元（x64） | [下載 Windows EXE](https://github.com/wackyjazz/softlipa_canal/releases/download/homecookin-v0.3.0/HomeCookinUnlocker-Windows-x64.exe) | 雙擊開啟；也可選擇[含說明的 ZIP](https://github.com/wackyjazz/softlipa_canal/releases/download/homecookin-v0.3.0/HomeCookinUnlocker-Windows-x64.zip) |
+| Mac：Apple Silicon／M 系列 | [下載 Mac M 系列 ZIP](https://github.com/wackyjazz/softlipa_canal/releases/download/homecookin-v0.3.0/HomeCookinUnlocker-macOS-arm64.zip) | 解壓縮，將資料夾內的 App 拖入「應用程式」後開啟 |
+| Mac：Intel 處理器 | [下載 Mac Intel ZIP](https://github.com/wackyjazz/softlipa_canal/releases/download/homecookin-v0.3.0/HomeCookinUnlocker-macOS-x64.zip) | 解壓縮，將資料夾內的 App 拖入「應用程式」後開啟 |
+
+不確定 Mac 類型？點蘋果選單 →「關於這台 Mac」，查看「晶片」或「處理器」。下載上表的應用程式即可；GitHub 自動附上的 Source code 是開發者用的原始碼。
+
+1. 先確認遊戲有存檔，再完全關閉遊戲。
+2. 開啟工具；自動找到存檔後，勾選「我已完全關閉遊戲」。找不到時可按「選擇存檔」指定 `save.dat`。
+3. 按「啟用彩蛋」開啟謎之男子的出現資格，或按「解除彩蛋」回到一般路線資格。
+4. 看見完成提示後關閉工具，回遊戲選「繼續遊戲」。第四章仍需向唱片行詢問《家常音樂》，再走到店外。
+
+**只能在第四章分岔前切換。** 已走進其中一條分支、取得專輯或完成彩蛋時，工具會停止修改；解除不會撤銷已發生的劇情。想比較兩條路線，請保留分岔前的備份；「還原備份」會讓整份進度回到備份時間。
+
+Mac 版尚未使用 Developer ID 簽署或經 Apple 公證。首次開啟若被攔截，確認下載來源後可依 [Apple 說明](https://support.apple.com/zh-tw/102445)，在嘗試開啟後前往「系統設定 → 隱私權與安全性 → 強制打開」。Windows 版也尚未簽署，可能出現系統的下載或執行提示。
+
+已通過合成存檔測試、Windows 與兩種 Mac 的視窗操作及封裝啟動測試；Mac 測試環境為 macOS 15。**實際 Mac 遊戲存檔、兩平台遊戲內完整彩蛋流程及較舊 macOS 仍待驗證。** 本工具不需要官網帳密，存檔操作都在本機完成；不包含遊戲本體或音樂。
+
+[版本說明與所有下載](https://github.com/wackyjazz/softlipa_canal/releases/tag/homecookin-v0.3.0) · [完整操作與技術說明](https://github.com/wackyjazz/softlipa_canal/tree/e8aa0ce6bdeed9f178ef282acd35347574193bbc/homecookin_unlocker#readme) · [SHA-256 校驗碼](https://github.com/wackyjazz/softlipa_canal/releases/download/homecookin-v0.3.0/SHA256SUMS.txt)
+
+---
+
+## 攻略網站部署與維護
+
+部署交接與更新方式請讀 [DEPLOYMENT_STATUS.md](DEPLOYMENT_STATUS.md)。以下為網站維護者的部署文件。
 
 **先讀 [免費條件與限制](FREE-TIER.md)。R2 是有免費額度的用量計費服務，不是無条件零帳單服務。若你不接受啟用任何計費服務，請直接使用文末的純 GitHub Pages 方案。**
 
