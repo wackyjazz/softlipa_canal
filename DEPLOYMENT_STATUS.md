@@ -196,3 +196,12 @@ R2新增702個物件，32個沿用，全部734個物件的大小、MD5 ETag、Co
 注意：publish.py／build_walkthrough.py 會重建首頁章節摘要。本次僅更新圖片，已保留發布前章節資料，驗證只有七個事件capture／image欄位改動。
 
 正式發布成功：內容 commit `f147898080136eb219429b431d1c6c514c43e194`；Pages 流程 https://github.com/wackyjazz/softlipa_canal/actions/runs/34455430037 。Worker版本 `08041feb-48fb-4cd4-93b4-e6265e6e1c3e`。18個新R2物件上傳／716沿用，全部734物件大小、MD5 ETag、Content-Type驗證；Windows Node正式GET逐一核對18張SHA256及Content-Type成功。瀏覽器停用快取後，734個圖片版本與7事件×桌面／手機共14次載入、放大提示在圖外皆通過；目視088兩種尺寸正確。驗證紀錄 verification/room-camera-live-images.json、room-camera-live-site.json 及兩張正式站截圖。
+
+
+## 2026-10-15 第十章夜店段落重寫與滑板老人位置圖
+
+第十章改以「進夜店前先到夜店右上方的馬路遇到滑板老人、撿起錦囊」為主軸：章節標題下新增提醒（同步顯示於首頁第十章卡片）、步驟05改為重點步驟並加入安平地圖裁切標示圖 `walkthrough/ch10-nightclub-old-man.webp`（①夜店大門、②觸發老人的路段、虛線走法；座標依地圖物件 `anping/old_man_skateboarding` x2740 y2040 40×180 與夜店入口 teleport x2320 y2660 換算）。步驟06依原始碼修正在地MJ的solo為夜店專用的15秒上限（`nightclub.setPlayer` 設定 15e3；第八章練舞場維持預設10秒），新增「夜店 social 怎麼算完成」五點說明，交談名單11項加上店內位置與面向方向。步驟04、06、07文字同步調整。
+
+產生工具：`guide_tools/walkthrough_content.py`（內容）、`guide_tools/build_walkthrough.py`（新增 figure 與 playbook 欄位渲染，CSS 版本改為 20261015-1）、`guide/walkthrough/walkthrough.css`（`.playbook`、`.step-figure` 樣式）、圖片裁切腳本在工作區 `tmp/ch10-map/`（以 Windows Node 與部署資料夾內的 sharp 執行）。
+
+內容 commit `9e8caa1`；Pages run https://github.com/wackyjazz/softlipa_canal/actions/runs/38702494136 （第一次 deploy job 因 GitHub Pages API 500 失敗，重跑 deploy job 後成功，build 未重跑）。線上已核對：第十章提醒、步驟05新標題與圖片（HTTP 200、32,940 bytes、image/webp）、15秒solo說明、CSS 新版本、58步驟與夜店名單11項、首頁 guide-data 第十章任務名稱。R2、Worker、D1 設定與734張截圖均未變動。瀏覽器端 `test_walkthrough.cjs` 本次未執行。
